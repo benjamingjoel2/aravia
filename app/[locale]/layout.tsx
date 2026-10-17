@@ -70,7 +70,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
         >
           {dict.skipToContent}
         </a>
-        <AskProvider labels={{ label: dict.ask.label, submit: dict.ask.submit, close: dict.nav.close }}>
+        <AskProvider labels={dict.ask} closeLabel={dict.nav.close} locale={locale}>
           <Header
             homeHref={localePath(locale, "/")}
             items={items}
