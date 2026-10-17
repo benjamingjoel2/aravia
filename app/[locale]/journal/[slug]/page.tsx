@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/config/i18n";
@@ -7,6 +8,9 @@ import { formatDate, postBySlug, posts } from "@/lib/journal";
 import { PageHero } from "@/components/ui/PageHero";
 import { AskButton } from "@/components/ask/AskButton";
 import { LatticeRule } from "@/components/motif";
+import { JsonLd } from "@/components/ui/JsonLd";
+import { absoluteUrl } from "@/lib/seo";
+import { photos } from "@/data/photos";
 
 export const dynamicParams = false;
 
@@ -17,7 +21,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/[locale]/journal/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const p = postBySlug(slug);
-  return p ? { title: p.title, description: p.description, openGraph: { type: "article", publishedTime: p.date } } : {};
+  return p ? { title: p.title, description: p.description, openGraph: { type: "article", publishedTime: p.date }, alternates: alternates(`/journal/${p.slug}`) } : {};
 }
 
 export default async function JournalPost({ params }: PageProps<"/[locale]/journal/[slug]">) {
@@ -29,6 +33,19 @@ export default async function JournalPost({ params }: PageProps<"/[locale]/journ
 
   return (
     <article>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: p.title,
+          description: p.description,
+          datePublished: p.date,
+          image: photos[p.photo].src,
+          author: { "@type": "Organization", name: "Aravia" },
+          publisher: { "@type": "Organization", name: "Aravia" },
+          mainEntityOfPage: absoluteUrl(localePath(locale, `/journal/${p.slug}`)),
+        }}
+      />
       <PageHero
         top={
           <nav aria-label="Breadcrumb" className="text-xs tracking-[0.2em] text-ivory-300 uppercase">

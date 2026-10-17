@@ -1,4 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { alternates } from "@/lib/seo";
+import { site } from "@/config/site";
+import { JsonLd } from "@/components/ui/JsonLd";
 import { notFound } from "next/navigation";
 import { brand } from "@/config/brand";
 import { isLocale } from "@/config/i18n";
@@ -23,6 +27,8 @@ import { AskButton } from "@/components/ask/AskButton";
 import { LatticeFrame, LatticeHover, LatticeRule, StarMark } from "@/components/motif";
 import { Reveal } from "@/components/motion/Reveal";
 import { ToConfirm } from "@/components/ui/ToConfirm";
+
+export const metadata: Metadata = { alternates: alternates("/") };
 
 /** The Season teaser depends on the current month. */
 export const revalidate = 86400;
@@ -68,6 +74,18 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
 
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "TravelAgency",
+          name: brand.name,
+          slogan: brand.promise,
+          description: brand.description,
+          url: `${site.url}/${locale}`,
+          email: brand.contact.email,
+          areaServed: regions.flatMap((r) => countriesInRegion(r.id).map((c) => ({ "@type": "Country", name: c.name }))),
+        }}
+      />
       {/* Hero */}
       <section className="relative flex min-h-[100svh] items-center overflow-hidden pt-24 pb-28" aria-labelledby="hero-title">
         <div aria-hidden className="absolute inset-0">
@@ -83,28 +101,28 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
         </div>
         <div className="container-page relative">
           <div className="mx-auto max-w-4xl text-center">
-            <Reveal>
+            <div className="rise">
               <p className="eyebrow">
                 <span className="block sm:inline">Private travel concierge</span>
                 <span aria-hidden className="hidden sm:inline"> · </span>
                 <span className="mt-2 block sm:mt-0 sm:inline">The Arab world</span>
               </p>
-            </Reveal>
-            <Reveal delay={0.15}>
+            </div>
+            <div className="rise" style={{ animationDelay: "0.1s" }}>
               <h1 id="hero-title" className="mt-8 text-display-xl">
                 Ask, and consider it <em className="text-sand-300">arranged.</em>
               </h1>
-            </Reveal>
-            <Reveal delay={0.3}>
+            </div>
+            <div className="rise" style={{ animationDelay: "0.25s" }}>
               <p className="mx-auto mt-8 max-w-2xl text-lg text-ivory-50/85">
                 One personal concierge designs your journey across the Gulf, the Levant and North Africa, then stays with you, day and
                 night, for anything you need.
               </p>
-            </Reveal>
+            </div>
           </div>
-          <Reveal delay={0.45} className="mx-auto mt-14 max-w-3xl">
+          <div className="rise mx-auto mt-14 max-w-3xl" style={{ animationDelay: "0.4s" }}>
             <HeroAsk labels={dict.ask} askPath={href("/ask")} />
-          </Reveal>
+          </div>
         </div>
       </section>
 

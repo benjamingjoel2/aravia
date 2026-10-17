@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/config/i18n";
 import { localePath } from "@/lib/paths";
@@ -11,6 +12,7 @@ import { AskButton } from "@/components/ask/AskButton";
 import { LatticeRule } from "@/components/motif";
 
 export const metadata: Metadata = {
+  alternates: alternates("/services"),
   title: "What we arrange",
   description:
     "Private aviation, villas, yachts, desert camps, restaurant reservations, access to events, guides and more, across the Arab world. Arranged by your personal concierge.",

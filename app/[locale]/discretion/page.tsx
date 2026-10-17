@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/config/i18n";
@@ -9,6 +10,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { ToConfirm } from "@/components/ui/ToConfirm";
 
 export const metadata: Metadata = {
+  alternates: alternates("/discretion"),
   title: "Discretion, by design",
   description:
     "We never name our clients and never post their photographs. NDAs on request, enquiries seen only by your concierge, and a website without chat widgets or advertising cookies.",

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import { JourneyComposer } from "@/components/composer/JourneyComposer";
 
 export const metadata: Metadata = {
+  alternates: alternates("/journey-composer"),
   title: "Journey Composer",
   description:
     "Combine two to four places across the Gulf, the Levant and North Africa. See a suggested order, approximate travel times, how long to stay and when to go.",

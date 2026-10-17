@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/config/i18n";
@@ -9,6 +10,7 @@ import { LatticeFrame, LatticeHover, LatticeRule } from "@/components/motif";
 import { Reveal } from "@/components/motion/Reveal";
 
 export const metadata: Metadata = {
+  alternates: alternates("/travelling-with-grace"),
   title: "Travelling with grace",
   description:
     "A calm, practical guide to custom across the Arab world: dress at religious and heritage sites, the weekend, alcohol, photography, greetings and tipping, country by country.",

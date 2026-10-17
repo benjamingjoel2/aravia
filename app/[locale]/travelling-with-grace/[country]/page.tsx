@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/config/i18n";
@@ -26,6 +27,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/travelli
   return {
     title: `Travelling with grace in ${c.name}`,
     description: `Dress, the weekend, alcohol, photography, greetings and tipping in ${c.name}: a calm, practical guide for guests.`,
+    alternates: alternates(`/travelling-with-grace/${c.slug}`),
   };
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/config/i18n";
 import { brand } from "@/config/brand";
@@ -8,6 +9,7 @@ import { AskFlow } from "@/components/ask/AskFlow";
 import { LatticeRule, StarMark } from "@/components/motif";
 
 export const metadata: Metadata = {
+  alternates: alternates("/ask"),
   title: "Ask Aravia",
   description: "Tell your concierge what you would like arranged, anywhere in the Arab world. Continue by WhatsApp, a call back or email.",
 };

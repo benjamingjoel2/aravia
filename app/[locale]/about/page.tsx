@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/config/i18n";
 import { brand } from "@/config/brand";
@@ -10,6 +11,7 @@ import { AskButton } from "@/components/ask/AskButton";
 import { LatticeHover, LatticeRule, StarMark } from "@/components/motif";
 
 export const metadata: Metadata = {
+  alternates: alternates("/about"),
   title: "About",
   description: "Aravia, from “Arabia” and “via”: the way through Arabia. A private travel concierge for the Arab world, and the concierges who make it work.",
 };

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import { regions, countriesInRegion } from "@/data/countries";
 import { destinationsIn } from "@/data/destinations";
 import { LatticeRule } from "@/components/motif";
@@ -13,6 +14,7 @@ import Link from "next/link";
 import { PhotoCard } from "@/components/ui/PhotoCard";
 
 export const metadata: Metadata = {
+  alternates: alternates("/destinations"),
   title: "Where we take you",
   description: "The Gulf, the Levant and North Africa: the countries and places across the Arab world where your Aravia concierge arranges journeys.",
 };

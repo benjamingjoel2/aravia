@@ -1,6 +1,6 @@
 # Aravia — build plan (step 1)
 
-Status: plan approved; step 2 complete. Coverage widened to the Arab world (see §0).
+Status: all six steps complete and deployed. Coverage: the Arab world (see §0). Launch checklist in the README.
 
 ---
 

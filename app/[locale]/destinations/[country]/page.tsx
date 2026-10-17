@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/config/i18n";
@@ -25,7 +26,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/[locale]/destinations/[country]">): Promise<Metadata> {
   const { country } = await params;
   const c = countryBySlug(country);
-  return c ? { title: c.name, description: `${c.intro} Journeys in ${c.name} arranged by your Aravia concierge.` } : {};
+  return c ? { title: c.name, description: `${c.intro} Journeys in ${c.name} arranged by your Aravia concierge.`, alternates: alternates(`/destinations/${c.slug}`) } : {};
 }
 
 export default async function CountryPage({ params }: PageProps<"/[locale]/destinations/[country]">) {

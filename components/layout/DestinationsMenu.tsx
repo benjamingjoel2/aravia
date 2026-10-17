@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useEffect, useId, useRef, useState } from "react";
 import { LatticeRule } from "@/components/motif";
 import type { RegionNav } from "@/lib/nav";
@@ -11,7 +10,6 @@ type Props = { label: string; allLabel: string; href: string; regions: RegionNav
 /** Desktop disclosure for "Where we take you": opens on click or hover, closes on Esc, outside click or focus leaving. */
 export function DestinationsMenu({ label, allLabel, href, regions, active }: Props) {
   const [open, setOpen] = useState(false);
-  const reduce = useReducedMotion();
   const root = useRef<HTMLDivElement>(null);
   const button = useRef<HTMLButtonElement>(null);
   const closeTimer = useRef<number | undefined>(undefined);
@@ -68,15 +66,10 @@ export function DestinationsMenu({ label, allLabel, href, regions, active }: Pro
         </svg>
       </button>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
+      {open && (
+          <div
             id={panelId}
-            initial={reduce ? false : { opacity: 0, y: -6 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={reduce ? undefined : { opacity: 0, y: -6 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute inset-x-0 top-full border-y border-midnight-700/70 bg-midnight-950 shadow-[0_40px_80px_-20px_rgb(0_0_0/0.6)]"
+            className="fade-in absolute inset-x-0 top-full border-y border-midnight-700/70 bg-midnight-950 shadow-[0_40px_80px_-20px_rgb(0_0_0/0.6)]"
           >
             <div className="container-page grid grid-cols-3 gap-12 py-12">
               {regions.map((region) => (
@@ -104,9 +97,8 @@ export function DestinationsMenu({ label, allLabel, href, regions, active }: Pro
                 </Link>
               </p>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
     </div>
   );
 }

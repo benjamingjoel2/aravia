@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/config/i18n";
@@ -10,6 +11,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { ToConfirm } from "@/components/ui/ToConfirm";
 
 export const metadata: Metadata = {
+  alternates: alternates("/travelling-with-grace/ramadan"),
   title: "Travelling during Ramadan",
   description:
     "What changes during Ramadan across the Arab world, what is beautiful about it, from iftar to the quiet of the day, and how your Aravia concierge plans around it.",

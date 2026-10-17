@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/config/i18n";
@@ -12,6 +13,7 @@ import { LatticeFrame, LatticeRule, StarMark } from "@/components/motif";
 import type { PhotoKey } from "@/data/photos";
 
 export const metadata: Metadata = {
+  alternates: alternates("/how-it-works"),
   title: "How it works",
   description: "Meet your concierge, design your journey, and travel with someone always on call. How Aravia works, from the first message to the flight home.",
 };
