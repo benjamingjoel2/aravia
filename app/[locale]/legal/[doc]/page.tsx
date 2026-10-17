@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/config/i18n";
 import { legalBySlug, legalDocs } from "@/lib/legal";
@@ -14,7 +15,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/[locale]/legal/[doc]">): Promise<Metadata> {
   const { doc } = await params;
   const d = legalBySlug[doc];
-  return d ? { title: d.title, robots: { index: d.slug !== "credits" } } : {};
+  return d ? { title: d.title, robots: { index: d.slug !== "credits" }, alternates: alternates(`/legal/${d.slug}`) } : {};
 }
 
 export default async function LegalPage({ params }: PageProps<"/[locale]/legal/[doc]">) {

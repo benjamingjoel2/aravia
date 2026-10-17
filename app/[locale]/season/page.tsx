@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import { events } from "@/data/events";
 import { SeasonCalendar } from "@/components/season/SeasonCalendar";
 
 export const metadata: Metadata = {
+  alternates: alternates("/season"),
   title: "The Season",
   description:
     "The Arab world's season, from Formula 1 weekends to art fairs, music festivals and Saharan gatherings. Request access through your Aravia concierge.",

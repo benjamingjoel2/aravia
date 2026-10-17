@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/config/i18n";
@@ -15,6 +16,8 @@ import { ToConfirm } from "@/components/ui/ToConfirm";
 import { Reveal } from "@/components/motion/Reveal";
 import { AskButton } from "@/components/ask/AskButton";
 import { LatticeFrame, LatticeRule, StarMark } from "@/components/motif";
+import { JsonLd } from "@/components/ui/JsonLd";
+import { absoluteUrl } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -25,7 +28,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/[locale]/destinations/[country]/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const d = destinationBySlug[slug];
-  return d ? { title: `${d.name}, ${countryByCode[d.country].name}`, description: d.summary } : {};
+  return d
+    ? { title: `${d.name}, ${countryByCode[d.country].name}`, description: d.summary, alternates: alternates(`/destinations/${countryByCode[d.country].slug}/${d.slug}`) }
+    : {};
 }
 
 export default async function DestinationPage({ params }: PageProps<"/[locale]/destinations/[country]/[slug]">) {
@@ -43,6 +48,17 @@ export default async function DestinationPage({ params }: PageProps<"/[locale]/d
 
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Where we take you", item: absoluteUrl(href("/destinations")) },
+            { "@type": "ListItem", position: 2, name: c.name, item: absoluteUrl(href(`/destinations/${c.slug}`)) },
+            { "@type": "ListItem", position: 3, name: d.name, item: absoluteUrl(href(`/destinations/${c.slug}/${d.slug}`)) },
+          ],
+        }}
+      />
       <PageHero
         top={
           <nav aria-label="Breadcrumb" className="text-xs tracking-[0.2em] text-ivory-300 uppercase">

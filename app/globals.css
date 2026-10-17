@@ -267,3 +267,23 @@
   .prose-journal strong { color: var(--color-ivory-50); font-weight: 400; }
   .prose-journal blockquote { margin-block: 2em; }
 }
+
+/* ------------------------------------------------------------------
+   Motion without JavaScript on the critical path.
+   .rise: plays on load (hero copy). .reveal: plays when scrolled into view (set by <Reveal>).
+   Reduced motion is handled by the global rule above.
+------------------------------------------------------------------- */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+.rise { animation: rise 1.4s var(--ease-sand) both; }
+
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity 1.4s var(--ease-sand), transform 1.4s var(--ease-sand); }
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+.fade-in { animation: fade-in 0.7s var(--ease-sand) both; }
+@keyframes fade-up { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.fade-up { animation: fade-up 0.9s var(--ease-sand) both; }

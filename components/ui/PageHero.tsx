@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import type { PhotoKey } from "@/data/photos";
 import { Photo } from "./Photo";
 import { Parallax } from "@/components/motion/Parallax";
-import { Reveal } from "@/components/motion/Reveal";
 
 type Props = {
   eyebrow?: ReactNode;
@@ -45,17 +44,15 @@ export function PageHero({ eyebrow, title, intro, photo, illustrative, top }: Pr
       <div className="container-page relative w-full">
         {top}
         {eyebrow && (
-          <Reveal>
-            <p className="eyebrow mt-6">{eyebrow}</p>
-          </Reveal>
+          <p className="rise eyebrow mt-6">{eyebrow}</p>
         )}
-        <Reveal delay={0.1}>
+        <div className="rise">
           <h1 className="mt-5 max-w-5xl font-display text-[clamp(3rem,1.5rem+6vw,7.5rem)] leading-[0.95] tracking-[0.02em]">{title}</h1>
-        </Reveal>
+        </div>
         {intro && (
-          <Reveal delay={0.2}>
-            <div className="mt-8 max-w-2xl text-lg text-ivory-50/85">{intro}</div>
-          </Reveal>
+          <div className="rise mt-8 max-w-2xl text-lg text-ivory-50/85" style={{ animationDelay: "0.15s" }}>
+            {intro}
+          </div>
         )}
         {photo && illustrative && <p className="mt-8 text-[0.6875rem] tracking-[0.18em] text-ivory-300/70 uppercase">Illustrative photograph</p>}
       </div>

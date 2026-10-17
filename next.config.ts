@@ -4,6 +4,8 @@ import createMDX from "@next/mdx";
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   pageExtensions: ["ts", "tsx", "mdx"],
+  // The root layout lives under [locale], so unmatched URLs need a global 404.
+  experimental: { globalNotFound: true },
   images: {
     formats: ["image/avif", "image/webp"],
     qualities: [75],
@@ -17,6 +19,7 @@ const nextConfig: NextConfig = {
         headers: [
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "DENY" },
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
         ],
       },

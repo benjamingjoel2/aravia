@@ -66,7 +66,8 @@ export function AskFlow({ labels, locale, initialMessage = "", startAt = "compos
   useEffect(() => {
     if (firstRender.current) {
       firstRender.current = false;
-      if (autoFocus && step !== "compose") stepHeading.current?.focus();
+      // The flow mounts after the dialog has opened, so move focus here explicitly.
+      if (autoFocus) (step === "compose" ? messageField.current : stepHeading.current)?.focus();
       return;
     }
     if (step === "compose") messageField.current?.focus();

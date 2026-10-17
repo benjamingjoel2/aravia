@@ -2,7 +2,13 @@
 
 import { useEffect, useRef } from "react";
 import { useAsk } from "./AskContext";
-import { AskFlow, type AskLabels } from "./AskFlow";
+import dynamic from "next/dynamic";
+import type { AskLabels } from "./AskFlow";
+
+// The flow (and its animation library) stays out of the first page load; it is fetched in idle time
+// after load, or on first open if that comes sooner.
+const loadFlow = () => import("./AskFlow").then((m) => m.AskFlow);
+const AskFlow = dynamic(loadFlow, { ssr: false });
 import { StarMark } from "@/components/motif";
 
 /**
@@ -14,9 +20,18 @@ export function AskDialog({ labels, closeLabel, locale }: { labels: AskLabels; c
   const ref = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
+    const idle = window.requestIdleCallback ?? ((cb: () => void) => window.setTimeout(cb, 1500));
+    idle(() => void loadFlow());
+  }, []);
+
+  useEffect(() => {
     const dialog = ref.current;
     if (!dialog) return;
-    if (state.open && !dialog.open) dialog.showModal();
+    if (state.open && !dialog.open) {
+      dialog.showModal();
+      // showModal focuses the first button (close); hand focus to the request field or step heading instead.
+      dialog.querySelector<HTMLElement>("textarea, h2[tabindex='-1']")?.focus();
+    }
     else if (!state.open && dialog.open) dialog.close();
   }, [state.open, state.session]);
 

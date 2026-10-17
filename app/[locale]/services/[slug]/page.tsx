@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/config/i18n";
@@ -19,7 +20,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/[locale]/services/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const s = serviceBySlug[slug];
-  return s ? { title: s.name, description: s.summary } : {};
+  return s ? { title: s.name, description: s.summary, alternates: alternates(`/services/${s.slug}`) } : {};
 }
 
 export default async function ServicePage({ params }: PageProps<"/[locale]/services/[slug]">) {

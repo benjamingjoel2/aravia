@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/config/i18n";
@@ -8,6 +9,7 @@ import { Photo } from "@/components/ui/Photo";
 import { Reveal } from "@/components/motion/Reveal";
 
 export const metadata: Metadata = {
+  alternates: alternates("/journal"),
   title: "Journal",
   description: "Notes from our concierges on travelling the Arab world well: when to go, how to combine places, and how to be a good guest.",
 };

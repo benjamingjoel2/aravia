@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
-import type { ReactNode } from "react";
+import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
@@ -10,22 +9,34 @@ type Props = {
   as?: "div" | "section" | "li" | "article";
 };
 
-/** Slow fade upward, like light moving across sand. Static when reduced motion is preferred. */
-export function Reveal({ children, className, delay = 0, as = "div" }: Props) {
-  const reduce = useReducedMotion();
-  const Tag = motion[as];
-  if (reduce) {
-    const Static = as;
-    return <Static className={className}>{children}</Static>;
-  }
+/**
+ * Slow fade upward when the element enters the viewport, like light moving across sand.
+ * CSS does the animation; a shared IntersectionObserver only adds a class. Static under reduced motion.
+ */
+let observer: IntersectionObserver | null = null;
+function observe(el: Element) {
+  observer ??= new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.classList.add("is-visible");
+          observer?.unobserve(e.target);
+        }
+      }
+    },
+    { rootMargin: "0px 0px -10% 0px" },
+  );
+  observer.observe(el);
+  return () => observer?.unobserve(el);
+}
+
+export function Reveal({ children, className = "", delay = 0, as: Tag = "div" }: Props) {
+  const ref = useRef<HTMLElement>(null);
+  useEffect(() => (ref.current ? observe(ref.current) : undefined), []);
+  const style: CSSProperties | undefined = delay ? { transitionDelay: `${delay}s` } : undefined;
   return (
-    <Tag
-      className={className}
-      initial={{ opacity: 0, y: 14 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-      transition={{ duration: 1.4, delay, ease: [0.22, 1, 0.36, 1] }}
-    >
+    // @ts-expect-error: the ref type is shared across the allowed tags
+    <Tag ref={ref} className={`reveal ${className}`} style={style}>
       {children}
     </Tag>
   );

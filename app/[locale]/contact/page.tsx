@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/config/i18n";
 import { brand } from "@/config/brand";
@@ -9,6 +10,7 @@ import { LatticeRule, StarMark } from "@/components/motif";
 import { ToConfirm } from "@/components/ui/ToConfirm";
 
 export const metadata: Metadata = {
+  alternates: alternates("/contact"),
   title: "Contact",
   description: "Reach your Aravia concierge by WhatsApp, a call back or email. At any hour.",
 };

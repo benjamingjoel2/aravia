@@ -14,7 +14,7 @@ import { regionNav } from "@/lib/nav";
 
 const display = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["400"],
   style: ["normal", "italic"],
   variable: "--font-cormorant",
   display: "swap",
@@ -63,6 +63,12 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
 
   return (
     <html lang={locale} dir={dirFor(locale)} className={`${display.variable} ${sans.variable}`}>
+      <head>
+        {/* Without JavaScript, scroll reveals never run: show everything. */}
+        <noscript>
+          <style>{`.reveal{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
+      </head>
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"
