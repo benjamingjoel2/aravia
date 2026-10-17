@@ -6,6 +6,7 @@ export const en = {
     howItWorks: "How it works",
     services: "What we arrange",
     destinations: "Where we take you",
+    allDestinations: "All destinations",
     season: "The Season",
     composer: "Journey Composer",
     grace: "Travelling with grace",
@@ -22,6 +23,7 @@ export const en = {
   },
   footer: {
     arrange: "Arrange",
+    regions: "Destinations",
     guidance: "Guidance",
     house: "The house",
     licences: "Licences",

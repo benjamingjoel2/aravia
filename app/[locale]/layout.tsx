@@ -10,6 +10,7 @@ import { localePath } from "@/lib/paths";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AskProvider } from "@/components/ask/AskProvider";
+import { regionNav } from "@/lib/nav";
 
 const display = Cormorant_Garamond({
   subsets: ["latin"],
@@ -39,7 +40,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: `${brand.name}: private travel concierge for the Middle East`, template: `%s · ${brand.name}` },
+  title: { default: `${brand.name}: private travel concierge for the Arab world`, template: `%s · ${brand.name}` },
   description: brand.description,
   applicationName: brand.name,
   openGraph: { siteName: brand.name, type: "website" },
@@ -74,7 +75,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
             homeHref={localePath(locale, "/")}
             items={items}
             mobileItems={mobileItems}
-            labels={{ ask: dict.ask.cta, menu: dict.nav.menu, close: dict.nav.close, home: dict.nav.home }}
+            destinationsHref={localePath(locale, "/destinations")}
+            regions={regionNav(locale)}
+            labels={{ ask: dict.ask.cta, menu: dict.nav.menu, close: dict.nav.close, home: dict.nav.home, allDestinations: dict.nav.allDestinations }}
           />
           <main id="main" className="flex-1">
             {children}
