@@ -1,11 +1,12 @@
 import type { EventType, SeasonEvent } from "./types";
 
-export const eventTypes: { id: EventType; name: string }[] = [
-  { id: "motorsport", name: "Motorsport" },
-  { id: "art-culture", name: "Art and culture" },
-  { id: "music", name: "Music" },
-  { id: "sport", name: "Sport" },
-  { id: "festival", name: "Festivals" },
+/** `name` labels the filters; `label` labels a single event. */
+export const eventTypes: { id: EventType; name: string; label: string }[] = [
+  { id: "motorsport", name: "Motorsport", label: "Motorsport" },
+  { id: "art-culture", name: "Art and culture", label: "Art and culture" },
+  { id: "music", name: "Music", label: "Music" },
+  { id: "sport", name: "Sport", label: "Sport" },
+  { id: "festival", name: "Festivals", label: "Festival" },
 ];
 
 /**
