@@ -18,6 +18,7 @@ export const en = {
     terms: "Terms",
     privacyPolicy: "Privacy policy",
     cookies: "Cookies",
+    credits: "Photography",
     menu: "Menu",
     close: "Close",
   },

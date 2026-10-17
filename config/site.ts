@@ -49,4 +49,5 @@ export const legalNav = [
   { href: "/legal/terms", key: "terms" },
   { href: "/legal/privacy-policy", key: "privacyPolicy" },
   { href: "/legal/cookies", key: "cookies" },
+  { href: "/legal/credits", key: "credits" },
 ] as const;

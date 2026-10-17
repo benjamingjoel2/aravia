@@ -1,17 +1,26 @@
 import type { Metadata } from "next";
 import { regions, countriesInRegion } from "@/data/countries";
 import { destinationsIn } from "@/data/destinations";
-import { LatticeHover, LatticeRule } from "@/components/motif";
+import { LatticeRule } from "@/components/motif";
 import { Reveal } from "@/components/motion/Reveal";
 import { AskButton } from "@/components/ask/AskButton";
 import { monthRanges } from "@/lib/months";
+import { localePath } from "@/lib/paths";
+import { destinationPhoto } from "@/lib/destinations";
+import { isLocale } from "@/config/i18n";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { PhotoCard } from "@/components/ui/PhotoCard";
 
 export const metadata: Metadata = {
   title: "Where we take you",
   description: "The Gulf, the Levant and North Africa: the countries and places across the Arab world where your Aravia concierge arranges journeys.",
 };
 
-export default function DestinationsPage() {
+export default async function DestinationsPage({ params }: PageProps<"/[locale]/destinations">) {
+  const { locale } = await params;
+  if (!isLocale(locale)) notFound();
+  const href = (p: string) => localePath(locale, p);
   return (
     <>
       <header className="container-page pt-40 pb-16 sm:pt-48">
@@ -44,18 +53,25 @@ export default function DestinationsPage() {
             {countriesInRegion(region.id).map((country) => (
               <div key={country.code} id={country.slug} className="mt-20 scroll-mt-28 grid gap-10 lg:grid-cols-12">
                 <Reveal className="lg:col-span-4">
-                  <h3 className="font-display text-display-sm text-sand-300">{country.name}</h3>
+                  <h3 className="font-display text-display-sm text-sand-300">
+                    <Link href={href(`/destinations/${country.slug}`)} className="link-quiet !text-sand-300">
+                      {country.name}
+                    </Link>
+                  </h3>
                   <p className="mt-4 text-ivory-300">{country.intro}</p>
                 </Reveal>
-                <ul className="grid ps-px pt-px sm:grid-cols-2 lg:col-span-8 lg:self-start">
+                <ul className="grid gap-4 sm:grid-cols-2 lg:col-span-8">
                   {destinationsIn(country.code).map((d) => (
-                    <li key={d.slug} className="lattice-host -ms-px -mt-px border border-midnight-800 p-7">
-                      <LatticeHover />
-                      <h4 className="font-display text-2xl">{d.name}</h4>
-                      <p className="mt-3 text-[0.9375rem] text-ivory-300">{d.summary}</p>
-                      <p className="mt-5 text-xs tracking-[0.18em] text-ivory-500 uppercase">
-                        Best: {monthRanges(d.bestMonths)}
-                      </p>
+                    <li key={d.slug}>
+                      <PhotoCard
+                        href={href(`/destinations/${country.slug}/${d.slug}`)}
+                        title={d.name}
+                        photo={destinationPhoto(d).photo}
+                        meta={`Best: ${monthRanges(d.bestMonths)}`}
+                        sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
+                      >
+                        {d.summary}
+                      </PhotoCard>
                     </li>
                   ))}
                 </ul>

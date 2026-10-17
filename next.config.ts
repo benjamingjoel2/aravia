@@ -4,7 +4,12 @@ import createMDX from "@next/mdx";
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   pageExtensions: ["ts", "tsx", "mdx"],
-  images: { formats: ["image/avif", "image/webp"] },
+  images: {
+    formats: ["image/avif", "image/webp"],
+    qualities: [75],
+    // Unsplash photos only; see data/photos.ts.
+    remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com", pathname: "/photo-**" }],
+  },
   async headers() {
     return [
       {
