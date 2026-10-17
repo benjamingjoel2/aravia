@@ -6,6 +6,7 @@ import type { Dictionary } from "@/dictionaries/en";
 import { localePath } from "@/lib/paths";
 import { LatticeRule, Logo } from "@/components/motif";
 import { whatsappLink } from "@/lib/whatsapp";
+import { regionNav } from "@/lib/nav";
 
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const year = new Date().getFullYear();
@@ -13,7 +14,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     <footer className="mt-auto border-t border-midnight-800 bg-midnight-950">
       <LatticeRule variant="strip" className="-mt-4" />
       <div className="container-page grid gap-16 pt-16 pb-12 lg:grid-cols-12">
-        <div className="lg:col-span-4">
+        <div className="lg:col-span-3">
           <Link href={localePath(locale, "/")} aria-label="Aravia">
             <Logo />
           </Link>
@@ -21,7 +22,19 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <p className="mt-6 max-w-xs text-sm text-ivory-300">{dict.footer.discretionLine}</p>
         </div>
 
-        <nav aria-label="Footer" className="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-5">
+        <nav aria-label="Footer" className="grid grid-cols-2 gap-10 sm:grid-cols-4 lg:col-span-6">
+          <div>
+            <h2 className="eyebrow">{dict.footer.regions}</h2>
+            <ul className="mt-5 space-y-3 text-sm">
+              {regionNav(locale).map((r) => (
+                <li key={r.id}>
+                  <Link href={r.href} className="link-quiet text-ivory-300">
+                    {r.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
           {footerNav.map((group) => (
             <div key={group.key}>
               <h2 className="eyebrow">{dict.footer[group.key]}</h2>

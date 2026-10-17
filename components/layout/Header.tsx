@@ -6,6 +6,8 @@ import { useEffect, useRef, useState } from "react";
 import { Logo } from "@/components/motif";
 import { AskButton } from "@/components/ask/AskButton";
 import { MobileNav } from "./MobileNav";
+import { DestinationsMenu } from "./DestinationsMenu";
+import type { RegionNav } from "@/lib/nav";
 
 export type NavItem = { href: string; label: string };
 
@@ -13,10 +15,13 @@ type Props = {
   homeHref: string;
   items: NavItem[];
   mobileItems: NavItem[];
-  labels: { ask: string; menu: string; close: string; home: string };
+  /** Nav item href that opens the grouped destinations menu instead of linking directly. */
+  destinationsHref: string;
+  regions: RegionNav[];
+  labels: { ask: string; menu: string; close: string; home: string; allDestinations: string };
 };
 
-export function Header({ homeHref, items, mobileItems, labels }: Props) {
+export function Header({ homeHref, items, mobileItems, destinationsHref, regions, labels }: Props) {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,6 +37,7 @@ export function Header({ homeHref, items, mobileItems, labels }: Props) {
   useEffect(() => setMenuOpen(false), [pathname]);
 
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-[background-color,border-color,backdrop-filter] duration-700 ease-sand ${
         scrolled || menuOpen
@@ -48,6 +54,13 @@ export function Header({ homeHref, items, mobileItems, labels }: Props) {
           <ul className="flex items-center gap-9">
             {items.map((item) => {
               const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+              if (item.href === destinationsHref) {
+                return (
+                  <li key={item.href}>
+                    <DestinationsMenu label={item.label} allLabel={labels.allDestinations} href={item.href} regions={regions} active={active} />
+                  </li>
+                );
+              }
               return (
                 <li key={item.href}>
                   <Link
@@ -64,7 +77,7 @@ export function Header({ homeHref, items, mobileItems, labels }: Props) {
         </nav>
 
         <div className="relative z-10 flex items-center gap-2">
-          <AskButton source="header" className="btn-brass !min-h-10 !px-5 !py-2 !text-[0.6875rem]">
+          <AskButton source="header" className="btn-brass !min-h-10 !px-4 !py-2 !text-[0.6875rem] whitespace-nowrap sm:!px-5">
             {labels.ask}
           </AskButton>
           <button
@@ -82,15 +95,18 @@ export function Header({ homeHref, items, mobileItems, labels }: Props) {
           </button>
         </div>
       </div>
+    </header>
 
       <MobileNav
         open={menuOpen}
         items={mobileItems}
+        destinationsHref={destinationsHref}
+        regions={regions}
         onClose={() => {
           setMenuOpen(false);
           menuButton.current?.focus();
         }}
       />
-    </header>
+    </>
   );
 }

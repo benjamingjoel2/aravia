@@ -5,8 +5,11 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useEffect } from "react";
 import { LatticeRule } from "@/components/motif";
 import type { NavItem } from "./Header";
+import type { RegionNav } from "@/lib/nav";
 
-export function MobileNav({ open, items, onClose }: { open: boolean; items: NavItem[]; onClose: () => void }) {
+type Props = { open: boolean; items: NavItem[]; destinationsHref: string; regions: RegionNav[]; onClose: () => void };
+
+export function MobileNav({ open, items, destinationsHref, regions, onClose }: Props) {
   const reduce = useReducedMotion();
 
   useEffect(() => {
@@ -30,7 +33,7 @@ export function MobileNav({ open, items, onClose }: { open: boolean; items: NavI
           animate={{ opacity: 1 }}
           exit={reduce ? undefined : { opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed inset-x-0 top-20 bottom-0 overflow-y-auto bg-midnight-950 lg:hidden"
+          className="fixed inset-x-0 top-20 bottom-0 z-30 overflow-y-auto bg-midnight-950 lg:hidden"
         >
           <div className="container-page py-10">
             <ul className="space-y-1">
@@ -44,6 +47,26 @@ export function MobileNav({ open, items, onClose }: { open: boolean; items: NavI
                   <Link href={item.href} onClick={onClose} className="block py-2.5 font-display text-3xl text-ivory-50 hover:text-brass-300">
                     {item.label}
                   </Link>
+                  {item.href === destinationsHref && (
+                    <div className="mt-2 mb-5 grid gap-6 border-s border-midnight-700 ps-5">
+                      {regions.map((region) => (
+                        <div key={region.id}>
+                          <Link href={region.href} onClick={onClose} className="eyebrow">
+                            {region.name}
+                          </Link>
+                          <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
+                            {region.countries.map((c) => (
+                              <li key={c.href}>
+                                <Link href={c.href} onClick={onClose} className="block py-1 text-ivory-300 hover:text-brass-300">
+                                  {c.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </motion.li>
               ))}
             </ul>

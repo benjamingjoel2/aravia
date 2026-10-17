@@ -7,7 +7,7 @@ export const brand = {
   etymology: "From “Arabia” and “via”: the way through Arabia.",
   promise: "Ask, and consider it arranged.",
   description:
-    "A private travel concierge for the Middle East. One personal concierge designs your journey across the region, then stays with you, day and night, for anything you need.",
+    "A private travel concierge for the Arab world, from the Gulf to the Levant and North Africa. One personal concierge designs your journey, then stays with you, day and night, for anything you need.",
   legalName: "[COMPANY NAME]",
   contact: {
     /** International format, digits only, used for wa.me links. */

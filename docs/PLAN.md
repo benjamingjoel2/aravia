@@ -1,6 +1,21 @@
 # Aravia — build plan (step 1)
 
-Status: **awaiting approval**. Nothing beyond this document is built yet.
+Status: plan approved; step 2 complete. Coverage widened to the Arab world (see §0).
+
+---
+
+## 0. Coverage: the Arab world
+
+Grouped everywhere (navigation, destinations, filters) as three regions:
+
+| Region | Countries | Destinations |
+|---|---|---|
+| **The Gulf** | Saudi Arabia, United Arab Emirates, Qatar, Kuwait, Bahrain, Oman | AlUla and Hegra, Red Sea islands, Riyadh and Diriyah, Jeddah's Al-Balad · Dubai, Abu Dhabi, Ras Al Khaimah's desert · Doha · Kuwait City, Failaka Island · Manama · Muscat, Musandam, Wahiba Sands, Jebel Akhdar |
+| **The Levant** | Jordan | Petra, Wadi Rum, the Dead Sea, Aqaba |
+| **North Africa** | Egypt, Morocco, Tunisia, Algeria | Cairo and the Pyramids, Luxor and the Nile, the Red Sea · Marrakech, Fes, the Atlas, Merzouga, Essaouira, Chefchaouen · Tunis and Sidi Bou Said, Carthage, El Djem, Djerba, Tozeur · Algiers and the Casbah, Timgad and Djémila, Tassili n'Ajjer and Djanet |
+
+11 countries, 36 destinations. Seed data in `/data`: 27 Season events, 29 composer places, 62 legs, 13 curated routes,
+entry notes and etiquette for every country. Every date, route, leg and entry rule carries `verify: true`.
 
 ---
 
@@ -108,67 +123,14 @@ Private-members'-club feel: 12-col grid, generous vertical rhythm (sections 128�
 /public/plates/*.svg             ← temporary art-directed placeholder images
 ```
 
-## 4. Data types (abridged)
+## 4. Data types
 
-```ts
-type Locale = 'en' | 'ar' | 'fr' | 'de';
-type CountryCode = 'AE' | 'SA' | 'OM' | 'QA' | 'JO' | 'BH' | 'EG';
-
-/** Any claim the owner must confirm before launch. Rendered as a small "[to confirm]" badge in dev/preview builds. */
-interface Claim { text: string; confirm?: true }
-
-interface Country { code: CountryCode; slug: string; name: string; intro: string; weekend: string; destinations: string[] }
-
-interface Destination {
-  slug: string; country: CountryCode; name: string; region?: string;
-  opening: string;               // evocative paragraph
-  arrange: Claim[];               // what your concierge can arrange here
-  bestMonths: number[];           // 1–12
-  serviceSlugs: string[];         // related services
-  image: ImageRef; askPrompt: string;
-}
-
-interface Service {
-  slug: string; name: string; summary: string; body: string[];
-  includes: Claim[]; regions?: CountryCode[]; image: ImageRef; askPrompt: string;
-}
-
-type EventType = 'motorsport' | 'art-culture' | 'music' | 'sport' | 'festival';
-interface SeasonEvent {
-  slug: string; name: string; type: EventType; country: CountryCode; destination?: string;
-  start: string; end: string;    // ISO, approximate
-  dateNote: string;              // e.g. "usually early December"
-  verifyYearly: true;
-  description: string; askPrompt: string;  // "Request access to …" — never "tickets guaranteed"
-}
-
-interface Place { id: string; name: string; country: CountryCode; airport: string; lat: number; lng: number; idealNights: [number, number]; bestMonths: number[] }
-interface FlightLeg { from: string; to: string; approxMinutes: number; mode: 'scheduled' | 'private' | 'drive'; note?: string }
-interface EntryNote { country: CountryCode; summary: string; guidanceOnly: true }
-interface ComposerRoute { slug: string; title: string; places: string[]; nights: number[]; season: string; note: string }
-
-interface EtiquetteGuide {
-  country: CountryCode;
-  sections: { dress: string[]; weekend: string; alcohol: string[]; photography: string[]; greetings: string[]; tipping: string[] };
-}
-
-interface RamadanYear { year: number; start: string; end: string; eidAlFitr: string; verifyYearly: true }
-
-interface Concierge { id: string; name: string; based: string; languages: string[]; regions: CountryCode[]; bio: string; placeholder: true }
-interface Testimonial { quote: string; attribution: string; placeholder: true } // "A family from Geneva"
-
-type Channel = 'whatsapp' | 'callback' | 'email';
-interface ConciergeRequest {
-  message: string; channel: Channel;
-  name?: string; phone?: string; email?: string; preferredTime?: string;
-  context?: { source: 'hero'|'header'|'season'|'composer'|'destination'|'service'|'contact'; ref?: string };
-  locale: Locale; createdAt: string;
-}
-```
-
-Localisable text: every content string is typed as `string` now; `/data` modules export a `get…(locale)` accessor,
-so Arabic/French/German can later be added as parallel files (`destinations.ar.ts`) or swapped for `Record<Locale,string>`
-without touching components.
+Source of truth: [`/data/types.ts`](../data/types.ts). Key points:
+- `RegionId = 'gulf' | 'levant' | 'north-africa'`; `CountryCode` covers the 11 countries.
+- `SeasonEvent` stores a typical month window (wrapping over the new year) and a human `timing` line, not fixed dates.
+- `ComposerLeg`, `ComposerRoute`, `EntryNote`, `EtiquetteGuide`, `SeasonEvent` all extend `Verify` (`verify: true`).
+- Composer place ids are a literal union, so routes and legs that name an unknown place fail to compile.
+- Ramadan and Eid dates live in `/config/ramadan.ts`, flagged verify yearly.
 
 ## 5. Signature features — how they work
 
@@ -191,12 +153,10 @@ without touching components.
   rather than a grid of empty days — more beautiful, works on mobile.
 - Filters: country and type as toggle chips, synced to URL query (`?country=SA&type=motorsport`) so filtered views are shareable.
 - Every card shows "Dates approximate — verify yearly" and a quiet "Request access" → `openAsk("Access to {event}, {year}", {source:'season'})`.
-- Seed (~15): F1 Abu Dhabi, F1 Saudi Arabia (Jeddah), F1 Qatar (Lusail), Riyadh Season, AlUla Moments / Winter at Tantora,
-  Art Dubai, Dubai Shopping Festival, Diriyah Contemporary Art Biennale, Sharjah/Abu Dhabi art week, Qatar Museums season,
-  MDL Beast Soundstorm, Dubai World Cup, Desert Jazz (AlUla), Muscat Nights, Jerash Festival, Bahrain Grand Prix, Dubai Desert Classic.
+- Seed (27, all "verify"), across all three regions, e.g. F1 in Abu Dhabi, Saudi Arabia, Qatar and Bahrain; Riyadh Season; AlUla's winter festivals; Hala February (Kuwait); Abu Simbel Sun Festival; Marrakech film festival; Fes sacred music; Gnaoua in Essaouira; Festival of the Sahara in Douz; Carthage festival; Sebeïba in Djanet. Filters: region, country, type.
 
 ### 3. Journey Composer
-- Pick 2–4 places from ~16 composer places (chips grouped by country).
+- Pick 2–4 places from 29 composer places (chips grouped by region, then country).
 - `lib/composer.ts`: if the selection matches a curated route in `routes.ts`, use its order; otherwise order by a
   nearest-neighbour pass from the westernmost/easternmost gateway (simple, deterministic, explained as "a suggested order").
 - Legs: looked up in `flight-times.ts` (approx. minutes; scheduled vs private where relevant; e.g. Petra legs are via Amman/Aqaba + drive).
