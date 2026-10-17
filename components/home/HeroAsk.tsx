@@ -48,7 +48,7 @@ export function HeroAsk({ labels, askPath }: { labels: AskLabels; askPath: strin
           <CyclingPlaceholder
             examples={requestExamples}
             visible={value.length === 0}
-            className="font-display text-[1.625rem] leading-tight text-ivory-300/70 sm:text-[2rem]"
+            className="font-display text-[1.625rem] leading-tight text-ivory-50/55 sm:text-[2rem]"
           />
         </div>
         <button type="submit" className="btn-brass shrink-0">

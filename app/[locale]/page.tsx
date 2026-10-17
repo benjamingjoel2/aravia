@@ -5,7 +5,6 @@ import { isLocale } from "@/config/i18n";
 import { getDictionary } from "@/lib/i18n";
 import { localePath } from "@/lib/paths";
 import { countriesInRegion, countryByCode, regions } from "@/data/countries";
-import { destinationsIn } from "@/data/destinations";
 import { events } from "@/data/events";
 import { routes } from "@/data/composer";
 import { services } from "@/data/services";
@@ -14,7 +13,11 @@ import { upcomingEvents } from "@/lib/season";
 import { findLeg, formatDuration, placeById } from "@/lib/composer";
 import { monthName } from "@/lib/months";
 import type { Month } from "@/data/types";
-import { DuneNight } from "@/components/home/DuneNight";
+import { RegionPanels } from "@/components/home/RegionPanels";
+import { Parallax } from "@/components/motion/Parallax";
+import { Photo } from "@/components/ui/Photo";
+import type { PhotoKey } from "@/data/photos";
+import type { RegionId } from "@/data/types";
 import { HeroAsk } from "@/components/home/HeroAsk";
 import { AskButton } from "@/components/ask/AskButton";
 import { LatticeFrame, LatticeHover, LatticeRule, StarMark } from "@/components/motif";
@@ -29,6 +32,8 @@ const steps = [
   { title: "Design your journey", body: "Countries, places and pace, shaped around you and refined until it feels right." },
   { title: "Travel with someone always on call", body: "Day and night, one message away, for the small things and the large." },
 ];
+
+const regionPhoto: Record<RegionId, PhotoKey> = { gulf: "dubaiBurjAlArab", levant: "petraSiqTreasury", "north-africa": "duneRipplesGold" };
 
 const featuredRoute = routes.find((r) => r.slug === "dubai-alula-petra")!;
 
@@ -65,7 +70,17 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
     <>
       {/* Hero */}
       <section className="relative flex min-h-[100svh] items-center overflow-hidden pt-24 pb-28" aria-labelledby="hero-title">
-        <DuneNight />
+        <div aria-hidden className="absolute inset-0">
+          <Parallax className="h-full" distance={50}>
+            <div className="relative h-full w-full">
+              <Photo name="dunesDuskSun" sizes="100vw" preload alt="" />
+            </div>
+          </Parallax>
+          <div className="absolute inset-0 bg-[#8a6550] mix-blend-multiply" />
+          <div className="absolute inset-0 bg-midnight-950/30" />
+          <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-midnight-950/80 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-midnight-950 via-midnight-950/70 to-transparent" />
+        </div>
         <div className="container-page relative">
           <div className="mx-auto max-w-4xl text-center">
             <Reveal>
@@ -77,11 +92,11 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
             </Reveal>
             <Reveal delay={0.15}>
               <h1 id="hero-title" className="mt-8 text-display-xl">
-                {brand.promise}
+                Ask, and consider it <em className="text-sand-300">arranged.</em>
               </h1>
             </Reveal>
             <Reveal delay={0.3}>
-              <p className="mx-auto mt-8 max-w-2xl text-lg text-ivory-300">
+              <p className="mx-auto mt-8 max-w-2xl text-lg text-ivory-50/85">
                 One personal concierge designs your journey across the Gulf, the Levant and North Africa, then stays with you, day and
                 night, for anything you need.
               </p>
@@ -154,36 +169,27 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       {/* Where we take you */}
       <section className="section" aria-labelledby="where-title">
         <div className="container-page">
-          <Reveal className="max-w-3xl">
-            <Eyebrow>Where we take you</Eyebrow>
-            <h2 id="where-title" className="mt-6 text-display-md">
-              Eleven countries, from the Gulf to the Atlantic.
-            </h2>
-          </Reveal>
-          <ul className="mt-16 grid gap-6 md:grid-cols-3">
-            {regions.map((r, i) => (
-              <Reveal as="li" key={r.id} delay={i * 0.12}>
-                <LatticeFrame className="h-full">
-                  <Link href={href(`/destinations#${r.id}`)} className="lattice-host group block h-full border border-midnight-800 p-8 sm:p-10">
-                    <LatticeHover />
-                    <h3 className="font-display text-display-sm transition-colors duration-700 group-hover:text-brass-300">{r.name}</h3>
-                    <p className="mt-4 text-ivory-300">{r.intro}</p>
-                    <ul className="mt-8 space-y-1.5 text-sm text-sand-300">
-                      {countriesInRegion(r.id).map((c) => (
-                        <li key={c.code} className="flex items-baseline justify-between gap-4">
-                          <span>{c.name}</span>
-                          <span className="text-xs text-ivory-500">{destinationsIn(c.code).length}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </Link>
-                </LatticeFrame>
-              </Reveal>
-            ))}
-          </ul>
-          <div className="mt-12">
+          <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+            <Reveal className="max-w-3xl">
+              <Eyebrow>Where we take you</Eyebrow>
+              <h2 id="where-title" className="mt-6 text-display-md">
+                Eleven countries, from the Gulf <em className="text-sand-300">to the Atlantic.</em>
+              </h2>
+            </Reveal>
             <MoreLink href={href("/destinations")}>All destinations</MoreLink>
           </div>
+        </div>
+        <div className="mt-14 px-2 md:px-[var(--gutter)]">
+          <RegionPanels
+            regions={regions.map((r) => ({
+              id: r.id,
+              name: r.name,
+              intro: r.intro,
+              href: href(`/destinations#${r.id}`),
+              photo: regionPhoto[r.id],
+              countries: countriesInRegion(r.id).map((c) => c.name),
+            }))}
+          />
         </div>
       </section>
 
@@ -279,7 +285,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       </section>
 
       {/* Discretion */}
-      <section className="section" aria-labelledby="discretion-title">
+      <section className="section bg-rose-900" aria-labelledby="discretion-title">
         <div className="container-page text-center">
           <Reveal>
             <Eyebrow center>Discretion, by design</Eyebrow>
@@ -293,7 +299,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
               "Non-disclosure agreements, on request.",
               "Your enquiry is seen only by your concierge.",
             ].map((t, i) => (
-              <Reveal as="li" key={t} delay={i * 0.1} className="border-t border-midnight-700 pt-6">
+              <Reveal as="li" key={t} delay={i * 0.1} className="border-t border-rose-400/30 pt-6 text-ivory-50/80">
                 {t}
               </Reveal>
             ))}
@@ -305,10 +311,13 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       </section>
 
       {/* Words from guests */}
-      <section className="section border-t border-midnight-800" aria-labelledby="words-title">
+      <section className="section bg-sand-300 text-midnight-950" aria-labelledby="words-title">
         <div className="container-page">
           <Reveal>
-            <Eyebrow>In their words</Eyebrow>
+            <p className="eyebrow flex items-center gap-3 !text-rose-600">
+              <StarMark className="h-3 w-3" />
+              In their words
+            </p>
             <h2 id="words-title" className="sr-only">
               From our guests
             </h2>
@@ -317,8 +326,8 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
             {testimonials.map((t, i) => (
               <Reveal as="li" key={t.attribution} delay={(i % 2) * 0.12}>
                 <figure>
-                  <blockquote className="font-display text-[1.625rem] leading-snug text-ivory-50">“{t.quote}”</blockquote>
-                  <figcaption className="mt-5 text-xs tracking-[0.2em] text-sand-300 uppercase">
+                  <blockquote className="font-display text-[1.75rem] leading-snug text-midnight-950 italic">“{t.quote}”</blockquote>
+                  <figcaption className="mt-5 text-xs tracking-[0.2em] text-midnight-800 uppercase">
                     {t.attribution}
                     {t.placeholder && <ToConfirm label="placeholder" />}
                   </figcaption>
@@ -330,12 +339,15 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       </section>
 
       {/* Closing */}
-      <section className="relative overflow-hidden py-40" aria-labelledby="closing-title">
-        <div aria-hidden className="lattice-field absolute inset-0 text-brass-400 opacity-[0.07]" />
+      <section className="relative overflow-hidden py-48 sm:py-60" aria-labelledby="closing-title">
+        <div aria-hidden className="absolute inset-0">
+          <Photo name="seaNightStars" sizes="100vw" alt="" />
+          <div className="absolute inset-0 bg-midnight-950/55" />
+        </div>
         <div className="container-page relative text-center">
           <Reveal>
             <h2 id="closing-title" className="mx-auto max-w-3xl text-display-lg">
-              Your concierge is one message away. At any hour.
+              Your concierge is one message away. <em className="text-sand-300">At any hour.</em>
             </h2>
           </Reveal>
           <Reveal delay={0.15} className="mt-12">

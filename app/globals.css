@@ -16,6 +16,8 @@
 
   --color-rose-400: #c98f7e;
   --color-rose-600: #9c6656;
+  --color-rose-800: #3a2428;
+  --color-rose-900: #241619;
 
   --color-brass-300: #dcbd82;
   --color-brass-400: #c8a35f;
@@ -255,3 +257,13 @@
   50% { opacity: 0.2; }
 }
 .dn-twinkle { animation: dn-twinkle 7s ease-in-out infinite; }
+
+@layer components {
+  .prose-journal h2 { font-size: var(--text-display-sm); color: var(--color-sand-300); margin-top: 2.2em; }
+  .prose-journal ul { list-style: none; padding: 0; }
+  .prose-journal li { position: relative; padding-inline-start: 1.5rem; }
+  .prose-journal li + li { margin-top: 0.6em; }
+  .prose-journal li::before { content: ""; position: absolute; inset-inline-start: 0; top: 0.7em; width: 0.4rem; height: 0.4rem; border: 1px solid var(--color-brass-400); transform: rotate(45deg); }
+  .prose-journal strong { color: var(--color-ivory-50); font-weight: 400; }
+  .prose-journal blockquote { margin-block: 2em; }
+}

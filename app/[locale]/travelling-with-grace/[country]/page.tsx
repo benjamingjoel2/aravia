@@ -119,7 +119,7 @@ export default async function CountryGrace({ params }: PageProps<"/[locale]/trav
               <ul className="mt-5 space-y-2">
                 {destinationsIn(c.code).map((d) => (
                   <li key={d.slug}>
-                    <Link href={href(`/destinations#${c.slug}`)} className="link-quiet font-display text-xl">
+                    <Link href={href(`/destinations/${c.slug}/${d.slug}`)} className="link-quiet font-display text-xl">
                       {d.name}
                     </Link>
                   </li>
