@@ -41,7 +41,7 @@ export const places = [
 
 export type PlaceId = (typeof places)[number]["id"];
 
-type Leg = ComposerLeg & { from: PlaceId; to: PlaceId };
+export type Leg = Omit<ComposerLeg, "from" | "to"> & { from: PlaceId; to: PlaceId };
 
 /** Undirected: a leg from A to B also serves B to A. Pairs not listed fall back to a distance estimate marked "approximate". */
 export const legs: Leg[] = [
@@ -117,7 +117,7 @@ export const legs: Leg[] = [
   { from: "algiers", to: "djanet", approxMinutes: 150, mode: "flight", verify: true },
 ];
 
-type Route = ComposerRoute & { places: PlaceId[] };
+export type Route = Omit<ComposerRoute, "places"> & { places: PlaceId[] };
 
 export const routes: Route[] = [
   { slug: "dubai-alula-petra", title: "Dubai, AlUla and Petra", places: ["dubai", "alula", "petra"], nights: [3, 3, 2],
