@@ -1,0 +1,205 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Aravia design tokens. Night falling over the desert.
+   Mirrors /docs/PLAN.md §2. Dark only.
+------------------------------------------------------------------- */
+@theme {
+  --color-midnight-950: #0b0e1f;
+  --color-midnight-900: #12162e;
+  --color-midnight-800: #1b2142;
+  --color-midnight-700: #2a315a;
+  --color-midnight-600: #3a4270;
+
+  --color-sand-300: #e3cfa8;
+  --color-sand-500: #c9ae7e;
+
+  --color-rose-400: #c98f7e;
+  --color-rose-600: #9c6656;
+
+  --color-brass-300: #dcbd82;
+  --color-brass-400: #c8a35f;
+  --color-brass-600: #9e7c3f;
+
+  --color-ivory-50: #f6f1e7;
+  --color-ivory-300: #cfc7b8;
+  --color-ivory-500: #a29a8c;
+
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-jost), "Jost", ui-sans-serif, system-ui, sans-serif;
+
+  --ease-sand: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Fluid type scale */
+  --text-eyebrow: 0.75rem;
+  --text-display-xl: clamp(3rem, 2rem + 4.5vw, 5.75rem);
+  --text-display-lg: clamp(2.5rem, 1.8rem + 3vw, 4.25rem);
+  --text-display-md: clamp(2rem, 1.6rem + 1.8vw, 3rem);
+  --text-display-sm: clamp(1.5rem, 1.3rem + 0.9vw, 2rem);
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --gutter: clamp(1.25rem, 0.5rem + 3vw, 3rem);
+    --section: clamp(6rem, 4rem + 8vw, 12rem);
+  }
+
+  html {
+    background: var(--color-midnight-950);
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--color-midnight-950);
+    color: var(--color-ivory-50);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: 0.02em;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  ::selection {
+    background: var(--color-brass-400);
+    color: var(--color-midnight-950);
+  }
+
+  :focus-visible {
+    outline: 1px solid var(--color-brass-400);
+    outline-offset: 4px;
+    border-radius: 1px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: 84rem;
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  .section { padding-block: var(--section); }
+
+  /* Small spaced capitals above headings */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: var(--text-eyebrow);
+    font-weight: 400;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--color-sand-300);
+  }
+
+  /* The one brass action */
+  .btn-brass {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-height: 2.875rem;
+    padding: 0.75rem 1.75rem;
+    border: 1px solid var(--color-brass-400);
+    background: var(--color-brass-400);
+    color: var(--color-midnight-950);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    transition: background-color 600ms var(--ease-sand), color 600ms var(--ease-sand);
+  }
+  .btn-brass:hover { background: transparent; color: var(--color-brass-300); }
+
+  /* Quiet outline action, used sparingly */
+  .btn-quiet {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 2.75rem;
+    padding: 0.625rem 1.25rem;
+    border: 1px solid color-mix(in oklab, var(--color-brass-400) 55%, transparent);
+    color: var(--color-ivory-50);
+    font-size: 0.75rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    transition: border-color 600ms var(--ease-sand), color 600ms var(--ease-sand);
+  }
+  .btn-quiet:hover { border-color: var(--color-brass-400); color: var(--color-brass-300); }
+
+  /* Text link with a hairline underline that draws in from the start edge */
+  .link-quiet {
+    position: relative;
+    color: var(--color-ivory-50);
+    text-decoration: none;
+    background-image: linear-gradient(var(--color-brass-400), var(--color-brass-400));
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    transition: background-size 700ms var(--ease-sand), color 700ms var(--ease-sand);
+  }
+  [dir="rtl"] .link-quiet { background-position: 100% 100%; }
+  .link-quiet:hover, .link-quiet:focus-visible {
+    background-size: 100% 1px;
+    color: var(--color-brass-300);
+  }
+
+  .prose-aravia { max-width: 68ch; color: var(--color-ivory-300); }
+  .prose-aravia > * + * { margin-top: 1.25em; }
+  .prose-aravia h2 { color: var(--color-ivory-50); font-size: var(--text-display-sm); margin-top: 2.5em; }
+  .prose-aravia a { color: var(--color-sand-300); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+}
+
+@layer components {
+  /* Mashrabiya lattice tile (8-point star with connectors), used as a mask so it takes currentColor. */
+  :root { --lattice-tile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none' stroke='%23000' stroke-width='0.75'%3E%3Cpath d='M16 5.5 26.5 16 16 26.5 5.5 16Z'/%3E%3Cpath d='M8.6 8.6h14.8v14.8H8.6Z'/%3E%3Cpath d='M16 0v5.5M16 26.5V32M0 16h5.5M26.5 16H32M0 0l8.6 8.6M32 0l-8.6 8.6M0 32l8.6-8.6M32 32l-8.6-8.6'/%3E%3C/svg%3E"); }
+
+  .lattice-strip {
+    height: 32px;
+    background-color: currentColor;
+    -webkit-mask: var(--lattice-tile) center / 32px 32px repeat-x, linear-gradient(90deg, transparent, #000 25%, #000 75%, transparent);
+    -webkit-mask-composite: source-in;
+    mask: var(--lattice-tile) center / 32px 32px repeat-x, linear-gradient(90deg, transparent, #000 25%, #000 75%, transparent);
+    mask-composite: intersect;
+  }
+
+  .lattice-field {
+    background-color: currentColor;
+    -webkit-mask: var(--lattice-tile) center / 40px 40px repeat, radial-gradient(ellipse at center, #000 10%, transparent 72%);
+    -webkit-mask-composite: source-in;
+    mask: var(--lattice-tile) center / 40px 40px repeat, radial-gradient(ellipse at center, #000 10%, transparent 72%);
+    mask-composite: intersect;
+  }
+
+  /* Hover lattice: a faint field that fades in on hover / focus-within of the parent .lattice-host */
+  .lattice-host { position: relative; isolation: isolate; }
+  .lattice-host > .lattice-hover {
+    position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    color: var(--color-brass-400);
+    opacity: 0;
+    transition: opacity 900ms var(--ease-sand);
+  }
+  .lattice-host:hover > .lattice-hover,
+  .lattice-host:focus-within > .lattice-hover { opacity: 0.14; }
+}
