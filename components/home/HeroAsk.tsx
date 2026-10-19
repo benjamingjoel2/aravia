@@ -25,12 +25,12 @@ export function HeroAsk({ labels, askPath }: { labels: AskLabels; askPath: strin
       }}
       className="w-full"
     >
-      <label htmlFor="hero-ask" className="eyebrow block text-center">
+      <label htmlFor="hero-ask" className="eyebrow block">
         {labels.label}
       </label>
       <div
-        className={`mt-6 flex flex-col gap-4 border-b pb-3 transition-colors duration-700 sm:flex-row sm:items-end ${
-          focused ? "border-brass-400" : "border-ivory-300/40"
+        className={`mt-4 flex items-center gap-2 rounded-full border bg-black/15 p-1.5 ps-5 backdrop-blur-md transition-colors duration-500 sm:ps-7 ${
+          focused ? "border-cream/80" : "border-cream/35"
         }`}
       >
         <div className="relative min-w-0 flex-1">
@@ -43,19 +43,15 @@ export function HeroAsk({ labels, askPath }: { labels: AskLabels; askPath: strin
             onBlur={() => setFocused(false)}
             autoComplete="off"
             maxLength={2000}
-            className="relative z-10 block w-full bg-transparent py-2 font-display text-[1.625rem] leading-tight text-ivory-50 focus:outline-none sm:text-[2rem]"
+            className="relative z-10 block w-full bg-transparent py-2 text-base text-cream focus:outline-none sm:text-lg"
           />
-          <CyclingPlaceholder
-            examples={requestExamples}
-            visible={value.length === 0}
-            className="font-display text-[1.625rem] leading-tight text-ivory-50/55 sm:text-[2rem]"
-          />
+          <CyclingPlaceholder examples={requestExamples} visible={value.length === 0} className="text-base text-cream/70 sm:text-lg" />
         </div>
-        <button type="submit" className="btn-brass shrink-0">
+        <button type="submit" className="btn-primary shrink-0">
           {labels.submit}
         </button>
       </div>
-      <p className="mt-4 text-center text-xs text-ivory-300/80 sm:text-start">{labels.privacy}</p>
+      <p className="mt-3 text-xs text-cream">{labels.privacy}</p>
     </form>
   );
 }

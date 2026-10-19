@@ -13,7 +13,7 @@ export function GiantWordmark({ className = "" }: { className?: string }) {
         textLength="1000"
         lengthAdjust="spacing"
         fill="currentColor"
-        style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: 180, fontWeight: 400 }}
+        style={{ fontFamily: "var(--font-instrument), Georgia, serif", fontSize: 180, fontWeight: 400 }}
       >
         {brand.wordmark}
       </text>

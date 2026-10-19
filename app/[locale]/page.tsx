@@ -62,7 +62,7 @@ function Eyebrow({ children, center = false }: { children: React.ReactNode; cent
 
 function MoreLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <Link href={href} className="link-quiet inline-flex items-center gap-3 text-xs tracking-[0.28em] uppercase">
+    <Link href={href} className="link-quiet inline-flex items-center gap-3 text-xs tracking-[0.16em] font-medium uppercase">
       {children}
       <span aria-hidden className="rtl:rotate-180">
         →
@@ -94,44 +94,47 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           areaServed: regions.flatMap((r) => countriesInRegion(r.id).map((c) => ({ "@type": "Country", name: c.name }))),
         }}
       />
-      {/* Hero: the promise and the request field, the name set edge to edge below */}
-      <section className="relative flex min-h-[100svh] flex-col overflow-hidden" aria-labelledby="hero-title">
-        <div aria-hidden className="absolute inset-0">
-          <Parallax className="h-full" distance={50}>
+      {/* Hero: photograph melting into a taupe panel, the name across the top, the promise stacked at the foot */}
+      <section data-hero-photo data-hero-wordmark className="on-dark relative overflow-hidden bg-taupe text-cream md:min-h-[100svh]" aria-labelledby="hero-title">
+        <div aria-hidden className="relative h-[66svh] min-h-[28rem] md:absolute md:inset-y-0 md:left-0 md:h-auto md:w-[62%]">
+          <Parallax className="h-full" distance={40}>
             <div className="relative h-full w-full">
-              <Photo name="dunesDuskSun" sizes="100vw" preload alt="" />
+              <Photo name="dunesDuskSun" sizes="(min-width: 768px) 62vw, 100vw" preload alt="" className="object-[30%_50%]" />
             </div>
           </Parallax>
-          <div className="absolute inset-0 bg-[#8a6550] mix-blend-multiply" />
-          <div className="absolute inset-0 bg-midnight-950/30" />
-          <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-midnight-950/80 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-midnight-950/90 via-midnight-950/40 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black/40 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-taupe via-taupe/40 to-transparent md:hidden" />
+          <div className="absolute inset-y-0 right-0 hidden w-2/3 bg-gradient-to-r from-transparent via-taupe/55 to-taupe md:block" />
         </div>
 
-        <div className="container-page relative flex flex-1 flex-col justify-center pt-32 pb-10">
-          <div className="mx-auto max-w-4xl text-center">
-            <h1 id="hero-title" className="rise text-display-xl">
-              Ask, and consider it <em className="text-sand-300">arranged.</em>
-            </h1>
-            <p className="rise mx-auto mt-8 max-w-2xl text-lg text-ivory-50/85" style={{ animationDelay: "0.15s" }}>
-              One personal concierge designs your journey across the Arab world, then stays with you, day and night, for anything you
-              need.
-            </p>
-          </div>
-          <div className="rise mx-auto mt-12 w-full max-w-3xl" style={{ animationDelay: "0.3s" }}>
-            <HeroAsk labels={dict.ask} askPath={href("/ask")} />
-          </div>
+        <div aria-hidden className="rise absolute top-24 left-[var(--gutter)] z-10 w-[72%] md:top-7 md:w-[34%]">
+          <GiantWordmark className="text-cream" />
         </div>
 
-        <div className="container-page relative pb-4 sm:pb-6">
-          <div className="rise flex justify-between gap-6 text-[0.6875rem] tracking-[0.24em] text-ivory-50/80 uppercase sm:text-xs" style={{ animationDelay: "0.45s" }}>
-            <p>Private travel concierge</p>
-            <p className="text-end">
-              <span className="hidden sm:inline">The Gulf · The Levant · North Africa</span>
-              <span className="sm:hidden">The Arab world</span>
+        <h1
+          id="hero-title"
+          className="rise absolute top-[calc(66svh-10.5rem)] left-[var(--gutter)] z-10 font-display text-[clamp(2.75rem,1.2rem+5.4vw,6.75rem)] leading-[0.9] whitespace-nowrap uppercase md:top-auto md:bottom-8 md:left-[50%]"
+          style={{ animationDelay: "0.2s" }}
+        >
+          <span className="sr-only">Ask, and consider it arranged.</span>
+          <span aria-hidden className="block">Ask.</span>
+          <span aria-hidden className="block">Consider it</span>
+          <span aria-hidden className="block italic text-sand-200 normal-case">arranged.</span>
+        </h1>
+
+        <div className="container-page relative z-10 pt-10 pb-16 md:grid md:min-h-[100svh] md:grid-cols-12 md:items-start md:pt-[21vh] md:pb-0">
+          <div className="rise md:col-span-5 md:col-start-8" style={{ animationDelay: "0.35s" }}>
+            <p className="max-w-md text-[0.9875rem] leading-relaxed text-cream">
+              One personal concierge designs your journey across the Gulf, the Levant and North Africa, then stays with you, day and
+              night, for anything you need.
             </p>
+            <div className="mt-8">
+              <HeroAsk labels={dict.ask} askPath={href("/ask")} />
+            </div>
+            <Link href={href("/how-it-works")} className="mt-8 inline-flex items-center gap-2 text-[1.0625rem] underline decoration-cream/50 decoration-1 underline-offset-[6px] transition-colors hover:decoration-cream">
+              How it works <span aria-hidden className="rtl:rotate-180">→</span>
+            </Link>
           </div>
-          <GiantWordmark className="rise mt-3 text-ivory-50/95" />
         </div>
       </section>
 
@@ -141,11 +144,11 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           <Reveal className="lg:col-span-6">
             <Eyebrow>Aravia</Eyebrow>
             <h2 id="statement-title" className="mt-6 font-display text-[clamp(2.75rem,1.5rem+4.5vw,5.5rem)] leading-[0.95]">
-              Not a tour operator. <em className="text-sand-300">A concierge.</em>
+              Not a tour operator. <em className="text-accent">A concierge.</em>
             </h2>
           </Reveal>
           <Reveal delay={0.1} className="lg:col-span-6">
-            <p className="text-[clamp(1.25rem,1.05rem+0.7vw,1.75rem)] leading-snug font-light text-ivory-50">
+            <p className="text-[clamp(1.25rem,1.05rem+0.7vw,1.75rem)] leading-snug text-ink-2">
               We do not sell packages. Each guest has one concierge, who designs the journey and then stays with it: a jet, a villa, a
               table, a desert camp for two, a yacht by morning.
             </p>
@@ -166,7 +169,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
             <Reveal className="max-w-3xl">
               <Eyebrow>What we arrange</Eyebrow>
               <h2 id="arrange-title" className="mt-6 text-display-md">
-                Whatever the journey <em className="text-sand-300">asks for.</em>
+                Whatever the journey <em className="text-accent">asks for.</em>
               </h2>
             </Reveal>
             <MoreLink href={href("/services")}>All thirteen services</MoreLink>
@@ -184,7 +187,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
             <Reveal className="max-w-3xl">
               <Eyebrow>Where we take you</Eyebrow>
               <h2 id="where-title" className="mt-6 text-display-md">
-                Eleven countries, from the Gulf <em className="text-sand-300">to the Atlantic.</em>
+                Eleven countries, from the Gulf <em className="text-accent">to the Atlantic.</em>
               </h2>
             </Reveal>
             <MoreLink href={href("/destinations")}>All destinations</MoreLink>
@@ -205,15 +208,15 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       </section>
 
       {/* The Season */}
-      <section className="section border-t border-midnight-800" aria-labelledby="season-title">
+      <section className="section border-t border-line" aria-labelledby="season-title">
         <div className="container-page">
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
             <Reveal className="max-w-2xl">
               <Eyebrow>The Season</Eyebrow>
               <h2 id="season-title" className="mt-6 text-display-md">
-                In the coming <em className="text-sand-300">months.</em>
+                In the coming <em className="text-accent">months.</em>
               </h2>
-              <p className="mt-6 text-ivory-300">
+              <p className="mt-6 text-ink-2">
                 Races, fairs and festivals across the region. We request access on your behalf; we never promise tickets.
               </p>
             </Reveal>
@@ -226,14 +229,14 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       </section>
 
       {/* Journey Composer */}
-      <section className="section bg-midnight-900/40" aria-labelledby="composer-title">
+      <section className="section bg-paper-2" aria-labelledby="composer-title">
         <div className="container-page grid items-center gap-16 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
             <Eyebrow>Journey Composer</Eyebrow>
             <h2 id="composer-title" className="mt-6 text-display-md">
               Many of our guests combine countries.
             </h2>
-            <p className="mt-6 text-ivory-300">
+            <p className="mt-6 text-ink-2">
               Choose two to four places and see a suggested order, the time between them, how long to stay and when to go. Then let your
               concierge refine it.
             </p>
@@ -243,7 +246,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           </Reveal>
           <Reveal delay={0.15} className="lg:col-span-7">
             <LatticeFrame inset="1rem">
-              <div className="border border-midnight-700 p-8 sm:p-12">
+              <div className="border border-line-strong p-8 sm:p-12">
                 <p className="eyebrow">{featuredRoute.title}</p>
                 <ol className="mt-10">
                   {featuredRoute.places.map((id, i) => {
@@ -252,26 +255,26 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                     const leg = next ? findLeg(id, next) : undefined;
                     return (
                       <li key={id} className="relative ps-10">
-                        <StarMark className="absolute start-0 top-1.5 h-4 w-4 text-brass-400" />
-                        {next && <span aria-hidden className="absolute start-[7.5px] top-7 bottom-0 w-px bg-midnight-600" />}
+                        <StarMark className="absolute start-0 top-1.5 h-4 w-4 text-accent" />
+                        {next && <span aria-hidden className="absolute start-[7.5px] top-7 bottom-0 w-px bg-line-strong" />}
                         <div className="flex items-baseline justify-between gap-4">
                           <h3 className="font-display text-2xl">{place.name}</h3>
-                          <span className="text-sm whitespace-nowrap text-ivory-300">
+                          <span className="text-sm whitespace-nowrap text-ink-2">
                             {featuredRoute.nights[i]} {featuredRoute.nights[i] === 1 ? "night" : "nights"}
                           </span>
                         </div>
-                        <p className="text-xs text-ivory-500">{countryByCode[place.country].name}</p>
+                        <p className="text-xs text-ink-3">{countryByCode[place.country].name}</p>
                         {leg && (
-                          <p className="py-6 text-sm text-sand-300">
+                          <p className="py-6 text-sm text-accent">
                             About {formatDuration(leg.approxMinutes)}
-                            {leg.note && <span className="text-ivory-500"> · {leg.note}</span>}
+                            {leg.note && <span className="text-ink-3"> · {leg.note}</span>}
                           </p>
                         )}
                       </li>
                     );
                   })}
                 </ol>
-                <p className="mt-8 border-t border-midnight-800 pt-6 text-xs text-ivory-500">
+                <p className="mt-8 border-t border-line pt-6 text-xs text-ink-3">
                   Best season: {featuredRoute.season}. Times approximate; guidance only, verify.
                 </p>
               </div>
@@ -281,7 +284,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       </section>
 
       {/* Discretion: a short manifesto */}
-      <section className="section bg-rose-900" aria-labelledby="discretion-title">
+      <section className="on-dark section bg-rose-900 text-cream" aria-labelledby="discretion-title">
         <div className="container-page text-center">
           <Reveal>
             <Eyebrow center>Discretion, by design</Eyebrow>
@@ -289,15 +292,15 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
               Discretion, by design
             </h2>
           </Reveal>
-          <ul className="mt-12 font-display text-[clamp(2.25rem,1.2rem+4.2vw,5rem)] leading-[1.05] tracking-[0.04em] text-sand-300 uppercase">
+          <ul className="mt-12 font-display text-[clamp(2.25rem,1.2rem+4.2vw,5rem)] leading-[1.02] text-sand-300">
             {["Never named.", "Never photographed.", "Never shared.", "Always on call."].map((t, i) => (
-              <Reveal as="li" key={t} delay={i * 0.12} className={i === 3 ? "text-ivory-50" : ""}>
+              <Reveal as="li" key={t} delay={i * 0.12} className={i === 3 ? "text-cream italic" : ""}>
                 {t}
               </Reveal>
             ))}
           </ul>
           <Reveal delay={0.4}>
-            <p className="mx-auto mt-14 max-w-xl text-ivory-50/80">
+            <p className="mx-auto mt-14 max-w-xl text-cream/80">
               We never name our clients. They prefer it that way, and so do we. Non-disclosure agreements on request; your enquiry is seen
               only by your concierge.
             </p>
@@ -309,7 +312,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       </section>
 
       {/* Words from guests */}
-      <section className="section bg-sand-300 text-midnight-950" aria-labelledby="words-title">
+      <section className="section bg-sand-200 text-ink" aria-labelledby="words-title">
         <div className="container-page">
           <Reveal>
             <p className="eyebrow flex items-center gap-3 !text-rose-800">
@@ -324,8 +327,8 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
             {testimonials.map((t, i) => (
               <Reveal as="li" key={t.attribution} delay={(i % 2) * 0.12}>
                 <figure>
-                  <blockquote className="font-display text-[1.75rem] leading-snug text-midnight-950 italic">“{t.quote}”</blockquote>
-                  <figcaption className="mt-5 text-xs tracking-[0.2em] text-midnight-800 uppercase">
+                  <blockquote className="font-display text-[2rem] leading-[1.15] text-ink">“{t.quote}”</blockquote>
+                  <figcaption className="mt-5 text-[0.6875rem] font-medium tracking-[0.16em] text-ink-2 uppercase">
                     {t.attribution}
                     {t.placeholder && <ToConfirm label="placeholder" onLight />}
                   </figcaption>
@@ -337,10 +340,10 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       </section>
 
       {/* Closing */}
-      <section className="relative overflow-hidden py-48 sm:py-60" aria-labelledby="closing-title">
+      <section className="on-dark relative overflow-hidden py-48 text-cream sm:py-60" aria-labelledby="closing-title">
         <div aria-hidden className="absolute inset-0">
           <Photo name="seaNightStars" sizes="100vw" alt="" />
-          <div className="absolute inset-0 bg-midnight-950/55" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="container-page relative text-center">
           <Reveal>

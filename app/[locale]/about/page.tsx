@@ -31,7 +31,7 @@ export default async function About({ params }: PageProps<"/[locale]/about">) {
             <span aria-hidden className="relative block aspect-[3/2] w-[38%] max-w-md shrink-0 overflow-hidden sm:w-[30%]">
               <Photo name="petraSiqTreasury" sizes="(min-width: 640px) 30vw, 40vw" alt="" />
             </span>
-            <em className="text-sand-300">through</em>
+            <em className="text-accent">through</em>
           </span>
           <span className="block text-end">Arabia.</span>
         </h1>
@@ -39,9 +39,9 @@ export default async function About({ params }: PageProps<"/[locale]/about">) {
 
       <section className="container-page grid gap-16 pb-28 lg:grid-cols-12">
         <Reveal className="lg:col-span-5">
-          <p className="font-display text-display-sm text-ivory-50">{brand.etymology}</p>
+          <p className="font-display text-display-sm text-ink">{brand.etymology}</p>
         </Reveal>
-        <Reveal delay={0.1} className="space-y-6 text-lg text-ivory-300 lg:col-span-6 lg:col-start-7">
+        <Reveal delay={0.1} className="space-y-6 text-lg text-ink-2 lg:col-span-6 lg:col-start-7">
           <p>
             Aravia began with a simple observation: the Arab world is one of the most rewarding regions on earth to travel, and one of the
             hardest to travel well without someone who knows it.
@@ -53,9 +53,9 @@ export default async function About({ params }: PageProps<"/[locale]/about">) {
           <p>
             We are not a tour operator. We do not sell packages, and we never name our clients. Each guest has one concierge, who designs
             the journey and then stays with it, day and night. Our promise is the one on every page:{" "}
-            <span className="text-ivory-50">{brand.promise}</span>
+            <span className="text-ink">{brand.promise}</span>
           </p>
-          <p className="text-sm text-ivory-500">
+          <p className="text-sm text-ink-3">
             Founding story and team details are placeholders to be confirmed.
             <ToConfirm />
           </p>
@@ -64,7 +64,6 @@ export default async function About({ params }: PageProps<"/[locale]/about">) {
 
       <section className="relative h-[60vh] min-h-[22rem] overflow-hidden" aria-hidden>
         <Photo name="dunesWideSun" sizes="100vw" alt="" />
-        <div className="absolute inset-0 bg-gradient-to-b from-midnight-950 via-transparent to-midnight-950" />
       </section>
 
       <section className="container-page py-28" aria-labelledby="team-title">
@@ -73,15 +72,15 @@ export default async function About({ params }: PageProps<"/[locale]/about">) {
           <h2 id="team-title" className="mt-6 text-display-md">
             The people you will speak to.
           </h2>
-          <p className="mt-6 text-ivory-300">
+          <p className="mt-6 text-ink-2">
             First names only. Our concierges are as discreet about themselves as they are about you.
           </p>
         </div>
-        <ul className="mt-16 grid gap-px bg-midnight-800 sm:grid-cols-2">
+        <ul className="mt-16 grid gap-px bg-line sm:grid-cols-2">
           {concierges.map((c, i) => (
-            <Reveal as="li" key={c.id} delay={(i % 2) * 0.1} className="lattice-host grid grid-cols-[5.5rem_1fr] gap-6 bg-midnight-950 p-8 sm:grid-cols-[7rem_1fr] sm:p-10">
+            <Reveal as="li" key={c.id} delay={(i % 2) * 0.1} className="lattice-host grid grid-cols-[5.5rem_1fr] gap-6 bg-paper p-8 sm:grid-cols-[7rem_1fr] sm:p-10">
               <LatticeHover />
-              <span aria-hidden className="flex aspect-[4/5] items-center justify-center border border-midnight-700 bg-gradient-to-br from-midnight-800 to-rose-900/70 font-display text-5xl text-sand-300">
+              <span aria-hidden className="flex aspect-[4/5] items-center justify-center rounded-lg bg-gradient-to-br from-sand-200 to-rose-200 font-display text-5xl text-accent">
                 {c.name.charAt(0)}
               </span>
               <div>
@@ -89,12 +88,12 @@ export default async function About({ params }: PageProps<"/[locale]/about">) {
                   {c.name}
                   {c.placeholder && <ToConfirm label="placeholder" />}
                 </h3>
-                <p className="mt-1 text-xs tracking-[0.2em] text-sand-300 uppercase">
+                <p className="mt-1 text-xs tracking-[0.16em] font-medium text-accent uppercase">
                   {c.based} · {c.regions}
                 </p>
-                <p className="mt-5 font-display text-xl leading-snug text-ivory-50 italic">“{c.line}”</p>
-                <p className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ivory-300">
-                  <StarMark className="h-3 w-3 text-brass-400" />
+                <p className="mt-5 font-display text-xl leading-snug text-ink italic">“{c.line}”</p>
+                <p className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-2">
+                  <StarMark className="h-3 w-3 text-accent" />
                   {c.languages.join(" · ")}
                 </p>
               </div>
@@ -104,7 +103,7 @@ export default async function About({ params }: PageProps<"/[locale]/about">) {
         <LatticeRule className="my-24" />
         <div className="text-center">
           <p className="mx-auto max-w-xl font-display text-display-sm">One of them will be yours.</p>
-          <AskButton source="page" className="btn-brass mt-10">
+          <AskButton source="page" className="btn-primary mt-10">
             Ask Aravia
           </AskButton>
         </div>

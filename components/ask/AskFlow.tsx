@@ -176,22 +176,22 @@ export function AskFlow({ labels, locale, initialMessage = "", startAt = "compos
                 maxLength={2000}
                 aria-invalid={errors.message ? true : undefined}
                 aria-describedby={errors.message ? `${uid}-message-error` : undefined}
-                className="peer relative z-10 block w-full resize-none border-0 border-b border-midnight-600 bg-transparent px-0 py-3 font-display text-2xl leading-snug text-ivory-50 focus:border-brass-400 focus:outline-none"
+                className="peer relative z-10 block w-full resize-none border-0 border-b border-line-strong bg-transparent px-0 py-3 font-display text-[1.75rem] leading-snug text-ink focus:border-ink focus:outline-none"
               />
               <CyclingPlaceholder
                 examples={requestExamples}
                 visible={message.length === 0}
-                className="!items-start py-3 font-display text-2xl leading-snug text-ivory-500"
+                className="!items-start py-3 font-display text-2xl leading-snug text-ink-3"
               />
             </div>
             {errors.message && (
-              <p id={`${uid}-message-error`} className="mt-3 text-sm text-rose-400">
+              <p id={`${uid}-message-error`} className="mt-3 text-sm text-rose-600">
                 {errors.message}
               </p>
             )}
             <div className="mt-8 flex flex-col-reverse items-stretch gap-5 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-xs text-ivory-500">{labels.privacy}</p>
-              <button type="submit" className="btn-brass shrink-0">
+              <p className="text-xs text-ink-3">{labels.privacy}</p>
+              <button type="submit" className="btn-primary shrink-0">
                 {labels.submit}
               </button>
             </div>
@@ -204,7 +204,7 @@ export function AskFlow({ labels, locale, initialMessage = "", startAt = "compos
             <h2 id={titleId} ref={stepHeading} tabIndex={-1} className={`mt-8 ${headingClass}`}>
               {labels.chooseTitle}
             </h2>
-            <p className="mt-3 text-ivory-300">{labels.chooseIntro}</p>
+            <p className="mt-3 text-ink-2">{labels.chooseIntro}</p>
             <ul className="mt-8 grid gap-3">
               <li>
                 <ChannelOption
@@ -285,7 +285,7 @@ export function AskFlow({ labels, locale, initialMessage = "", startAt = "compos
                       ))}
                     </div>
                     {timezone && (
-                      <p className="mt-3 text-xs text-ivory-500">
+                      <p className="mt-3 text-xs text-ink-3">
                         {labels.timezoneNote}: {timezone.replace(/_/g, " ")}
                       </p>
                     )}
@@ -313,15 +313,15 @@ export function AskFlow({ labels, locale, initialMessage = "", startAt = "compos
               )}
             </div>
             {formError && (
-              <p role="alert" className="mt-6 text-sm text-rose-400">
+              <p role="alert" className="mt-6 text-sm text-rose-600">
                 {formError}
               </p>
             )}
             <div className="mt-10 flex flex-col-reverse items-stretch gap-6 sm:flex-row sm:items-center sm:justify-between">
-              <button type="button" onClick={() => setStep("channel")} className="link-quiet text-xs tracking-[0.28em] uppercase">
+              <button type="button" onClick={() => setStep("channel")} className="link-quiet text-xs tracking-[0.16em] font-medium uppercase">
                 {labels.back}
               </button>
-              <button type="submit" className="btn-brass whitespace-nowrap" disabled={pending} aria-busy={pending}>
+              <button type="submit" className="btn-primary whitespace-nowrap" disabled={pending} aria-busy={pending}>
                 {pending ? labels.sending : labels.send}
               </button>
             </div>
@@ -333,14 +333,14 @@ export function AskFlow({ labels, locale, initialMessage = "", startAt = "compos
             <h2 id={titleId} ref={stepHeading} tabIndex={-1} className={headingClass}>
               {labels.sentTitle}
             </h2>
-            <p className="mt-4 max-w-md text-ivory-300">{labels.sent[channel]}</p>
+            <p className="mt-4 max-w-md text-ink-2">{labels.sent[channel]}</p>
             <div className="mt-10 flex flex-wrap items-center gap-8">
               {channel === "whatsapp" && (
-                <a href={whatsappLink(message)} target="_blank" rel="noopener noreferrer" className="btn-quiet">
+                <a href={whatsappLink(message)} target="_blank" rel="noopener noreferrer" className="btn-secondary">
                   {labels.whatsappAgain}
                 </a>
               )}
-              <button type="button" onClick={reset} className="link-quiet text-xs tracking-[0.28em] uppercase">
+              <button type="button" onClick={reset} className="link-quiet text-xs tracking-[0.16em] font-medium uppercase">
                 {labels.another}
               </button>
             </div>
@@ -353,10 +353,10 @@ export function AskFlow({ labels, locale, initialMessage = "", startAt = "compos
 
 function RequestQuote({ labels, message, onEdit }: { labels: AskLabels; message: string; onEdit: () => void }) {
   return (
-    <div className="border-s border-brass-400/60 ps-5">
+    <div className="border-s border-ink/40 ps-5">
       <p className="eyebrow !text-[0.625rem]">{labels.yourRequest}</p>
-      <p className="mt-2 font-display text-xl leading-snug text-ivory-50">{message}</p>
-      <button type="button" onClick={onEdit} className="link-quiet mt-2 text-xs text-ivory-500">
+      <p className="mt-2 font-display text-xl leading-snug text-ink">{message}</p>
+      <button type="button" onClick={onEdit} className="link-quiet mt-2 text-xs text-ink-3">
         {labels.edit}
       </button>
     </div>
@@ -370,9 +370,9 @@ function Field({ id, label, hint, error, children }: { id: string; label: string
         {label}
       </label>
       {children}
-      {hint && !error && <p className="mt-2 text-xs text-ivory-500">{hint}</p>}
+      {hint && !error && <p className="mt-2 text-xs text-ink-3">{hint}</p>}
       {error && (
-        <p id={`${id}-error`} className="mt-2 text-sm text-rose-400">
+        <p id={`${id}-error`} className="mt-2 text-sm text-rose-600">
           {error}
         </p>
       )}
@@ -386,20 +386,20 @@ function ChannelOption(props: OptionProps) {
   const { title, body, icon, onClick } = props;
   const inner = (
     <>
-      <span className="flex h-11 w-11 shrink-0 items-center justify-center border border-midnight-600 text-brass-400 transition-colors duration-700 group-hover:border-brass-400">
+      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line-strong text-ink transition-colors duration-500 group-hover:border-ink">
         {icon}
       </span>
       <span className="min-w-0">
-        <span className="block font-display text-xl text-ivory-50">{title}</span>
-        <span className="mt-0.5 block text-sm text-ivory-300">{body}</span>
+        <span className="block font-display text-xl text-ink">{title}</span>
+        <span className="mt-0.5 block text-sm text-ink-2">{body}</span>
       </span>
-      <span aria-hidden className="ms-auto text-ivory-500 transition-transform duration-700 group-hover:translate-x-1 rtl:rotate-180">
+      <span aria-hidden className="ms-auto text-ink-3 transition-transform duration-700 group-hover:translate-x-1 rtl:rotate-180">
         →
       </span>
     </>
   );
   const cls =
-    "group flex w-full items-center gap-5 border border-midnight-700 bg-midnight-950/40 p-4 text-start transition-colors duration-700 hover:border-brass-400/70 hover:bg-midnight-800/60 sm:p-5";
+    "group flex w-full items-center gap-5 rounded-xl border border-line bg-paper-2/60 p-4 text-start transition-colors duration-500 hover:border-ink hover:bg-paper-2 sm:p-5";
   if (props.as === "a") {
     return (
       <a href={props.href} target="_blank" rel="noopener noreferrer" onClick={onClick} className={cls}>
