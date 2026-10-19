@@ -18,6 +18,15 @@ export const metadata: Metadata = {
   description: "Meet your concierge, design your journey, and travel with someone always on call. How Aravia works, from the first message to the flight home.",
 };
 
+const faqs: { q: string; a: string }[] = [
+  { q: "Do you sell packages or tours?", a: "No. Every journey is designed for you by your concierge, and nothing is booked until you have agreed to it." },
+  { q: "Why are there no prices on the site?", a: "Because every journey is different. Your concierge will share costs with each proposal, before anything is confirmed." },
+  { q: "Which countries do you cover?", a: "Eleven across the Arab world: Saudi Arabia, the United Arab Emirates, Qatar, Kuwait, Bahrain and Oman in the Gulf; Jordan in the Levant; Egypt, Morocco, Tunisia and Algeria in North Africa." },
+  { q: "How do I reach my concierge while travelling?", a: "However you prefer: WhatsApp, a call or email. Your concierge is one message away, at any hour." },
+  { q: "Can you guarantee access to events or private visits?", a: "We request access on your behalf and confirm only what has been confirmed to us. If something cannot be arranged, we will say so, and suggest what can." },
+  { q: "Will you ever share who I am?", a: "Never. We do not name our clients or publish their photographs, and we sign non-disclosure agreements on request." },
+];
+
 const chapters: { n: string; title: string; lede: string; points: (string | { text: string; confirm: true })[]; photo: PhotoKey }[] = [
   {
     n: "01", title: "Meet your concierge", photo: "sandRipplesClose",
@@ -92,6 +101,28 @@ export default async function HowItWorks({ params }: PageProps<"/[locale]/how-it
           </Reveal>
         </section>
       ))}
+      <section className="container-page grid gap-12 pt-12 pb-24 lg:grid-cols-12" aria-labelledby="faq-title">
+        <div className="lg:col-span-4">
+          <p className="eyebrow">Questions</p>
+          <h2 id="faq-title" className="mt-6 text-display-md">
+            What guests <em className="text-sand-300">ask first.</em>
+          </h2>
+        </div>
+        <div className="border-t border-midnight-700 lg:col-span-8">
+          {faqs.map((f) => (
+            <details key={f.q} className="group border-b border-midnight-700">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 font-display text-2xl transition-colors duration-500 hover:text-brass-300 [&::-webkit-details-marker]:hidden">
+                {f.q}
+                <span aria-hidden className="shrink-0 text-brass-400 transition-transform duration-500 group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+              <p className="max-w-2xl pb-7 text-ivory-300">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
       <section className="container-page pb-32 text-center">
         <LatticeRule className="mb-20" />
         <h2 className="mx-auto max-w-2xl text-display-md">

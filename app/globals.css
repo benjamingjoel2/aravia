@@ -287,3 +287,10 @@
 .fade-in { animation: fade-in 0.7s var(--ease-sand) both; }
 @keyframes fade-up { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 .fade-up { animation: fade-up 0.9s var(--ease-sand) both; }
+
+@layer components {
+  /* Thin brass scrollbar for horizontal carousels */
+  .carousel { scrollbar-width: thin; scrollbar-color: var(--color-brass-600) transparent; }
+  .carousel::-webkit-scrollbar { height: 4px; }
+  .carousel::-webkit-scrollbar-thumb { background: var(--color-brass-600); }
+}
