@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Jost } from "next/font/google";
+import { Instrument_Serif, Inter_Tight } from "next/font/google";
 import { notFound } from "next/navigation";
 import "../globals.css";
 import { brand } from "@/config/brand";
@@ -12,18 +12,18 @@ import { Footer } from "@/components/layout/Footer";
 import { AskProvider } from "@/components/ask/AskProvider";
 import { regionNav } from "@/lib/nav";
 
-const display = Cormorant_Garamond({
+const display = Instrument_Serif({
   subsets: ["latin"],
   weight: ["400"],
   style: ["normal", "italic"],
-  variable: "--font-cormorant",
+  variable: "--font-instrument",
   display: "swap",
 });
 
-const sans = Jost({
+const sans = Inter_Tight({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
-  variable: "--font-jost",
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -34,8 +34,8 @@ export function generateStaticParams() {
 export const dynamicParams = false;
 
 export const viewport: Viewport = {
-  themeColor: "#0b0e1f",
-  colorScheme: "dark",
+  themeColor: "#f3eee4",
+  colorScheme: "light",
 };
 
 export const metadata: Metadata = {
@@ -72,7 +72,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-50 focus:bg-brass-400 focus:px-4 focus:py-2 focus:text-midnight-950"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-50 focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"
         >
           {dict.skipToContent}
         </a>

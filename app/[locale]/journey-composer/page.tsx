@@ -15,7 +15,7 @@ export default function JourneyComposerPage() {
       <header className="max-w-3xl">
         <p className="eyebrow">Journey Composer</p>
         <h1 className="mt-6 text-display-lg">Many journeys, one concierge.</h1>
-        <p className="mt-8 text-lg text-ivory-300">
+        <p className="mt-8 text-lg text-ink-2">
           Many of our guests combine countries: the Gulf with Petra, Cairo with Marrakech, AlUla with the Red Sea. Choose the places that
           call to you and we will suggest an order, the time between them, how long to stay and when to go. Your concierge then makes it
           yours.

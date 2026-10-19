@@ -58,7 +58,7 @@ export function DestinationsMenu({ label, allLabel, href, regions, active }: Pro
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((o) => (o && Date.now() - hoverOpenedAt.current < 800 ? true : !o))}
-        className={`link-quiet inline-flex items-center gap-2 text-[0.8125rem] tracking-[0.14em] ${active || open ? "text-brass-300" : ""}`}
+        className={`link-quiet inline-flex items-center gap-2 text-[0.9375rem] ${active ? "underline decoration-1 underline-offset-[6px]" : ""}`}
       >
         {label}
         <svg aria-hidden viewBox="0 0 12 12" className={`h-2.5 w-2.5 transition-transform duration-500 ${open ? "rotate-180" : ""}`} fill="none" stroke="currentColor">
@@ -69,12 +69,12 @@ export function DestinationsMenu({ label, allLabel, href, regions, active }: Pro
       {open && (
           <div
             id={panelId}
-            className="fade-in absolute inset-x-0 top-full border-y border-midnight-700/70 bg-midnight-950 shadow-[0_40px_80px_-20px_rgb(0_0_0/0.6)]"
+            className="fade-in absolute inset-x-0 top-full border-y border-line bg-paper text-ink shadow-[0_30px_60px_-30px_rgb(27_29_34/0.35)]"
           >
             <div className="container-page grid grid-cols-3 gap-12 py-12">
               {regions.map((region) => (
                 <div key={region.id}>
-                  <Link href={region.href} onClick={() => setOpen(false)} className="eyebrow link-quiet !text-sand-300">
+                  <Link href={region.href} onClick={() => setOpen(false)} className="eyebrow link-quiet !text-accent">
                     {region.name}
                   </Link>
                   <ul className="mt-6 space-y-3">
@@ -92,7 +92,7 @@ export function DestinationsMenu({ label, allLabel, href, regions, active }: Pro
             <div className="container-page pb-10">
               <LatticeRule />
               <p className="mt-6 text-center">
-                <Link href={href} onClick={() => setOpen(false)} className="link-quiet text-xs tracking-[0.28em] uppercase">
+                <Link href={href} onClick={() => setOpen(false)} className="btn-secondary">
                   {allLabel}
                 </Link>
               </p>

@@ -25,7 +25,7 @@ export default async function Contact({ params }: PageProps<"/[locale]/contact">
       <div className="lg:col-span-5">
         <p className="eyebrow">Contact</p>
         <h1 className="mt-6 text-display-lg">
-          Your concierge is one message away. <em className="text-sand-300">At any hour.</em>
+          Your concierge is one message away. <em className="text-accent">At any hour.</em>
         </h1>
         <LatticeRule className="my-12 max-w-xs" />
         <dl className="space-y-8">
@@ -47,16 +47,16 @@ export default async function Contact({ params }: PageProps<"/[locale]/contact">
           </div>
           <div>
             <dt className="field-label">Offices</dt>
-            <dd className="mt-2 text-ivory-300">
+            <dd className="mt-2 text-ink-2">
               [OFFICE ADDRESSES]
               <ToConfirm />
             </dd>
           </div>
           <div>
             <dt className="field-label">Press and partnerships</dt>
-            <dd className="mt-2 text-ivory-300">
+            <dd className="mt-2 text-ink-2">
               Write to{" "}
-              <a href={`mailto:${brand.contact.email}`} className="link-quiet text-sand-300">
+              <a href={`mailto:${brand.contact.email}`} className="link-quiet text-accent">
                 {brand.contact.emailDisplay}
               </a>
               . We do not discuss clients, ever.
@@ -65,8 +65,8 @@ export default async function Contact({ params }: PageProps<"/[locale]/contact">
         </dl>
       </div>
       <div className="lg:col-span-6 lg:col-start-7">
-        <div className="border border-midnight-700 bg-midnight-900/60 p-7 sm:p-12">
-          <StarMark className="mb-6 h-6 w-6 text-brass-400" />
+        <div className="border border-line-strong bg-paper-2 p-7 sm:p-12">
+          <StarMark className="mb-6 h-6 w-6 text-accent" />
           <AskFlow labels={dict.ask} locale={locale} source="contact" />
         </div>
       </div>

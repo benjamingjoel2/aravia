@@ -32,28 +32,28 @@ export default async function AskPage({ params, searchParams }: PageProps<"/[loc
       <div className="lg:col-span-5">
         <p className="eyebrow">Ask Aravia</p>
         <h1 className="mt-6 text-display-lg">{brand.promise}</h1>
-        <p className="mt-8 max-w-md text-ivory-300">
+        <p className="mt-8 max-w-md text-ink-2">
           Tell us what you have in mind, in as many or as few words as you like. Your concierge will take it from there, by WhatsApp, a
           call back or email.
         </p>
         <LatticeRule className="mt-12 max-w-xs" />
-        <p className="mt-10 text-sm text-ivory-300">
+        <p className="mt-10 text-sm text-ink-2">
           Or write directly:{" "}
-          <a href={whatsappLink()} className="link-quiet text-sand-300">
+          <a href={whatsappLink()} className="link-quiet text-accent">
             WhatsApp
           </a>{" "}
           ·{" "}
-          <a href={`mailto:${brand.contact.email}`} className="link-quiet text-sand-300">
+          <a href={`mailto:${brand.contact.email}`} className="link-quiet text-accent">
             {brand.contact.emailDisplay}
           </a>
         </p>
       </div>
 
       <div className="lg:col-span-7">
-        <div className="border border-midnight-700 bg-midnight-900/60 p-7 sm:p-12">
-          <StarMark className="mb-6 h-6 w-6 text-brass-400" />
+        <div className="border border-line-strong bg-paper-2 p-7 sm:p-12">
+          <StarMark className="mb-6 h-6 w-6 text-accent" />
           {error && (
-            <p role="alert" className="mb-8 border-s border-rose-400 ps-4 text-sm text-rose-400">
+            <p role="alert" className="mb-8 border-s border-rose-600 ps-4 text-sm text-rose-600">
               {error}
             </p>
           )}
@@ -94,7 +94,7 @@ export default async function AskPage({ params, searchParams }: PageProps<"/[loc
                 {dict.ask.phone}
               </label>
               <input id="ns-phone" name="phone" type="tel" autoComplete="tel" className="field" />
-              <button type="submit" className="btn-brass justify-self-end">
+              <button type="submit" className="btn-primary justify-self-end">
                 {dict.ask.send}
               </button>
             </form>

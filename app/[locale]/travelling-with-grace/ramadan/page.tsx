@@ -53,8 +53,8 @@ export default async function RamadanPage({ params }: PageProps<"/[locale]/trave
 
   return (
     <div className="container-page pt-40 pb-32 sm:pt-48">
-      <nav aria-label="Breadcrumb" className="text-xs tracking-[0.2em] text-ivory-500 uppercase">
-        <Link href={localePath(locale, "/travelling-with-grace")} className="link-quiet text-ivory-300">
+      <nav aria-label="Breadcrumb" className="text-xs tracking-[0.16em] font-medium text-ink-3 uppercase">
+        <Link href={localePath(locale, "/travelling-with-grace")} className="link-quiet text-ink-2">
           Travelling with grace
         </Link>
       </nav>
@@ -62,29 +62,29 @@ export default async function RamadanPage({ params }: PageProps<"/[locale]/trave
       <header className="mt-8 grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-7">
           <h1 className="text-display-lg">Travelling during Ramadan</h1>
-          <p className="mt-8 text-lg text-ivory-300">
+          <p className="mt-8 text-lg text-ink-2">
             Ramadan is the holiest month of the Islamic year, a time of fasting, reflection and generosity. For a guest it is not a time
             to avoid, but a rare chance to see the region at its most heartfelt. A little understanding is all it asks.
           </p>
         </div>
         <aside className="lg:col-span-5" aria-labelledby="dates-title">
           <LatticeFrame inset="0.75rem">
-            <div className="border border-midnight-700 p-8">
+            <div className="border border-line-strong p-8">
               <h2 id="dates-title" className="eyebrow">
                 Expected dates
               </h2>
               <ul className="mt-6 space-y-6">
                 {upcoming.map((r, i) => (
-                  <li key={r.year} className={i > 0 ? "border-t border-midnight-800 pt-6" : ""}>
+                  <li key={r.year} className={i > 0 ? "border-t border-line pt-6" : ""}>
                     <p className="font-display text-2xl">Ramadan {r.year}</p>
-                    <p className="mt-1 text-ivory-300">
+                    <p className="mt-1 text-ink-2">
                       {fmt(r.start)} to {fmt(r.end)}
                     </p>
-                    <p className="mt-1 text-sm text-sand-300">Eid al-Fitr from {fmt(r.eidAlFitr)}</p>
+                    <p className="mt-1 text-sm text-accent">Eid al-Fitr from {fmt(r.eidAlFitr)}</p>
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-xs leading-relaxed text-ivory-500">
+              <p className="mt-6 text-xs leading-relaxed text-ink-3">
                 Expected, subject to the sighting of the moon, and may differ by a day between countries. Verify yearly.
               </p>
             </div>
@@ -100,8 +100,8 @@ export default async function RamadanPage({ params }: PageProps<"/[locale]/trave
         </h2>
         <ul className="space-y-6 lg:col-span-8">
           {changes.map((c) => (
-            <Reveal as="li" key={c} className="flex gap-4 text-ivory-300">
-              <StarMark className="mt-2 h-3 w-3 shrink-0 text-brass-400" />
+            <Reveal as="li" key={c} className="flex gap-4 text-ink-2">
+              <StarMark className="mt-2 h-3 w-3 shrink-0 text-accent" />
               <span>{c}</span>
             </Reveal>
           ))}
@@ -114,9 +114,9 @@ export default async function RamadanPage({ params }: PageProps<"/[locale]/trave
         </h2>
         <ul className="mt-12 grid gap-10 md:grid-cols-3">
           {beautiful.map((b, i) => (
-            <Reveal as="li" key={b.title} delay={i * 0.12} className="border-t border-midnight-700 pt-6">
-              <h3 className="font-display text-display-sm text-sand-300">{b.title}</h3>
-              <p className="mt-4 text-ivory-300">{b.body}</p>
+            <Reveal as="li" key={b.title} delay={i * 0.12} className="border-t border-line-strong pt-6">
+              <h3 className="font-display text-display-sm text-accent">{b.title}</h3>
+              <p className="mt-4 text-ink-2">{b.body}</p>
             </Reveal>
           ))}
         </ul>
@@ -128,8 +128,8 @@ export default async function RamadanPage({ params }: PageProps<"/[locale]/trave
         </h2>
         <ul className="space-y-6 lg:col-span-8">
           {planning.map((p) => (
-            <Reveal as="li" key={p.text} className="flex gap-4 text-ivory-300">
-              <StarMark className="mt-2 h-3 w-3 shrink-0 text-brass-400" />
+            <Reveal as="li" key={p.text} className="flex gap-4 text-ink-2">
+              <StarMark className="mt-2 h-3 w-3 shrink-0 text-accent" />
               <span>
                 {p.text}
                 {p.confirm && <ToConfirm />}
@@ -144,7 +144,7 @@ export default async function RamadanPage({ params }: PageProps<"/[locale]/trave
           Thinking of travelling during Ramadan or Eid? Your concierge will shape the days around it.
         </p>
         <div className="mt-10">
-          <AskButton source="page" refId="ramadan" prefill="A journey during Ramadan" className="btn-brass">
+          <AskButton source="page" refId="ramadan" prefill="A journey during Ramadan" className="btn-primary">
             Ask Aravia
           </AskButton>
         </div>

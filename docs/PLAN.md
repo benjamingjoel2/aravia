@@ -36,6 +36,8 @@ No chat widgets, no tag managers, no cookie banner needed (no non-essential cook
 
 ## 2. Design system
 
+> **Superseded on 19 October 2026.** The site moved to a light, photo-led system after the design references: paper and ink, Instrument Serif and Inter Tight, pill buttons, solid midnight / Petra rose / sand blocks. Tokens live in `app/globals.css`; see `docs/design-references.md`. The original dark spec below is kept for history.
+
 ### Palette (tokens)
 | Token | Hex | Use |
 |---|---|---|
