@@ -61,7 +61,7 @@ export default async function DestinationPage({ params }: PageProps<"/[locale]/d
       />
       <PageHero
         top={
-          <nav aria-label="Breadcrumb" className="text-xs tracking-[0.2em] text-ivory-300 uppercase">
+          <nav aria-label="Breadcrumb" className="text-xs tracking-[0.16em] font-medium text-ink-2 uppercase">
             <Link href={href("/destinations")} className="link-quiet">
               Where we take you
             </Link>
@@ -81,7 +81,7 @@ export default async function DestinationPage({ params }: PageProps<"/[locale]/d
         <div className="lg:col-span-6">
           {detail && (
             <Reveal>
-              <p className="font-display text-[1.75rem] leading-snug text-ivory-50">{detail.opening}</p>
+              <p className="font-display text-[1.75rem] leading-snug text-ink">{detail.opening}</p>
             </Reveal>
           )}
           <div className="mt-12">
@@ -94,12 +94,12 @@ export default async function DestinationPage({ params }: PageProps<"/[locale]/d
         {detail && (
           <Reveal delay={0.1} className="lg:col-span-5 lg:col-start-8">
             <LatticeFrame inset="0.75rem">
-              <div className="border border-midnight-700 p-8 sm:p-10">
+              <div className="border border-line-strong p-8 sm:p-10">
                 <h2 className="eyebrow">What your concierge can arrange here</h2>
                 <ul className="mt-6 space-y-4">
                   {detail.arrange.map((a) => (
-                    <li key={a.text} className="flex gap-4 text-ivory-50">
-                      <StarMark className="mt-1.5 h-3 w-3 shrink-0 text-brass-400" />
+                    <li key={a.text} className="flex gap-4 text-ink">
+                      <StarMark className="mt-1.5 h-3 w-3 shrink-0 text-accent" />
                       <span>
                         {a.text}
                         {a.confirm && <ToConfirm />}
@@ -107,7 +107,7 @@ export default async function DestinationPage({ params }: PageProps<"/[locale]/d
                     </li>
                   ))}
                 </ul>
-                <AskButton source="destination" refId={d.slug} prefill={d.askPrompt} className="btn-brass mt-10 w-full">
+                <AskButton source="destination" refId={d.slug} prefill={d.askPrompt} className="btn-primary mt-10 w-full">
                   Ask Aravia
                 </AskButton>
               </div>
@@ -121,36 +121,36 @@ export default async function DestinationPage({ params }: PageProps<"/[locale]/d
           <LatticeRule className="mb-12" />
           <h2 className="font-display text-display-sm">{here.length ? "In the Season" : `The Season in ${c.name}`}</h2>
           {[...here, ...nearby].length ? (
-            <ul className="mt-8 divide-y divide-midnight-800 border-y border-midnight-800">
+            <ul className="mt-8 divide-y divide-line border-y border-line">
               {[...here, ...nearby].map((e) => (
                 <li key={e.slug} className="flex flex-col gap-2 py-5 sm:flex-row sm:items-baseline sm:justify-between">
                   <span>
                     <span className="block font-display text-xl">{e.name}</span>
-                    <span className="text-sm text-ivory-500">{e.timing} · verify yearly</span>
+                    <span className="text-sm text-ink-3">{e.timing} · verify yearly</span>
                   </span>
-                  <AskButton source="season" refId={e.slug} prefill={e.askPrompt} startAt="channel" className="link-quiet shrink-0 text-xs tracking-[0.28em] uppercase">
+                  <AskButton source="season" refId={e.slug} prefill={e.askPrompt} startAt="channel" className="link-quiet shrink-0 text-xs tracking-[0.16em] font-medium uppercase">
                     Request access
                   </AskButton>
                 </li>
               ))}
             </ul>
           ) : (
-            <p className="mt-6 text-ivory-300">Nothing is listed yet. Ask, and we will tell you what is on during your dates.</p>
+            <p className="mt-6 text-ink-2">Nothing is listed yet. Ask, and we will tell you what is on during your dates.</p>
           )}
         </div>
         {guide && (
           <aside className="lg:col-span-4 lg:col-start-9">
             <LatticeRule className="mb-12" />
             <h2 className="font-display text-display-sm">As a guest</h2>
-            <ul className="mt-8 space-y-4 text-sm text-ivory-300">
+            <ul className="mt-8 space-y-4 text-sm text-ink-2">
               {[guide.dress[0], guide.photography[0], `The weekend: ${guide.weekend}`].map((t) => (
                 <li key={t} className="flex gap-3">
-                  <StarMark className="mt-1 h-3 w-3 shrink-0 text-brass-400" />
+                  <StarMark className="mt-1 h-3 w-3 shrink-0 text-accent" />
                   <span>{t}</span>
                 </li>
               ))}
             </ul>
-            <Link href={href(`/travelling-with-grace/${c.slug}`)} className="link-quiet mt-8 inline-block text-xs tracking-[0.28em] uppercase">
+            <Link href={href(`/travelling-with-grace/${c.slug}`)} className="link-quiet mt-8 inline-block text-xs tracking-[0.16em] font-medium uppercase">
               Travelling with grace in {c.name} →
             </Link>
           </aside>

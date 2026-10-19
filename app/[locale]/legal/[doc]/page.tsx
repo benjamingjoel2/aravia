@@ -28,7 +28,7 @@ export default async function LegalPage({ params }: PageProps<"/[locale]/legal/[
       <header className="max-w-3xl">
         <p className="eyebrow">Legal</p>
         <h1 className="mt-6 text-display-lg">{d.title}</h1>
-        <p className="mt-6 text-sm text-ivory-500">
+        <p className="mt-6 text-sm text-ink-3">
           Last updated {d.updated}.
           {d.slug !== "credits" && (
             <>
@@ -51,7 +51,7 @@ export default async function LegalPage({ params }: PageProps<"/[locale]/legal/[
           <ul className="mt-10 space-y-3 text-sm">
             {Object.entries(photos).map(([key, p]) => (
               <li key={key}>
-                <span className="text-ivory-50">{p.alt}.</span>{" "}
+                <span className="text-ink">{p.alt}.</span>{" "}
                 <a href={p.credit} rel="noopener noreferrer">
                   View on Unsplash
                 </a>

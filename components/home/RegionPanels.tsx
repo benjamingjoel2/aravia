@@ -16,15 +16,15 @@ export function RegionPanels({ regions }: { regions: RegionPanel[] }) {
           key={r.id}
           className="relative h-[62vh] min-h-[24rem] overflow-hidden md:h-auto md:flex-1 md:transition-[flex-grow] md:duration-[1200ms] md:ease-sand md:hover:flex-[2.2] md:focus-within:flex-[2.2] motion-reduce:transition-none"
         >
-          <Link href={r.href} className="group absolute inset-0 block focus-visible:outline-offset-[-6px]">
+          <Link href={r.href} className="on-dark group absolute inset-0 block text-cream focus-visible:outline-offset-[-6px]">
             <Photo name={r.photo} sizes="(min-width: 768px) 60vw, 100vw" alt="" className="transition-transform duration-[2000ms] ease-sand group-hover:scale-[1.04] motion-reduce:transition-none" />
-            <span aria-hidden className="absolute inset-0 bg-gradient-to-t from-midnight-950/95 via-midnight-950/35 to-midnight-950/10" />
+            <span aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
             <span className="absolute inset-x-0 bottom-0 p-7 sm:p-10">
-              <span className="block font-display text-display-md leading-none tracking-[0.04em] text-ivory-50">{r.name}</span>
-              <span className="mt-4 block max-w-sm text-[0.9375rem] text-ivory-300 md:opacity-0 md:transition-opacity md:duration-700 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">
+              <span className="block font-display text-display-lg leading-none">{r.name}</span>
+              <span className="mt-4 block max-w-sm text-[0.9375rem] text-cream/90 md:opacity-0 md:transition-opacity md:duration-700 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">
                 {r.intro}
               </span>
-              <span className="mt-5 block text-xs tracking-[0.22em] text-sand-300 uppercase">{r.countries.join(" · ")}</span>
+              <span className="mt-5 block text-[0.6875rem] font-medium tracking-[0.16em] text-cream/80 uppercase">{r.countries.join(" · ")}</span>
             </span>
           </Link>
         </li>

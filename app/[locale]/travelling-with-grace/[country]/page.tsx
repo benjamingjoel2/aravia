@@ -50,8 +50,8 @@ export default async function CountryGrace({ params }: PageProps<"/[locale]/trav
 
   return (
     <div className="container-page pt-40 pb-32 sm:pt-48">
-      <nav aria-label="Breadcrumb" className="text-xs tracking-[0.2em] text-ivory-500 uppercase">
-        <Link href={href("/travelling-with-grace")} className="link-quiet text-ivory-300">
+      <nav aria-label="Breadcrumb" className="text-xs tracking-[0.16em] font-medium text-ink-3 uppercase">
+        <Link href={href("/travelling-with-grace")} className="link-quiet text-ink-2">
           Travelling with grace
         </Link>
         <span aria-hidden> / </span>
@@ -60,7 +60,7 @@ export default async function CountryGrace({ params }: PageProps<"/[locale]/trav
 
       <header className="mt-8 max-w-3xl">
         <h1 className="text-display-lg">{c.name}</h1>
-        <p className="mt-8 text-lg text-ivory-300">{guide.intro}</p>
+        <p className="mt-8 text-lg text-ink-2">{guide.intro}</p>
       </header>
 
       <div className="mt-20 grid gap-16 lg:grid-cols-12">
@@ -68,13 +68,13 @@ export default async function CountryGrace({ params }: PageProps<"/[locale]/trav
           <ul className="sticky top-28 space-y-3 text-sm">
             {sections.map((s) => (
               <li key={s.id}>
-                <a href={`#${s.id}`} className="link-quiet text-ivory-300">
+                <a href={`#${s.id}`} className="link-quiet text-ink-2">
                   {s.title}
                 </a>
               </li>
             ))}
             <li>
-              <a href="#entry" className="link-quiet text-ivory-300">
+              <a href="#entry" className="link-quiet text-ink-2">
                 Entry
               </a>
             </li>
@@ -84,14 +84,14 @@ export default async function CountryGrace({ params }: PageProps<"/[locale]/trav
         <div className="lg:col-span-8">
           {sections.map((s) => (
             <Reveal key={s.id}>
-              <section id={s.id} aria-labelledby={`${s.id}-title`} className="scroll-mt-28 border-t border-midnight-800 py-10">
-                <h2 id={`${s.id}-title`} className="font-display text-display-sm text-sand-300">
+              <section id={s.id} aria-labelledby={`${s.id}-title`} className="scroll-mt-28 border-t border-line py-10">
+                <h2 id={`${s.id}-title`} className="font-display text-display-sm text-accent">
                   {s.title}
                 </h2>
                 <ul className="mt-6 space-y-4">
                   {s.items.map((item) => (
-                    <li key={item} className="flex gap-4 text-ivory-300">
-                      <StarMark className="mt-2 h-3 w-3 shrink-0 text-brass-400" />
+                    <li key={item} className="flex gap-4 text-ink-2">
+                      <StarMark className="mt-2 h-3 w-3 shrink-0 text-accent" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -101,17 +101,17 @@ export default async function CountryGrace({ params }: PageProps<"/[locale]/trav
           ))}
 
           {entry && (
-            <section id="entry" aria-labelledby="entry-title" className="scroll-mt-28 border-t border-midnight-800 py-10">
-              <h2 id="entry-title" className="font-display text-display-sm text-sand-300">
+            <section id="entry" aria-labelledby="entry-title" className="scroll-mt-28 border-t border-line py-10">
+              <h2 id="entry-title" className="font-display text-display-sm text-accent">
                 Entry
               </h2>
-              <p className="mt-6 text-ivory-300">{entry.summary}</p>
-              {entry.caution && <p className="mt-4 text-rose-400">{entry.caution}</p>}
-              <p className="mt-4 text-xs tracking-[0.16em] text-ivory-500 uppercase">Guidance only, verify. Rules depend on your passport.</p>
+              <p className="mt-6 text-ink-2">{entry.summary}</p>
+              {entry.caution && <p className="mt-4 text-rose-600">{entry.caution}</p>}
+              <p className="mt-4 text-xs tracking-[0.16em] text-ink-3 uppercase">Guidance only, verify. Rules depend on your passport.</p>
             </section>
           )}
 
-          <p className="mt-6 text-sm text-ivory-500">Customs and laws change. Everything on this page is a guide only: verify before you travel.</p>
+          <p className="mt-6 text-sm text-ink-3">Customs and laws change. Everything on this page is a guide only: verify before you travel.</p>
 
           <LatticeRule className="my-16" />
 
@@ -129,8 +129,8 @@ export default async function CountryGrace({ params }: PageProps<"/[locale]/trav
               </ul>
             </div>
             <div className="sm:text-end">
-              <p className="text-ivory-300">Travelling to {c.name}? Your concierge will brief you before you go.</p>
-              <AskButton source="page" refId={`grace-${c.slug}`} prefill={`A journey to ${c.name}`} className="btn-quiet mt-6">
+              <p className="text-ink-2">Travelling to {c.name}? Your concierge will brief you before you go.</p>
+              <AskButton source="page" refId={`grace-${c.slug}`} prefill={`A journey to ${c.name}`} className="btn-secondary mt-6">
                 Ask Aravia
               </AskButton>
             </div>

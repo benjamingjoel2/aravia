@@ -37,7 +37,7 @@ function MonthStrip({ event }: { event: SeasonEvent }) {
   return (
     <div aria-hidden className="flex gap-[3px]">
       {SEASON_ORDER.map((m) => (
-        <span key={m} title={monthName(m)} className={`h-1 flex-1 ${on.has(m) ? "bg-brass-400" : "bg-midnight-700"}`} />
+        <span key={m} title={monthName(m)} className={`h-1 flex-1 ${on.has(m) ? "bg-brass-400" : "bg-line-strong"}`} />
       ))}
     </div>
   );
@@ -71,7 +71,7 @@ export function SeasonCalendar({ events }: { events: SeasonEvent[] }) {
   return (
     <div>
       {/* Filters */}
-      <div className="grid gap-6 border-y border-midnight-800 py-8">
+      <div className="grid gap-6 border-y border-line py-8">
         <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Region">
           <span className="field-label w-full sm:me-3 sm:w-20">Region</span>
           <Chip active={!filters.region} onClick={() => update({ ...filters, region: undefined, country: undefined })}>
@@ -107,12 +107,12 @@ export function SeasonCalendar({ events }: { events: SeasonEvent[] }) {
         </div>
       </div>
 
-      <p className="mt-6 text-sm text-ivory-500" aria-live="polite">
+      <p className="mt-6 text-sm text-ink-3" aria-live="polite">
         {filtered.length} {filtered.length === 1 ? "event" : "events"}
         {anyFilter && (
           <>
             {" · "}
-            <button type="button" onClick={() => update({})} className="link-quiet text-ivory-300">
+            <button type="button" onClick={() => update({})} className="link-quiet text-ink-2">
               Show everything
             </button>
           </>
@@ -122,10 +122,10 @@ export function SeasonCalendar({ events }: { events: SeasonEvent[] }) {
       {/* Timeline */}
       <div className="mt-12">
         {byMonth.length === 0 && (
-          <div className="border border-midnight-800 p-10 text-center">
+          <div className="border border-line p-10 text-center">
             <p className="font-display text-2xl">Nothing listed for this selection.</p>
-            <p className="mt-3 text-ivory-300">The season is wider than this page. Ask, and we will tell you what is on.</p>
-            <AskButton source="season" className="btn-quiet mt-8">
+            <p className="mt-3 text-ink-2">The season is wider than this page. Ask, and we will tell you what is on.</p>
+            <AskButton source="season" className="btn-secondary mt-8">
               Ask Aravia
             </AskButton>
           </div>
@@ -140,38 +140,38 @@ export function SeasonCalendar({ events }: { events: SeasonEvent[] }) {
               exit={reduce ? undefined : { opacity: 0 }}
               transition={{ duration: 0.6 }}
               aria-labelledby={`month-${group.month}`}
-              className="grid gap-6 border-t border-midnight-800 py-12 lg:grid-cols-12"
+              className="grid gap-6 border-t border-line py-12 lg:grid-cols-12"
             >
-              <h2 id={`month-${group.month}`} className="font-display text-display-sm text-sand-300 lg:col-span-3 lg:sticky lg:top-28 lg:self-start">
+              <h2 id={`month-${group.month}`} className="font-display text-display-sm text-accent lg:col-span-3 lg:sticky lg:top-28 lg:self-start">
                 {monthName(group.month)}
               </h2>
-              <ul className="grid gap-px bg-midnight-800 sm:grid-cols-2 lg:col-span-9">
+              <ul className="grid gap-px bg-line sm:grid-cols-2 lg:col-span-9">
                 {group.items.map((e) => (
-                  <li key={e.slug} className="lattice-host flex flex-col bg-midnight-950 p-7">
+                  <li key={e.slug} className="lattice-host flex flex-col bg-paper p-7">
                     <LatticeHover />
-                    <p className="text-xs tracking-[0.2em] text-brass-400 uppercase">
+                    <p className="text-xs tracking-[0.16em] font-medium text-accent uppercase">
                       {typeName[e.type]}
-                      <span className="text-ivory-500"> · {countryByCode[e.country].name}</span>
+                      <span className="text-ink-3"> · {countryByCode[e.country].name}</span>
                     </p>
                     <h3 className="mt-4 font-display text-2xl leading-tight">{e.name}</h3>
-                    <p className="mt-3 text-[0.9375rem] text-ivory-300">{e.description}</p>
-                    <p className="mt-4 flex-1 text-sm text-sand-300">{e.timing}.</p>
+                    <p className="mt-3 text-[0.9375rem] text-ink-2">{e.description}</p>
+                    <p className="mt-4 flex-1 text-sm text-accent">{e.timing}.</p>
                     <div className="mt-6">
                       <MonthStrip event={e} />
-                      <p className="mt-2 text-[0.6875rem] tracking-[0.16em] text-ivory-500 uppercase">Dates vary · verify yearly</p>
+                      <p className="mt-2 text-[0.6875rem] tracking-[0.16em] text-ink-3 uppercase">Dates vary · verify yearly</p>
                     </div>
                     <AskButton
                       source="season"
                       refId={e.slug}
                       prefill={e.askPrompt}
                       startAt="channel"
-                      className="link-quiet mt-6 self-start text-xs tracking-[0.28em] uppercase"
+                      className="link-quiet mt-6 self-start text-xs tracking-[0.16em] font-medium uppercase"
                     >
                       Request access
                     </AskButton>
                   </li>
                 ))}
-                {group.items.length % 2 === 1 && <li aria-hidden className="hidden bg-midnight-950 sm:block" />}
+                {group.items.length % 2 === 1 && <li aria-hidden className="hidden bg-paper sm:block" />}
               </ul>
             </motion.section>
           ))}

@@ -48,7 +48,7 @@ export default async function JournalPost({ params }: PageProps<"/[locale]/journ
       />
       <PageHero
         top={
-          <nav aria-label="Breadcrumb" className="text-xs tracking-[0.2em] text-ivory-300 uppercase">
+          <nav aria-label="Breadcrumb" className="text-xs tracking-[0.16em] font-medium text-ink-2 uppercase">
             <Link href={localePath(locale, "/journal")} className="link-quiet">
               Journal
             </Link>
@@ -59,7 +59,7 @@ export default async function JournalPost({ params }: PageProps<"/[locale]/journ
         photo={p.photo}
       />
       <div className="container-page pt-10 pb-24">
-        <p className="mx-auto max-w-[68ch] font-display text-display-sm text-ivory-50">{p.description}</p>
+        <p className="mx-auto max-w-[68ch] font-display text-display-sm text-ink">{p.description}</p>
         <div className="prose-aravia prose-journal mx-auto mt-12 text-lg">
           <Content />
         </div>
@@ -67,7 +67,7 @@ export default async function JournalPost({ params }: PageProps<"/[locale]/journ
           <LatticeRule />
           <div className="mt-12 flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="font-display text-2xl">Would you like this arranged?</p>
-            <AskButton source="page" refId={`journal-${p.slug}`} prefill={p.title} className="btn-brass">
+            <AskButton source="page" refId={`journal-${p.slug}`} prefill={p.title} className="btn-primary">
               Ask Aravia
             </AskButton>
           </div>
@@ -79,7 +79,7 @@ export default async function JournalPost({ params }: PageProps<"/[locale]/journ
         </h2>
         <ul className="mt-6 grid gap-6 sm:grid-cols-3">
           {others.map((o) => (
-            <li key={o.slug} className="border-t border-midnight-800 pt-5">
+            <li key={o.slug} className="border-t border-line pt-5">
               <Link href={localePath(locale, `/journal/${o.slug}`)} className="link-quiet font-display text-xl">
                 {o.title}
               </Link>

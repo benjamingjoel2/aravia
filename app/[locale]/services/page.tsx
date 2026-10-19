@@ -44,7 +44,7 @@ export default async function ServicesPage({ params }: PageProps<"/[locale]/serv
         <LatticeRule className="my-24" />
         <div className="text-center">
           <p className="mx-auto max-w-xl font-display text-display-sm">Something not on this list?</p>
-          <AskButton source="service" className="btn-brass mt-10">
+          <AskButton source="service" className="btn-primary mt-10">
             Ask Aravia
           </AskButton>
         </div>
