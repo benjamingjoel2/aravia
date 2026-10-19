@@ -18,3 +18,14 @@ Six Senses could not be loaded (access denied, archive copy failed).
 
 Every one of these sites is led by photography. Typography and layout support the image; they don't replace it.
 Aravia's design system is in place, but the site has no photography yet, which is the main gap these references show.
+
+## Second round (19 October 2026)
+
+| Site | Status | What was borrowed |
+|---|---|---|
+| **Eagle's Nest** (eaglesnest.sergesyutkin.com) | Reviewed (layout and type; its media host was blocked) | The name set edge to edge along the bottom of the hero with small corner labels; big serif headings beside a large sans lede; offerings as hairline rows with a small photo; words scrolling over a pinned photograph; a stacked uppercase manifesto; a sideways-scrolling schedule; an FAQ. |
+| **Six Senses** (sixsenses.com) | Not reviewed | The site's bot protection returns "Access Denied"; archived copies unreachable from this environment. |
+| **Elementis** (elementis.co) | Not reviewed | Its content API and image host are blocked by the environment's network policy; www returned 502. |
+| **Sabbatical** (sabbatical.travel) | Not reviewed | Blocked by the environment's network policy. |
+
+Applied on the homepage: the ARAVIA wordmark across the hero, "Not a tour operator. *A concierge.*", How it works over a pinned photograph, six offering rows, the Season as a sideways carousel, and the discretion manifesto (*Never named. Never photographed. Never shared. Always on call.*). How it works gained an FAQ.
