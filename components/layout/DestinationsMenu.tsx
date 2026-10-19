@@ -58,7 +58,7 @@ export function DestinationsMenu({ label, allLabel, href, regions, active }: Pro
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((o) => (o && Date.now() - hoverOpenedAt.current < 800 ? true : !o))}
-        className={`link-quiet inline-flex items-center gap-2 text-[0.9375rem] ${active ? "underline decoration-1 underline-offset-[6px]" : ""}`}
+        className={`inline-flex items-center gap-2 text-[1.0625rem] underline decoration-1 underline-offset-[7px] transition-colors duration-300 hover:decoration-current ${active || open ? "decoration-current" : "decoration-current/35"}`}
       >
         {label}
         <svg aria-hidden viewBox="0 0 12 12" className={`h-2.5 w-2.5 transition-transform duration-500 ${open ? "rotate-180" : ""}`} fill="none" stroke="currentColor">

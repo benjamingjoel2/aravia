@@ -25,11 +25,11 @@ export function HeroAsk({ labels, askPath }: { labels: AskLabels; askPath: strin
       }}
       className="w-full"
     >
-      <label htmlFor="hero-ask" className="eyebrow block text-center">
+      <label htmlFor="hero-ask" className="eyebrow block">
         {labels.label}
       </label>
       <div
-        className={`mt-5 flex items-center gap-2 rounded-full border bg-black/20 p-1.5 ps-5 backdrop-blur-md transition-colors duration-500 sm:ps-7 ${
+        className={`mt-4 flex items-center gap-2 rounded-full border bg-black/15 p-1.5 ps-5 backdrop-blur-md transition-colors duration-500 sm:ps-7 ${
           focused ? "border-cream/80" : "border-cream/35"
         }`}
       >
@@ -51,7 +51,7 @@ export function HeroAsk({ labels, askPath }: { labels: AskLabels; askPath: strin
           {labels.submit}
         </button>
       </div>
-      <p className="mt-4 text-center text-xs text-cream/75">{labels.privacy}</p>
+      <p className="mt-3 text-xs text-cream">{labels.privacy}</p>
     </form>
   );
 }

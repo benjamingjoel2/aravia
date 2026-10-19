@@ -29,3 +29,11 @@ Aravia's design system is in place, but the site has no photography yet, which i
 | **Sabbatical** (sabbatical.travel) | Not reviewed | Blocked by the environment's network policy. |
 
 Applied on the homepage: the ARAVIA wordmark across the hero, "Not a tour operator. *A concierge.*", How it works over a pinned photograph, six offering rows, the Season as a sideways carousel, and the discretion manifesto (*Never named. Never photographed. Never shared. Always on call.*). How it works gained an FAQ.
+
+## Third round (19 October 2026)
+
+| Site | Status | What was borrowed |
+|---|---|---|
+| **Sylver Rappresentanze** (sylverrappresentanze.it) | Hero reviewed; the rest of the page, its fonts and images come from blocked hosts | A split hero: photograph melting into a warm taupe panel that holds the introduction; a giant light wordmark across the top-left in place of the small logo; a stacked uppercase serif statement running off the edge at the foot; navigation as underlined text links with a second row of smaller links stacked beneath. |
+
+Applied: the homepage hero is now the split composition (taupe #7E6852, chosen so cream text passes 4.5:1, where Sylver's lighter taupe does not); "ASK. / CONSIDER IT / *arranged.*" stacked at the foot; the small logo steps aside on desktop while the giant wordmark shows; underlined navigation with Travelling with grace, About, Journal and Contact stacked beneath at the top of every page.
