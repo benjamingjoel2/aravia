@@ -15,16 +15,19 @@ import { services } from "@/data/services";
 import { testimonials } from "@/data/testimonials";
 import { upcomingEvents } from "@/lib/season";
 import { findLeg, formatDuration, placeById } from "@/lib/composer";
-import { monthName } from "@/lib/months";
 import type { Month } from "@/data/types";
 import { RegionPanels } from "@/components/home/RegionPanels";
+import { GiantWordmark } from "@/components/home/GiantWordmark";
+import { StickySteps } from "@/components/home/StickySteps";
+import { OfferingRows } from "@/components/home/OfferingRows";
+import { SeasonCarousel } from "@/components/home/SeasonCarousel";
 import { Parallax } from "@/components/motion/Parallax";
 import { Photo } from "@/components/ui/Photo";
 import type { PhotoKey } from "@/data/photos";
 import type { RegionId } from "@/data/types";
 import { HeroAsk } from "@/components/home/HeroAsk";
 import { AskButton } from "@/components/ask/AskButton";
-import { LatticeFrame, LatticeHover, LatticeRule, StarMark } from "@/components/motif";
+import { LatticeFrame, StarMark } from "@/components/motif";
 import { Reveal } from "@/components/motion/Reveal";
 import { ToConfirm } from "@/components/ui/ToConfirm";
 
@@ -40,6 +43,11 @@ const steps = [
 ];
 
 const regionPhoto: Record<RegionId, PhotoKey> = { gulf: "dubaiBurjAlArab", levant: "petraSiqTreasury", "north-africa": "duneRipplesGold" };
+
+/** Six offerings for the homepage; the full list lives on /services. */
+const featuredServices = ["private-aviation", "villas-palaces-suites", "yachts", "desert-camps", "events-access", "heritage"].map(
+  (slug) => services.find((s) => s.slug === slug)!,
+);
 
 const featuredRoute = routes.find((r) => r.slug === "dubai-alula-petra")!;
 
@@ -70,7 +78,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
   const href = (p: string) => localePath(locale, p);
 
   const month = (new Date().getMonth() + 1) as Month;
-  const soon = upcomingEvents(events, month, 3).slice(0, 4);
+  const soon = upcomingEvents(events, month, 4).slice(0, 8);
 
   return (
     <>
@@ -86,8 +94,8 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           areaServed: regions.flatMap((r) => countriesInRegion(r.id).map((c) => ({ "@type": "Country", name: c.name }))),
         }}
       />
-      {/* Hero */}
-      <section className="relative flex min-h-[100svh] items-center overflow-hidden pt-24 pb-28" aria-labelledby="hero-title">
+      {/* Hero: the promise and the request field, the name set edge to edge below */}
+      <section className="relative flex min-h-[100svh] flex-col overflow-hidden" aria-labelledby="hero-title">
         <div aria-hidden className="absolute inset-0">
           <Parallax className="h-full" distance={50}>
             <div className="relative h-full w-full">
@@ -97,90 +105,75 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           <div className="absolute inset-0 bg-[#8a6550] mix-blend-multiply" />
           <div className="absolute inset-0 bg-midnight-950/30" />
           <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-midnight-950/80 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-midnight-950 via-midnight-950/70 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-midnight-950/90 via-midnight-950/40 to-transparent" />
         </div>
-        <div className="container-page relative">
+
+        <div className="container-page relative flex flex-1 flex-col justify-center pt-32 pb-10">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="rise">
-              <p className="eyebrow">
-                <span className="block sm:inline">Private travel concierge</span>
-                <span aria-hidden className="hidden sm:inline"> · </span>
-                <span className="mt-2 block sm:mt-0 sm:inline">The Arab world</span>
-              </p>
-            </div>
-            <div className="rise" style={{ animationDelay: "0.1s" }}>
-              <h1 id="hero-title" className="mt-8 text-display-xl">
-                Ask, and consider it <em className="text-sand-300">arranged.</em>
-              </h1>
-            </div>
-            <div className="rise" style={{ animationDelay: "0.25s" }}>
-              <p className="mx-auto mt-8 max-w-2xl text-lg text-ivory-50/85">
-                One personal concierge designs your journey across the Gulf, the Levant and North Africa, then stays with you, day and
-                night, for anything you need.
-              </p>
-            </div>
+            <h1 id="hero-title" className="rise text-display-xl">
+              Ask, and consider it <em className="text-sand-300">arranged.</em>
+            </h1>
+            <p className="rise mx-auto mt-8 max-w-2xl text-lg text-ivory-50/85" style={{ animationDelay: "0.15s" }}>
+              One personal concierge designs your journey across the Arab world, then stays with you, day and night, for anything you
+              need.
+            </p>
           </div>
-          <div className="rise mx-auto mt-14 max-w-3xl" style={{ animationDelay: "0.4s" }}>
+          <div className="rise mx-auto mt-12 w-full max-w-3xl" style={{ animationDelay: "0.3s" }}>
             <HeroAsk labels={dict.ask} askPath={href("/ask")} />
           </div>
         </div>
-      </section>
 
-      {/* Statement and how it works */}
-      <section className="section" aria-labelledby="how-title">
-        <div className="container-page">
-          <Reveal>
-            <p className="max-w-4xl font-display text-display-md leading-[1.2] text-ivory-50">
-              We are not a tour operator, and we do not sell packages. Each guest has one concierge, who designs the journey and then
-              stays with it: <span className="text-sand-300">a jet, a villa, a table, a desert camp for two, a yacht by morning.</span>
+        <div className="container-page relative pb-4 sm:pb-6">
+          <div className="rise flex justify-between gap-6 text-[0.6875rem] tracking-[0.24em] text-ivory-50/80 uppercase sm:text-xs" style={{ animationDelay: "0.45s" }}>
+            <p>Private travel concierge</p>
+            <p className="text-end">
+              <span className="hidden sm:inline">The Gulf · The Levant · North Africa</span>
+              <span className="sm:hidden">The Arab world</span>
             </p>
-          </Reveal>
-          <LatticeRule className="my-20" />
-          <h2 id="how-title" className="sr-only">
-            How it works
-          </h2>
-          <ol className="grid gap-14 md:grid-cols-3 md:gap-10">
-            {steps.map((s, i) => (
-              <Reveal as="li" key={s.title} delay={i * 0.12}>
-                <span className="font-display text-display-sm text-brass-400">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="mt-4 font-display text-2xl">{s.title}</h3>
-                <p className="mt-3 text-ivory-300">{s.body}</p>
-              </Reveal>
-            ))}
-          </ol>
-          <div className="mt-14">
-            <MoreLink href={href("/how-it-works")}>How it works</MoreLink>
           </div>
+          <GiantWordmark className="rise mt-3 text-ivory-50/95" />
         </div>
       </section>
 
-      {/* What we arrange */}
-      <section className="section border-t border-midnight-800 bg-midnight-900/40" aria-labelledby="arrange-title">
-        <div className="container-page grid gap-16 lg:grid-cols-12">
-          <Reveal className="lg:col-span-4">
-            <Eyebrow>What we arrange</Eyebrow>
-            <h2 id="arrange-title" className="mt-6 text-display-md">
-              Whatever the journey asks for.
+      {/* Statement */}
+      <section className="section" aria-labelledby="statement-title">
+        <div className="container-page grid gap-10 lg:grid-cols-12 lg:items-end">
+          <Reveal className="lg:col-span-6">
+            <Eyebrow>Aravia</Eyebrow>
+            <h2 id="statement-title" className="mt-6 font-display text-[clamp(2.75rem,1.5rem+4.5vw,5.5rem)] leading-[0.95]">
+              Not a tour operator. <em className="text-sand-300">A concierge.</em>
             </h2>
-            <p className="mt-6 text-ivory-300">If it can be arranged, your concierge arranges it. If it cannot, we will say so, and suggest what can.</p>
-            <div className="mt-10">
-              <MoreLink href={href("/services")}>Everything we arrange</MoreLink>
+          </Reveal>
+          <Reveal delay={0.1} className="lg:col-span-6">
+            <p className="text-[clamp(1.25rem,1.05rem+0.7vw,1.75rem)] leading-snug font-light text-ivory-50">
+              We do not sell packages. Each guest has one concierge, who designs the journey and then stays with it: a jet, a villa, a
+              table, a desert camp for two, a yacht by morning.
+            </p>
+            <div className="mt-8">
+              <MoreLink href={href("/how-it-works")}>How it works</MoreLink>
             </div>
           </Reveal>
-          <ul className="grid sm:grid-cols-2 lg:col-span-8">
-            {services.map((s) => (
-              <li key={s.slug} className="lattice-host -mt-px border-t border-b border-midnight-800 py-6 sm:odd:pe-8 sm:even:ps-8">
-                <LatticeHover />
-                <Link href={href(`/services/${s.slug}`)} className="group block">
-                  <h3 className="font-display text-2xl transition-colors duration-700 group-hover:text-brass-300">
-                    {s.name}
-                    {s.confirm && <ToConfirm />}
-                  </h3>
-                  <p className="mt-2 text-[0.9375rem] text-ivory-300">{s.summary}</p>
-                </Link>
-              </li>
-            ))}
-          </ul>
+        </div>
+      </section>
+
+      {/* How it works: steps over a pinned photograph */}
+      <StickySteps photo="desertDuskHorizon" steps={steps} label="How it works" />
+
+      {/* What we arrange */}
+      <section className="section" aria-labelledby="arrange-title">
+        <div className="container-page">
+          <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+            <Reveal className="max-w-3xl">
+              <Eyebrow>What we arrange</Eyebrow>
+              <h2 id="arrange-title" className="mt-6 text-display-md">
+                Whatever the journey <em className="text-sand-300">asks for.</em>
+              </h2>
+            </Reveal>
+            <MoreLink href={href("/services")}>All thirteen services</MoreLink>
+          </div>
+          <Reveal className="mt-14">
+            <OfferingRows items={featuredServices} hrefFor={(slug) => href(`/services/${slug}`)} />
+          </Reveal>
         </div>
       </section>
 
@@ -218,7 +211,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
             <Reveal className="max-w-2xl">
               <Eyebrow>The Season</Eyebrow>
               <h2 id="season-title" className="mt-6 text-display-md">
-                In the coming months.
+                In the coming <em className="text-sand-300">months.</em>
               </h2>
               <p className="mt-6 text-ivory-300">
                 Races, fairs and festivals across the region. We request access on your behalf; we never promise tickets.
@@ -226,24 +219,9 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
             </Reveal>
             <MoreLink href={href("/season")}>The full Season</MoreLink>
           </div>
-          <ul className="mt-14 grid gap-px border border-midnight-800 bg-midnight-800 sm:grid-cols-2 lg:grid-cols-4">
-            {soon.map((e, i) => (
-              <Reveal as="li" key={e.slug} delay={i * 0.08} className="flex flex-col bg-midnight-950 p-7">
-                <p className="text-xs tracking-[0.2em] text-brass-400 uppercase">
-                  {e.window.start === e.window.end
-                    ? monthName(e.window.start)
-                    : `${monthName(e.window.start, "short")} – ${monthName(e.window.end, "short")}`}
-                  <span className="text-ivory-500"> · {countryByCode[e.country].name}</span>
-                </p>
-                <h3 className="mt-4 font-display text-2xl leading-tight">{e.name}</h3>
-                <p className="mt-3 flex-1 text-sm text-ivory-300">{e.timing}.</p>
-                <p className="mt-2 text-[0.6875rem] tracking-[0.16em] text-ivory-500 uppercase">Dates vary · verify yearly</p>
-                <AskButton source="season" refId={e.slug} prefill={e.askPrompt} startAt="channel" className="link-quiet mt-6 self-start text-xs tracking-[0.28em] uppercase">
-                  Request access
-                </AskButton>
-              </Reveal>
-            ))}
-          </ul>
+          <div className="mt-14">
+            <SeasonCarousel events={soon} label="Events in the coming months" />
+          </div>
         </div>
       </section>
 
@@ -302,29 +280,31 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
         </div>
       </section>
 
-      {/* Discretion */}
+      {/* Discretion: a short manifesto */}
       <section className="section bg-rose-900" aria-labelledby="discretion-title">
         <div className="container-page text-center">
           <Reveal>
             <Eyebrow center>Discretion, by design</Eyebrow>
-            <h2 id="discretion-title" className="mx-auto mt-8 max-w-3xl text-display-md">
-              We never name our clients. They prefer it that way, and so do we.
+            <h2 id="discretion-title" className="sr-only">
+              Discretion, by design
             </h2>
           </Reveal>
-          <ul className="mx-auto mt-16 grid max-w-5xl gap-10 text-ivory-300 md:grid-cols-3">
-            {[
-              "No client names, and no client photographs, ever.",
-              "Non-disclosure agreements, on request.",
-              "Your enquiry is seen only by your concierge.",
-            ].map((t, i) => (
-              <Reveal as="li" key={t} delay={i * 0.1} className="border-t border-rose-400/30 pt-6 text-ivory-50/80">
+          <ul className="mt-12 font-display text-[clamp(2.25rem,1.2rem+4.2vw,5rem)] leading-[1.05] tracking-[0.04em] text-sand-300 uppercase">
+            {["Never named.", "Never photographed.", "Never shared.", "Always on call."].map((t, i) => (
+              <Reveal as="li" key={t} delay={i * 0.12} className={i === 3 ? "text-ivory-50" : ""}>
                 {t}
               </Reveal>
             ))}
           </ul>
-          <div className="mt-14">
-            <MoreLink href={href("/discretion")}>Our privacy promise</MoreLink>
-          </div>
+          <Reveal delay={0.4}>
+            <p className="mx-auto mt-14 max-w-xl text-ivory-50/80">
+              We never name our clients. They prefer it that way, and so do we. Non-disclosure agreements on request; your enquiry is seen
+              only by your concierge.
+            </p>
+            <div className="mt-10">
+              <MoreLink href={href("/discretion")}>Our privacy promise</MoreLink>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -332,7 +312,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       <section className="section bg-sand-300 text-midnight-950" aria-labelledby="words-title">
         <div className="container-page">
           <Reveal>
-            <p className="eyebrow flex items-center gap-3 !text-rose-600">
+            <p className="eyebrow flex items-center gap-3 !text-rose-800">
               <StarMark className="h-3 w-3" />
               In their words
             </p>
@@ -347,7 +327,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                   <blockquote className="font-display text-[1.75rem] leading-snug text-midnight-950 italic">“{t.quote}”</blockquote>
                   <figcaption className="mt-5 text-xs tracking-[0.2em] text-midnight-800 uppercase">
                     {t.attribution}
-                    {t.placeholder && <ToConfirm label="placeholder" />}
+                    {t.placeholder && <ToConfirm label="placeholder" onLight />}
                   </figcaption>
                 </figure>
               </Reveal>
