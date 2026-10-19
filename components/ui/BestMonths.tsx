@@ -8,12 +8,12 @@ export function BestMonths({ months }: { months: readonly Month[] }) {
   const on = new Set(months);
   return (
     <div>
-      <p className="text-ivory-50">{monthRanges(months)}</p>
+      <p className="text-ink">{monthRanges(months)}</p>
       <ol aria-hidden className="mt-4 grid grid-cols-12 gap-1">
         {ORDER.map((m) => (
           <li key={m} className="text-center">
-            <span className={`block h-1 ${on.has(m) ? "bg-brass-400" : "bg-midnight-700"}`} />
-            <span className={`mt-2 block text-[0.625rem] ${on.has(m) ? "text-sand-300" : "text-ivory-500"}`}>{monthName(m, "short").charAt(0)}</span>
+            <span className={`block h-1 ${on.has(m) ? "bg-brass-400" : "bg-line-strong"}`} />
+            <span className={`mt-2 block text-[0.625rem] ${on.has(m) ? "text-accent" : "text-ink-3"}`}>{monthName(m, "short").charAt(0)}</span>
           </li>
         ))}
       </ol>

@@ -7,18 +7,18 @@ import { AskButton } from "@/components/ask/AskButton";
 export const metadata: Metadata = { title: "Design system", robots: { index: false, follow: false } };
 
 const swatches = [
-  ["midnight-950", "bg-midnight-950", "Page"],
-  ["midnight-900", "bg-midnight-900", "Surface"],
-  ["midnight-800", "bg-midnight-800", "Raised"],
-  ["midnight-700", "bg-midnight-700", "Hairline"],
-  ["sand-300", "bg-sand-300", "Desert sand"],
-  ["sand-500", "bg-sand-500", "Sand, muted"],
-  ["rose-400", "bg-rose-400", "Petra rose"],
-  ["rose-600", "bg-rose-600", "Rose, deep"],
-  ["brass-400", "bg-brass-400", "Brass accent"],
-  ["brass-600", "bg-brass-600", "Brass, pressed"],
-  ["ivory-50", "bg-ivory-50", "Text"],
-  ["ivory-300", "bg-ivory-300", "Text, secondary"],
+  ["paper", "bg-paper", "Page"],
+  ["paper-2", "bg-paper-2", "Surface"],
+  ["line", "bg-line", "Hairline"],
+  ["ink", "bg-ink", "Text"],
+  ["ink-2", "bg-ink-2", "Text, secondary"],
+  ["accent", "bg-accent", "Accent text"],
+  ["midnight-900", "bg-midnight-900", "Deep block, footer"],
+  ["rose-900", "bg-rose-900", "Petra rose block"],
+  ["sand-200", "bg-sand-200", "Sand block"],
+  ["rose-200", "bg-rose-200", "Rose, light"],
+  ["brass-400", "bg-brass-400", "Brass detail"],
+  ["cream", "bg-cream", "Text on photographs"],
 ] as const;
 
 export default function DesignSystem() {
@@ -33,9 +33,9 @@ export default function DesignSystem() {
         <ul className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4 lg:grid-cols-6">
           {swatches.map(([name, cls, use]) => (
             <li key={name}>
-              <div className={`aspect-[4/3] border border-midnight-700 ${cls}`} />
-              <p className="mt-3 text-sm text-ivory-50">{use}</p>
-              <p className="text-xs text-ivory-500">{name}</p>
+              <div className={`aspect-[4/3] rounded-lg border border-line ${cls}`} />
+              <p className="mt-3 text-sm text-ink">{use}</p>
+              <p className="text-xs text-ink-3">{name}</p>
             </li>
           ))}
         </ul>
@@ -47,9 +47,9 @@ export default function DesignSystem() {
           <p className="font-display text-display-xl">Ask, and consider it arranged.</p>
           <p className="font-display text-display-lg">Petra at first light</p>
           <p className="font-display text-display-md">Your concierge is one message away.</p>
-          <p className="font-display text-display-sm italic text-sand-300">At any hour.</p>
+          <p className="font-display text-display-sm italic text-accent">At any hour.</p>
           <p className="prose-aravia">
-            Some doors in this region open only with an introduction. We make introductions. Body text is set in Jost Light at
+            Some doors in this region open only with an introduction. We make introductions. Body text is set in Inter Tight at
             seventeen pixels, with generous leading and a measure of no more than sixty-eight characters.
           </p>
           <p className="eyebrow">Eyebrow · spaced capitals</p>
@@ -61,7 +61,7 @@ export default function DesignSystem() {
         <div className="mt-8 space-y-12">
           <LatticeRule />
           <LatticeRule variant="strip" />
-          <div className="flex items-center gap-10 text-brass-400">
+          <div className="flex items-center gap-10 text-accent">
             <StarMark className="h-10 w-10" />
             <StarMark className="h-5 w-5" />
             <Logo />
@@ -69,7 +69,7 @@ export default function DesignSystem() {
           <div className="grid gap-6 sm:grid-cols-3">
             {["Frame", "Hover me", "Focus me"].map((t) => (
               <LatticeFrame key={t}>
-                <a href="#ds-motif" className="lattice-host block aspect-[4/5] border border-midnight-800 bg-midnight-900 p-8">
+                <a href="#ds-motif" className="lattice-host block aspect-[4/5] border border-line bg-paper-2 p-8">
                   <LatticeHover />
                   <span className="font-display text-2xl">{t}</span>
                 </a>
@@ -83,7 +83,7 @@ export default function DesignSystem() {
         <h2 id="ds-actions" className="eyebrow">Actions</h2>
         <div className="mt-8 flex flex-wrap items-center gap-8">
           <AskButton source="page">Ask Aravia</AskButton>
-          <AskButton source="page" prefill="Petra at first light" className="btn-quiet">
+          <AskButton source="page" prefill="Petra at first light" className="btn-secondary">
             Pre-filled request
           </AskButton>
           <a href="#ds-actions" className="link-quiet">
@@ -100,7 +100,7 @@ export default function DesignSystem() {
         <h2 id="ds-motion" className="eyebrow">Motion</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
           {[0, 0.15, 0.3].map((d) => (
-            <Reveal key={d} delay={d} className="border border-midnight-800 p-8 text-ivory-300">
+            <Reveal key={d} delay={d} className="border border-line p-8 text-ink-2">
               Slow fade, delay {d}s
             </Reveal>
           ))}

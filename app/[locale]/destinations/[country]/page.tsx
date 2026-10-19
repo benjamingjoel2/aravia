@@ -44,7 +44,7 @@ export default async function CountryPage({ params }: PageProps<"/[locale]/desti
     <>
       <PageHero
         top={
-          <nav aria-label="Breadcrumb" className="text-xs tracking-[0.2em] text-ivory-300 uppercase">
+          <nav aria-label="Breadcrumb" className="text-xs tracking-[0.16em] font-medium text-ink-2 uppercase">
             <Link href={href("/destinations")} className="link-quiet">
               Where we take you
             </Link>
@@ -80,23 +80,23 @@ export default async function CountryPage({ params }: PageProps<"/[locale]/desti
           <LatticeRule className="mb-12" />
           <h2 className="font-display text-display-sm">The Season in {c.name}</h2>
           {season.length ? (
-            <ul className="mt-8 divide-y divide-midnight-800 border-y border-midnight-800">
+            <ul className="mt-8 divide-y divide-line border-y border-line">
               {season.map((e) => (
                 <li key={e.slug} className="flex flex-col gap-2 py-5 sm:flex-row sm:items-baseline sm:justify-between">
                   <span>
                     <span className="block font-display text-xl">{e.name}</span>
-                    <span className="text-sm text-ivory-500">{e.timing} · verify yearly</span>
+                    <span className="text-sm text-ink-3">{e.timing} · verify yearly</span>
                   </span>
-                  <AskButton source="season" refId={e.slug} prefill={e.askPrompt} startAt="channel" className="link-quiet shrink-0 text-xs tracking-[0.28em] uppercase">
+                  <AskButton source="season" refId={e.slug} prefill={e.askPrompt} startAt="channel" className="link-quiet shrink-0 text-xs tracking-[0.16em] font-medium uppercase">
                     Request access
                   </AskButton>
                 </li>
               ))}
             </ul>
           ) : (
-            <p className="mt-6 text-ivory-300">Nothing is listed yet. Ask, and we will tell you what is on during your dates.</p>
+            <p className="mt-6 text-ink-2">Nothing is listed yet. Ask, and we will tell you what is on during your dates.</p>
           )}
-          <Link href={href(`/season?country=${c.code}`)} className="link-quiet mt-6 inline-block text-xs tracking-[0.28em] uppercase">
+          <Link href={href(`/season?country=${c.code}`)} className="link-quiet mt-6 inline-block text-xs tracking-[0.16em] font-medium uppercase">
             The full Season →
           </Link>
         </div>
@@ -108,29 +108,29 @@ export default async function CountryPage({ params }: PageProps<"/[locale]/desti
             {guide && (
               <div>
                 <dt className="field-label">The weekend</dt>
-                <dd className="mt-2 text-ivory-300">{guide.weekend}</dd>
+                <dd className="mt-2 text-ink-2">{guide.weekend}</dd>
               </div>
             )}
             {guide && (
               <div>
                 <dt className="field-label">Dress</dt>
-                <dd className="mt-2 text-ivory-300">{guide.dress[0]}</dd>
+                <dd className="mt-2 text-ink-2">{guide.dress[0]}</dd>
               </div>
             )}
             {entry && (
               <div>
                 <dt className="field-label">Entry</dt>
-                <dd className="mt-2 text-ivory-300">
-                  {entry.summary} <span className="text-ivory-500">Guidance only, verify.</span>
+                <dd className="mt-2 text-ink-2">
+                  {entry.summary} <span className="text-ink-3">Guidance only, verify.</span>
                 </dd>
               </div>
             )}
           </dl>
-          <Link href={href(`/travelling-with-grace/${c.slug}`)} className="link-quiet mt-8 inline-block text-xs tracking-[0.28em] uppercase">
+          <Link href={href(`/travelling-with-grace/${c.slug}`)} className="link-quiet mt-8 inline-block text-xs tracking-[0.16em] font-medium uppercase">
             Travelling with grace in {c.name} →
           </Link>
           <div className="mt-12">
-            <AskButton source="destination" refId={c.slug} prefill={`A journey to ${c.name}`} className="btn-brass">
+            <AskButton source="destination" refId={c.slug} prefill={`A journey to ${c.name}`} className="btn-primary">
               Ask Aravia
             </AskButton>
           </div>

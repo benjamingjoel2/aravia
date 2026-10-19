@@ -9,10 +9,10 @@ type Props = {
 /** Mashrabiya-inspired divider. Decorative only. */
 export function LatticeRule({ variant = "line", className = "" }: Props) {
   if (variant === "strip") {
-    return <div aria-hidden className={`lattice-strip text-brass-400/35 ${className}`} />;
+    return <div aria-hidden className={`lattice-strip text-accent/35 ${className}`} />;
   }
   return (
-    <div aria-hidden className={`flex items-center gap-4 text-brass-400/70 ${className}`}>
+    <div aria-hidden className={`flex items-center gap-4 text-accent/70 ${className}`}>
       <span className="h-px flex-1 bg-gradient-to-r from-transparent to-current rtl:bg-gradient-to-l" />
       <span className="h-1.5 w-1.5 rotate-45 border border-current" />
       <StarMark className="h-4 w-4" />

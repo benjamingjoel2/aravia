@@ -25,7 +25,11 @@ export function Header({ homeHref, items, mobileItems, destinationsHref, regions
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  // Pages that open on a full-bleed photograph mark it with data-hero-photo; the header sits on it in light text.
+  const [overPhoto, setOverPhoto] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => setOverPhoto(Boolean(document.querySelector("[data-hero-photo]"))), [pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -39,10 +43,12 @@ export function Header({ homeHref, items, mobileItems, destinationsHref, regions
   return (
     <>
     <header
-      className={`fixed inset-x-0 top-0 z-40 transition-[background-color,border-color,backdrop-filter] duration-700 ease-sand ${
+      className={`fixed inset-x-0 top-0 z-40 transition-[background-color,border-color,color] duration-500 ease-sand ${
         scrolled || menuOpen
-          ? "border-b border-midnight-700/70 bg-midnight-950/85 backdrop-blur-md"
-          : "border-b border-transparent bg-transparent"
+          ? "border-b border-line bg-paper/95 text-ink backdrop-blur-md"
+          : overPhoto
+            ? "on-dark border-b border-transparent bg-transparent text-cream"
+            : "border-b border-transparent bg-paper text-ink"
       }`}
     >
       <div className="container-page flex h-20 items-center justify-between gap-6">
@@ -66,7 +72,7 @@ export function Header({ homeHref, items, mobileItems, destinationsHref, regions
                   <Link
                     href={item.href}
                     aria-current={active ? "page" : undefined}
-                    className={`link-quiet text-[0.8125rem] tracking-[0.14em] ${active ? "text-brass-300" : ""}`}
+                    className={`link-quiet text-[0.9375rem] ${active ? "underline decoration-1 underline-offset-[6px]" : ""}`}
                   >
                     {item.label}
                   </Link>
@@ -77,13 +83,13 @@ export function Header({ homeHref, items, mobileItems, destinationsHref, regions
         </nav>
 
         <div className="relative z-10 flex items-center gap-2">
-          <AskButton source="header" className="btn-brass !min-h-10 !px-4 !py-2 !text-[0.6875rem] whitespace-nowrap sm:!px-5">
+          <AskButton source="header" className="btn-primary !min-h-10 !px-5 !py-2 !text-sm whitespace-nowrap">
             {labels.ask}
           </AskButton>
           <button
             ref={menuButton}
             type="button"
-            className="flex h-11 w-11 items-center justify-center text-ivory-50 lg:hidden"
+            className="flex h-11 w-11 items-center justify-center lg:hidden"
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
             onClick={() => setMenuOpen((o) => !o)}

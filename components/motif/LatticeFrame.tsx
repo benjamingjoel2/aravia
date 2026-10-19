@@ -7,7 +7,7 @@ type Props = { children: ReactNode; className?: string; inset?: string };
  * The brackets sit `inset` inside the edges.
  */
 export function LatticeFrame({ children, className = "", inset = "0.75rem" }: Props) {
-  const corner = "pointer-events-none absolute h-6 w-6 border-brass-400/60";
+  const corner = "pointer-events-none absolute h-6 w-6 border-ink/40";
   return (
     <div className={`relative ${className}`}>
       {children}

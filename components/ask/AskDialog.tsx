@@ -41,20 +41,20 @@ export function AskDialog({ labels, closeLabel, locale }: { labels: AskLabels; c
       onClose={closeAsk}
       onClick={(e) => e.target === e.currentTarget && closeAsk()}
       aria-labelledby="ask-dialog-title"
-      className="m-auto max-h-[calc(100dvh-2rem)] w-[min(40rem,calc(100vw-2rem))] overflow-y-auto border border-midnight-700 bg-midnight-900 p-0 text-ivory-50 backdrop:bg-midnight-950/80 backdrop:backdrop-blur-sm"
+      className="m-auto max-h-[calc(100dvh-2rem)] w-[min(40rem,calc(100vw-2rem))] overflow-y-auto rounded-2xl bg-paper p-0 text-ink shadow-[0_40px_120px_-40px_rgb(27_29_34/0.5)] backdrop:bg-ink/45 backdrop:backdrop-blur-sm"
     >
       <div className="relative p-7 sm:p-12">
         <button
           type="button"
           onClick={closeAsk}
-          className="absolute end-3 top-3 flex h-11 w-11 items-center justify-center text-ivory-300 transition-colors hover:text-brass-300"
+          className="absolute end-3 top-3 flex h-11 w-11 items-center justify-center text-ink-2 transition-colors hover:text-accent"
         >
           <span className="sr-only">{closeLabel}</span>
           <svg aria-hidden viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1">
             <path d="M5 5l14 14M19 5L5 19" />
           </svg>
         </button>
-        <StarMark className="mb-6 h-6 w-6 text-brass-400" />
+        <StarMark className="mb-6 h-6 w-6 text-brass-600" />
         {state.open && (
           <AskFlow
             key={state.session}

@@ -17,10 +17,10 @@ export default async function Received({ params, searchParams }: PageProps<"/[lo
 
   return (
     <section className="container-page flex min-h-[70dvh] flex-col items-center justify-center pt-32 pb-24 text-center">
-      <StarMark className="h-8 w-8 text-brass-400" />
+      <StarMark className="h-8 w-8 text-accent" />
       <h1 className="mt-8 text-display-lg">{dict.ask.sentTitle}</h1>
-      <p className="mt-6 max-w-md text-ivory-300">{line}</p>
-      <Link href={localePath(locale, "/")} className="link-quiet mt-12 text-xs tracking-[0.28em] uppercase">
+      <p className="mt-6 max-w-md text-ink-2">{line}</p>
+      <Link href={localePath(locale, "/")} className="link-quiet mt-12 text-xs tracking-[0.16em] font-medium uppercase">
         {dict.nav.home}
       </Link>
     </section>

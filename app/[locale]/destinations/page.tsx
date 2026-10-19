@@ -28,13 +28,13 @@ export default async function DestinationsPage({ params }: PageProps<"/[locale]/
       <header className="container-page pt-40 pb-16 sm:pt-48">
         <p className="eyebrow">Where we take you</p>
         <h1 className="mt-6 max-w-4xl text-display-lg">From the Gulf to the Atlantic.</h1>
-        <p className="mt-8 max-w-2xl text-lg text-ivory-300">
+        <p className="mt-8 max-w-2xl text-lg text-ink-2">
           Eleven countries across the Arab world, and the places within them we know best. Combine as many as you wish; your concierge
           will shape the journey around you.
         </p>
         <nav aria-label="Regions" className="mt-12 flex flex-wrap gap-x-10 gap-y-3">
           {regions.map((r) => (
-            <a key={r.id} href={`#${r.id}`} className="link-quiet text-xs tracking-[0.28em] uppercase">
+            <a key={r.id} href={`#${r.id}`} className="link-quiet text-xs tracking-[0.16em] font-medium uppercase">
               {r.name}
             </a>
           ))}
@@ -49,18 +49,18 @@ export default async function DestinationsPage({ params }: PageProps<"/[locale]/
               <h2 id={`${region.id}-title`} className="text-display-md">
                 {region.name}
               </h2>
-              <p className="mt-4 max-w-2xl text-ivory-300">{region.intro}</p>
+              <p className="mt-4 max-w-2xl text-ink-2">{region.intro}</p>
             </Reveal>
 
             {countriesInRegion(region.id).map((country) => (
               <div key={country.code} id={country.slug} className="mt-20 scroll-mt-28 grid gap-10 lg:grid-cols-12">
                 <Reveal className="lg:col-span-4">
-                  <h3 className="font-display text-display-sm text-sand-300">
-                    <Link href={href(`/destinations/${country.slug}`)} className="link-quiet !text-sand-300">
+                  <h3 className="font-display text-display-sm text-accent">
+                    <Link href={href(`/destinations/${country.slug}`)} className="link-quiet !text-accent">
                       {country.name}
                     </Link>
                   </h3>
-                  <p className="mt-4 text-ivory-300">{country.intro}</p>
+                  <p className="mt-4 text-ink-2">{country.intro}</p>
                 </Reveal>
                 <ul className="grid gap-4 sm:grid-cols-2 lg:col-span-8">
                   {destinationsIn(country.code).map((d) => (

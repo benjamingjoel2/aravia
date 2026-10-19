@@ -79,17 +79,17 @@ export default async function HowItWorks({ params }: PageProps<"/[locale]/how-it
             </LatticeFrame>
           </Reveal>
           <Reveal delay={0.1} className={`lg:col-span-6 ${i % 2 ? "lg:order-1" : "lg:col-start-7"}`}>
-            <p className="font-display text-display-md text-brass-400">{c.n}</p>
+            <p className="font-display text-display-md text-accent">{c.n}</p>
             <h2 id={`step-${c.n}`} className="mt-4 text-display-md">
               {c.title}
             </h2>
-            <p className="mt-6 text-lg text-ivory-300">{c.lede}</p>
+            <p className="mt-6 text-lg text-ink-2">{c.lede}</p>
             <ul className="mt-8 space-y-4">
               {c.points.map((p) => {
                 const text = typeof p === "string" ? p : p.text;
                 return (
-                  <li key={text} className="flex gap-4 text-ivory-50">
-                    <StarMark className="mt-1.5 h-3 w-3 shrink-0 text-brass-400" />
+                  <li key={text} className="flex gap-4 text-ink">
+                    <StarMark className="mt-1.5 h-3 w-3 shrink-0 text-accent" />
                     <span>
                       {text}
                       {typeof p !== "string" && <ToConfirm />}
@@ -105,19 +105,19 @@ export default async function HowItWorks({ params }: PageProps<"/[locale]/how-it
         <div className="lg:col-span-4">
           <p className="eyebrow">Questions</p>
           <h2 id="faq-title" className="mt-6 text-display-md">
-            What guests <em className="text-sand-300">ask first.</em>
+            What guests <em className="text-accent">ask first.</em>
           </h2>
         </div>
-        <div className="border-t border-midnight-700 lg:col-span-8">
+        <div className="border-t border-line-strong lg:col-span-8">
           {faqs.map((f) => (
-            <details key={f.q} className="group border-b border-midnight-700">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 font-display text-2xl transition-colors duration-500 hover:text-brass-300 [&::-webkit-details-marker]:hidden">
+            <details key={f.q} className="group border-b border-line-strong">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 font-display text-2xl transition-colors duration-500 hover:text-accent [&::-webkit-details-marker]:hidden">
                 {f.q}
-                <span aria-hidden className="shrink-0 text-brass-400 transition-transform duration-500 group-open:rotate-45">
+                <span aria-hidden className="shrink-0 text-accent transition-transform duration-500 group-open:rotate-45">
                   +
                 </span>
               </summary>
-              <p className="max-w-2xl pb-7 text-ivory-300">{f.a}</p>
+              <p className="max-w-2xl pb-7 text-ink-2">{f.a}</p>
             </details>
           ))}
         </div>
@@ -126,11 +126,11 @@ export default async function HowItWorks({ params }: PageProps<"/[locale]/how-it
       <section className="container-page pb-32 text-center">
         <LatticeRule className="mb-20" />
         <h2 className="mx-auto max-w-2xl text-display-md">
-          Begin with a single message. <em className="text-sand-300">We will take it from there.</em>
+          Begin with a single message. <em className="text-accent">We will take it from there.</em>
         </h2>
         <div className="mt-12 flex flex-col items-center gap-8">
           <AskButton source="page">Ask Aravia</AskButton>
-          <Link href={localePath(locale, "/discretion")} className="link-quiet text-xs tracking-[0.28em] uppercase">
+          <Link href={localePath(locale, "/discretion")} className="link-quiet text-xs tracking-[0.16em] font-medium uppercase">
             How we keep your privacy
           </Link>
         </div>
