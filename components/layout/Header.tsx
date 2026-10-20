@@ -15,29 +15,23 @@ type Props = {
   homeHref: string;
   items: NavItem[];
   mobileItems: NavItem[];
-  /** Smaller links stacked under the main navigation while the page is at the top. */
-  secondaryItems: NavItem[];
   /** Nav item href that opens the grouped destinations menu instead of linking directly. */
   destinationsHref: string;
   regions: RegionNav[];
   labels: { ask: string; menu: string; close: string; home: string; allDestinations: string };
 };
 
-export function Header({ homeHref, items, mobileItems, secondaryItems, destinationsHref, regions, labels }: Props) {
+export function Header({ homeHref, items, mobileItems, destinationsHref, regions, labels }: Props) {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   // Pages that open on a full-bleed photograph mark it with data-hero-photo; the header sits on it in light text.
   const [overPhoto, setOverPhoto] = useState(false);
-  // The homepage sets the name very large itself (data-hero-wordmark), so the small logo steps aside at the top.
-  const [bigWordmark, setBigWordmark] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     setOverPhoto(Boolean(document.querySelector("[data-hero-photo]")));
-    setBigWordmark(Boolean(document.querySelector("[data-hero-wordmark]")));
   }, [pathname]);
-  const atTop = !scrolled && !menuOpen;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -62,13 +56,13 @@ export function Header({ homeHref, items, mobileItems, secondaryItems, destinati
       <div className="container-page flex h-20 items-center justify-between gap-6">
         <Link
           href={homeHref}
-          className={`relative z-10 -my-2 py-2 transition-opacity duration-500 ${bigWordmark && atTop ? "lg:invisible lg:opacity-0" : ""}`}
+          className="relative z-10 -my-2 py-2"
           aria-label={`Aravia, ${labels.home}`}
         >
           <Logo />
         </Link>
 
-        <nav aria-label="Primary" className="relative hidden lg:ms-auto lg:block">
+        <nav aria-label="Primary" className="hidden lg:ms-auto lg:block">
           <ul className="flex items-center gap-7">
             {items.map((item) => {
               const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
@@ -84,27 +78,13 @@ export function Header({ homeHref, items, mobileItems, secondaryItems, destinati
                   <Link
                     href={item.href}
                     aria-current={active ? "page" : undefined}
-                    className={`text-[1.0625rem] underline decoration-1 underline-offset-[7px] transition-colors duration-300 hover:decoration-current ${active ? "decoration-current" : "decoration-current/35"}`}
+                    className={`text-[0.9375rem] decoration-1 underline-offset-[7px] hover:underline ${active ? "underline" : ""}`}
                   >
                     {item.label}
                   </Link>
                 </li>
               );
             })}
-          </ul>
-          {/* Secondary links stack beneath, right-aligned, while the page is at the top */}
-          <ul
-            className={`absolute end-0 top-full mt-2 space-y-0.5 text-end text-[0.9375rem] transition-opacity duration-500 ${
-              atTop ? "opacity-100" : "pointer-events-none invisible opacity-0"
-            }`}
-          >
-            {secondaryItems.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className="hover:underline hover:underline-offset-4">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
           </ul>
         </nav>
 

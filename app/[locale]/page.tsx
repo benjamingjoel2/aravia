@@ -17,7 +17,6 @@ import { upcomingEvents } from "@/lib/season";
 import { findLeg, formatDuration, placeById } from "@/lib/composer";
 import type { Month } from "@/data/types";
 import { RegionPanels } from "@/components/home/RegionPanels";
-import { GiantWordmark } from "@/components/home/GiantWordmark";
 import { StickySteps } from "@/components/home/StickySteps";
 import { OfferingRows } from "@/components/home/OfferingRows";
 import { SeasonCarousel } from "@/components/home/SeasonCarousel";
@@ -94,46 +93,34 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           areaServed: regions.flatMap((r) => countriesInRegion(r.id).map((c) => ({ "@type": "Country", name: c.name }))),
         }}
       />
-      {/* Hero: photograph melting into a taupe panel, the name across the top, the promise stacked at the foot */}
-      <section data-hero-photo data-hero-wordmark className="on-dark relative overflow-hidden bg-taupe text-cream md:min-h-[100svh]" aria-labelledby="hero-title">
-        <div aria-hidden className="relative h-[66svh] min-h-[28rem] md:absolute md:inset-y-0 md:left-0 md:h-auto md:w-[62%]">
+      {/* Hero: one full-bleed photograph, the promise and the request field together at the foot */}
+      <section data-hero-photo className="on-dark relative isolate flex min-h-[100svh] flex-col justify-end overflow-hidden bg-midnight-950 text-cream" aria-labelledby="hero-title">
+        <div aria-hidden className="absolute inset-0 -z-10">
           <Parallax className="h-full" distance={40}>
             <div className="relative h-full w-full">
-              <Photo name="dunesDuskSun" sizes="(min-width: 768px) 62vw, 100vw" preload alt="" className="object-[30%_50%]" />
+              <Photo name="dunesDuskSun" sizes="100vw" preload alt="" className="object-[35%_50%]" />
             </div>
           </Parallax>
-          <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black/40 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-taupe via-taupe/40 to-transparent md:hidden" />
-          <div className="absolute inset-y-0 right-0 hidden w-2/3 bg-gradient-to-r from-transparent via-taupe/55 to-taupe md:block" />
+          <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/45 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-black/80 via-black/45 to-transparent" />
         </div>
 
-        <div aria-hidden className="rise absolute top-24 left-[var(--gutter)] z-10 w-[72%] md:top-7 md:w-[34%]">
-          <GiantWordmark className="text-cream" />
-        </div>
-
-        <h1
-          id="hero-title"
-          className="rise absolute top-[calc(66svh-10.5rem)] left-[var(--gutter)] z-10 font-display text-[clamp(2.75rem,1.2rem+5.4vw,6.75rem)] leading-[0.9] whitespace-nowrap uppercase md:top-auto md:bottom-8 md:left-[50%]"
-          style={{ animationDelay: "0.2s" }}
-        >
-          <span className="sr-only">Ask, and consider it arranged.</span>
-          <span aria-hidden className="block">Ask.</span>
-          <span aria-hidden className="block">Consider it</span>
-          <span aria-hidden className="block italic text-sand-200 normal-case">arranged.</span>
-        </h1>
-
-        <div className="container-page relative z-10 pt-10 pb-16 md:grid md:min-h-[100svh] md:grid-cols-12 md:items-start md:pt-[21vh] md:pb-0">
-          <div className="rise md:col-span-5 md:col-start-8" style={{ animationDelay: "0.35s" }}>
-            <p className="max-w-md text-[0.9875rem] leading-relaxed text-cream">
+        <div className="container-page grid gap-10 pt-40 pb-14 md:pb-20 lg:grid-cols-12 lg:items-end lg:gap-16">
+          <h1
+            id="hero-title"
+            className="rise font-display text-[clamp(3.25rem,1.4rem+6vw,7.5rem)] leading-[0.95] lg:col-span-7"
+            style={{ animationDelay: "0.15s" }}
+          >
+            <span className="block">Ask.</span> Consider it <em className="text-sand-200">arranged.</em>
+          </h1>
+          <div className="rise lg:col-span-5" style={{ animationDelay: "0.3s" }}>
+            <p className="max-w-md text-[1.0625rem] leading-relaxed text-cream">
               One personal concierge designs your journey across the Gulf, the Levant and North Africa, then stays with you, day and
               night, for anything you need.
             </p>
             <div className="mt-8">
               <HeroAsk labels={dict.ask} askPath={href("/ask")} />
             </div>
-            <Link href={href("/how-it-works")} className="mt-8 inline-flex items-center gap-2 text-[1.0625rem] underline decoration-cream/50 decoration-1 underline-offset-[6px] transition-colors hover:decoration-cream">
-              How it works <span aria-hidden className="rtl:rotate-180">→</span>
-            </Link>
           </div>
         </div>
       </section>
