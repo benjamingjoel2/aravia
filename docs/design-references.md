@@ -37,3 +37,20 @@ Applied on the homepage: the ARAVIA wordmark across the hero, "Not a tour operat
 | **Sylver Rappresentanze** (sylverrappresentanze.it) | Hero reviewed; the rest of the page, its fonts and images come from blocked hosts | A split hero: photograph melting into a warm taupe panel that holds the introduction; a giant light wordmark across the top-left in place of the small logo; a stacked uppercase serif statement running off the edge at the foot; navigation as underlined text links with a second row of smaller links stacked beneath. |
 
 Applied: the homepage hero is now the split composition (taupe #7E6852, chosen so cream text passes 4.5:1, where Sylver's lighter taupe does not); "ASK. / CONSIDER IT / *arranged.*" stacked at the foot; the small logo steps aside on desktop while the giant wordmark shows; underlined navigation with Travelling with grace, About, Journal and Contact stacked beneath at the top of every page.
+
+## Fourth round: Sylver in full (20 October 2026)
+
+The whole Sylver page was reviewed this time, by serving its scroll library (GSAP 3.12.2) from the npm package in place of the blocked CDN. Its fonts (Haboro Contrast on Typekit) and two background videos stayed blocked.
+
+| Sylver | Aravia |
+|---|---|
+| Horizontal scroll on desktop: vertical scrolling moves full-height panels sideways; stacked on mobile | `HorizontalScroller` on the homepage, from 64rem up; keyboard focus scrolls an off-screen panel into view |
+| Split hero: photo melting into taupe `#B7A283`, giant spaced wordmark top-left, intro and "About →" on the right, the uppercase promise at the foot running into the next panel | Same composition. Taupe deepened to `#866F50` so white text passes 4.5:1 |
+| Hôtellerie and Ristorazione panels: huge uppercase heading, a short list, two paragraphs, a link with a faint wordmark behind it, a two-photo collage | What we arrange; Where we take you |
+| Contact panel with a map of Tuscany and Umbria filled in green over faint outlines | Contacts and concierges beside a map of the eleven countries (`data/map.ts`, Natural Earth) |
+| Green band with a strip of partner logos and the name set huge, cut by the edge | The same band with a strip of places |
+| Green footer with "Contatta il commerciale" form | "Ask your concierge" form on every page, posting to `/api/requests` |
+| Header: spaced wordmark, links with a short rule under the first letters, a second row stacked beneath; green bar on mobile | The same; Ask Aravia is a link in the row |
+| Deep green `#244440`, text `#4A4A4A`, stone `#F3EFE6`, white panels; Arsenal for text; square corners; buttons as underlined uppercase text | The same tokens. Tenor Sans stands in for Haboro Contrast |
+
+Removed from the homepage to match the reference: the request field in the hero (the footer form and Ask Aravia replace it), How it works, the Season carousel, the Composer teaser, the discretion manifesto and testimonials. Each still has its own page in the navigation.
