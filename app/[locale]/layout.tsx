@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Serif, Inter_Tight } from "next/font/google";
+import { Arsenal, Tenor_Sans } from "next/font/google";
 import { notFound } from "next/navigation";
 import "../globals.css";
 import { brand } from "@/config/brand";
@@ -12,18 +12,17 @@ import { Footer } from "@/components/layout/Footer";
 import { AskProvider } from "@/components/ask/AskProvider";
 import { regionNav } from "@/lib/nav";
 
-const display = Instrument_Serif({
+const display = Tenor_Sans({
   subsets: ["latin"],
   weight: ["400"],
-  style: ["normal", "italic"],
-  variable: "--font-instrument",
+  variable: "--font-tenor",
   display: "swap",
 });
 
-const sans = Inter_Tight({
+const sans = Arsenal({
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
-  variable: "--font-inter",
+  weight: ["400", "700"],
+  variable: "--font-arsenal",
   display: "swap",
 });
 
@@ -34,7 +33,7 @@ export function generateStaticParams() {
 export const dynamicParams = false;
 
 export const viewport: Viewport = {
-  themeColor: "#f3eee4",
+  themeColor: "#ffffff",
   colorScheme: "light",
 };
 
@@ -72,7 +71,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-50 focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-50 focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"
         >
           {dict.skipToContent}
         </a>
@@ -81,6 +80,12 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
             homeHref={localePath(locale, "/")}
             items={items}
             mobileItems={mobileItems}
+            secondaryItems={[
+              { href: localePath(locale, "/travelling-with-grace"), label: dict.nav.grace },
+              { href: localePath(locale, "/about"), label: dict.nav.about },
+              { href: localePath(locale, "/journal"), label: dict.nav.journal },
+              { href: localePath(locale, "/contact"), label: dict.nav.contact },
+            ]}
             destinationsHref={localePath(locale, "/destinations")}
             regions={regionNav(locale)}
             labels={{ ask: dict.ask.cta, menu: dict.nav.menu, close: dict.nav.close, home: dict.nav.home, allDestinations: dict.nav.allDestinations }}

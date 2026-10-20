@@ -58,7 +58,8 @@ export function DestinationsMenu({ label, allLabel, href, regions, active }: Pro
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((o) => (o && Date.now() - hoverOpenedAt.current < 800 ? true : !o))}
-        className={`inline-flex items-center gap-2 text-[0.9375rem] decoration-1 underline-offset-[7px] hover:underline ${active || open ? "underline" : ""}`}
+        aria-current={active ? "page" : undefined}
+        className={`link-mark text-[1.0625rem] ${open ? "after:!w-full" : ""}`}
       >
         {label}
         <svg aria-hidden viewBox="0 0 12 12" className={`h-2.5 w-2.5 transition-transform duration-500 ${open ? "rotate-180" : ""}`} fill="none" stroke="currentColor">
@@ -69,18 +70,18 @@ export function DestinationsMenu({ label, allLabel, href, regions, active }: Pro
       {open && (
           <div
             id={panelId}
-            className="fade-in absolute inset-x-0 top-full border-y border-line bg-paper text-ink shadow-[0_30px_60px_-30px_rgb(27_29_34/0.35)]"
+            className="fade-in absolute inset-x-0 top-full border-y border-line bg-paper text-ink"
           >
             <div className="container-page grid grid-cols-3 gap-12 py-12">
               {regions.map((region) => (
                 <div key={region.id}>
-                  <Link href={region.href} onClick={() => setOpen(false)} className="eyebrow link-quiet !text-accent">
+                  <Link href={region.href} onClick={() => setOpen(false)} className="eyebrow link-mark !text-accent">
                     {region.name}
                   </Link>
                   <ul className="mt-6 space-y-3">
                     {region.countries.map((c) => (
                       <li key={c.href}>
-                        <Link href={c.href} onClick={() => setOpen(false)} className="link-quiet font-display text-2xl">
+                        <Link href={c.href} onClick={() => setOpen(false)} className="link-quiet font-display text-2xl uppercase tracking-[0.04em]">
                           {c.name}
                         </Link>
                       </li>

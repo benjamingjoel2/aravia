@@ -33,7 +33,7 @@ export default function DesignSystem() {
         <ul className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4 lg:grid-cols-6">
           {swatches.map(([name, cls, use]) => (
             <li key={name}>
-              <div className={`aspect-[4/3] rounded-lg border border-line ${cls}`} />
+              <div className={`aspect-[4/3] border border-line ${cls}`} />
               <p className="mt-3 text-sm text-ink">{use}</p>
               <p className="text-xs text-ink-3">{name}</p>
             </li>

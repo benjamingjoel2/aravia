@@ -1,58 +1,62 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------
-   Aravia design tokens. Light, warm and photo-led.
-   Paper and ink for the page; midnight, Petra rose and sand as solid blocks; brass for small details.
+   Aravia design tokens, after Sylver Rappresentanze.
+   White panels and soft stone; deep green for type and solid blocks; taupe for the hero panel.
+   Square corners throughout.
 ------------------------------------------------------------------- */
 @theme {
   /* Page */
-  --color-paper: #f3eee4;
-  --color-paper-2: #e9e1d2;
-  --color-line: #d8cdb9;
-  --color-line-strong: #bfb197;
-  --color-ink: #1b1d22;
-  --color-ink-2: #4b4c52;
+  --color-paper: #ffffff;
+  --color-paper-2: #f3efe6;
+  --color-line: #e4ddd0;
+  --color-line-strong: #c9bfae;
+  /* Deep green for headings, links and solid blocks */
+  --color-ink: #244440;
+  /* Body text */
+  --color-ink-2: #4a4a4a;
   --color-ink-3: #66625a;
-  --color-accent: #7c5e2c;
-  /* Text on photographs and dark blocks */
-  --color-cream: #f8f4ec;
-  /* Warm taupe for the split hero panel; cream text on it passes 4.5:1 */
-  --color-taupe: #7e6852;
+  --color-accent: #866f50;
+  /* Text on photographs and green blocks */
+  --color-cream: #ffffff;
+  /* Taupe for the hero panel; white text on it passes 4.5:1 */
+  --color-taupe: #866f50;
+  --color-stone: #b7a283;
 
   /* Brand blocks and details */
-  --color-midnight-950: #0b0e1f;
-  --color-midnight-900: #12162e;
-  --color-midnight-800: #1b2142;
-  --color-sand-200: #efe3cb;
-  --color-sand-300: #e3cfa8;
-  --color-sand-500: #c9ae7e;
+  --color-midnight-950: #1b3431;
+  --color-midnight-900: #244440;
+  --color-midnight-800: #2f524d;
+  --color-sand-200: #f3efe6;
+  --color-sand-300: #e6dccb;
+  --color-sand-500: #b7a283;
   --color-rose-200: #ead6cf;
   --color-rose-400: #c98f7e;
   --color-rose-600: #855244;
   --color-rose-800: #5b3530;
   --color-rose-900: #3d2420;
-  --color-brass-300: #dcbd82;
-  --color-brass-400: #c8a35f;
-  --color-brass-600: #9e7c3f;
+  --color-brass-300: #d9c9ad;
+  --color-brass-400: #b7a283;
+  --color-brass-600: #866f50;
 
-  --font-display: var(--font-instrument), "Instrument Serif", Georgia, serif;
-  --font-sans: var(--font-inter), "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-tenor), "Tenor Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-arsenal), "Arsenal", "Helvetica Neue", Arial, sans-serif;
 
   --ease-sand: cubic-bezier(0.22, 1, 0.36, 1);
 
   /* Fluid type scale */
-  --text-eyebrow: 0.6875rem;
-  --text-display-xl: clamp(3.25rem, 1.6rem + 6.2vw, 7.5rem);
-  --text-display-lg: clamp(2.75rem, 1.6rem + 4.2vw, 5.5rem);
-  --text-display-md: clamp(2.25rem, 1.6rem + 2.4vw, 3.75rem);
-  --text-display-sm: clamp(1.625rem, 1.35rem + 1vw, 2.25rem);
+  --text-eyebrow: 0.75rem;
+  --text-display-xl: clamp(3rem, 1.4rem + 5.6vw, 6.5rem);
+  --text-display-lg: clamp(2.5rem, 1.4rem + 3.8vw, 4.75rem);
+  --text-display-md: clamp(2rem, 1.4rem + 2.2vw, 3.25rem);
+  --text-display-sm: clamp(1.5rem, 1.25rem + 0.9vw, 2rem);
 }
 
 @layer base {
   :root {
     color-scheme: light;
-    --gutter: clamp(1.25rem, 0.5rem + 3vw, 3rem);
-    --section: clamp(5rem, 3rem + 6vw, 10rem);
+    --gutter: clamp(1.25rem, 0.5rem + 2.2vw, 2rem);
+    --section: clamp(5rem, 3rem + 6vw, 9rem);
   }
 
   html {
@@ -63,23 +67,28 @@
 
   body {
     background: var(--color-paper);
-    color: var(--color-ink);
+    color: var(--color-ink-2);
     font-family: var(--font-sans);
     font-weight: 400;
     font-size: 1.0625rem;
-    line-height: 1.6;
+    line-height: 1.55;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4 {
+    color: var(--color-ink);
     font-family: var(--font-display);
     font-weight: 400;
-    line-height: 1.02;
-    letter-spacing: -0.01em;
+    line-height: 1.05;
+    letter-spacing: 0.04em;
     text-wrap: balance;
   }
-  h1 em, h2 em, h3 em { font-style: italic; }
+  .on-dark h1, .on-dark h2, .on-dark h3, .on-dark h4 { color: inherit; }
+  h1, h2 { text-transform: uppercase; }
+  /* The display face has no italic: emphasis is carried by colour instead */
+  h1 em, h2 em, h3 em { font-style: normal; color: var(--color-accent); }
+  .on-dark h1 em, .on-dark h2 em, .on-dark h3 em { color: inherit; }
 
   p { text-wrap: pretty; }
 
@@ -91,7 +100,6 @@
   :focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 3px;
-    border-radius: 2px;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -114,19 +122,19 @@
 
   .section { padding-block: var(--section); }
 
-  /* Tiny capitals above headings */
+  /* Small capitals above headings */
   .eyebrow {
     font-family: var(--font-sans);
     font-size: var(--text-eyebrow);
-    font-weight: 500;
-    letter-spacing: 0.16em;
+    font-weight: 400;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--color-ink-2);
   }
 
   .on-dark .eyebrow, .on-dark .field-label { color: var(--color-cream); }
 
-  /* Pills. Primary: the one action on a screen. */
+  /* Square buttons. Primary: the one action on a screen. */
   .btn-primary, .btn-secondary {
     display: inline-flex;
     align-items: center;
@@ -134,20 +142,44 @@
     gap: 0.6rem;
     min-height: 2.875rem;
     padding: 0.7rem 1.5rem;
-    border-radius: 999px;
-    font-size: 0.9375rem;
-    font-weight: 500;
-    letter-spacing: 0;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
     transition: background-color 500ms var(--ease-sand), color 500ms var(--ease-sand), border-color 500ms var(--ease-sand);
   }
   .btn-primary { background: var(--color-ink); color: var(--color-paper); border: 1px solid var(--color-ink); }
-  .btn-primary:hover { background: var(--color-brass-400); border-color: var(--color-brass-400); color: var(--color-ink); }
+  .btn-primary:hover { background: var(--color-accent); border-color: var(--color-accent); }
   .btn-primary:disabled { opacity: 0.6; cursor: progress; }
-  .btn-secondary { border: 1px solid color-mix(in oklab, currentColor 35%, transparent); color: inherit; }
-  .btn-secondary:hover { border-color: currentColor; }
-  /* On photographs and dark blocks */
+  .btn-secondary { border: 1px solid currentColor; color: inherit; }
+  .btn-secondary:hover { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-paper); }
+  /* On photographs and green blocks */
   .on-dark .btn-primary { background: var(--color-cream); color: var(--color-ink); border-color: var(--color-cream); }
-  .on-dark .btn-primary:hover { background: var(--color-brass-400); border-color: var(--color-brass-400); }
+  .on-dark .btn-primary:hover { background: var(--color-paper-2); border-color: var(--color-paper-2); }
+
+  /* Sylver's link: a short rule under the first letters that runs the full width on hover */
+  .link-mark {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding-bottom: 0.3rem;
+    color: inherit;
+  }
+  .link-mark::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    bottom: 0;
+    width: 1.25rem;
+    height: 1px;
+    background: currentColor;
+    transition: width 600ms var(--ease-sand);
+  }
+  .link-mark:hover::after, .link-mark:focus-visible::after, .link-mark[aria-current="page"]::after { width: 100%; }
+  .link-mark .arrow { transition: transform 600ms var(--ease-sand); }
+  .link-mark:hover .arrow { transform: translateX(0.25rem); }
+  [dir="rtl"] .link-mark .arrow { transform: scaleX(-1); }
 
   /* Text link with an underline that draws in */
   .link-quiet {
@@ -204,8 +236,8 @@
 @layer components {
   .field-label {
     display: block;
-    font-size: 0.6875rem;
-    font-weight: 500;
+    font-size: 0.75rem;
+    font-weight: 400;
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--color-ink-2);
@@ -225,6 +257,10 @@
   .field::placeholder { color: var(--color-ink-3); }
   .field:focus { outline: none; border-color: var(--color-ink); }
   .field[aria-invalid="true"] { border-color: var(--color-rose-600); }
+  .on-dark .field { color: var(--color-cream); border-color: rgb(255 255 255 / 0.5); }
+  .on-dark .field::placeholder { color: rgb(255 255 255 / 0.75); }
+  .on-dark .field:focus { border-color: var(--color-cream); }
+  .on-dark .field[aria-invalid="true"] { border-color: var(--color-cream); border-bottom-width: 2px; }
 
   .chip {
     display: inline-flex;
@@ -232,7 +268,6 @@
     min-height: 2.5rem;
     padding: 0.45rem 1rem;
     border: 1px solid var(--color-line-strong);
-    border-radius: 999px;
     color: var(--color-ink-2);
     font-size: 0.875rem;
     cursor: pointer;
@@ -253,7 +288,7 @@
   .prose-journal li { position: relative; padding-inline-start: 1.5rem; }
   .prose-journal li + li { margin-top: 0.6em; }
   .prose-journal li::before { content: ""; position: absolute; inset-inline-start: 0; top: 0.7em; width: 0.4rem; height: 0.4rem; border: 1px solid var(--color-brass-600); transform: rotate(45deg); }
-  .prose-journal strong { color: var(--color-ink); font-weight: 500; }
+  .prose-journal strong { color: var(--color-ink); font-weight: 700; }
   .prose-journal blockquote { margin-block: 2em; }
 }
 
@@ -282,3 +317,9 @@
   .carousel::-webkit-scrollbar { height: 4px; }
   .carousel::-webkit-scrollbar-thumb { background: var(--color-line-strong); }
 }
+
+/* The places strip on the homepage: two identical runs, moved by half their width */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee { animation: marquee 80s linear infinite; }
+[dir="rtl"] .marquee { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) { .marquee { animation: none; } }

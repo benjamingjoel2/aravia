@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
-import { LatticeRule } from "@/components/motif";
+import { brand } from "@/config/brand";
+import { whatsappLink } from "@/lib/whatsapp";
 import type { NavItem } from "./Header";
 import type { RegionNav } from "@/lib/nav";
 
@@ -25,17 +26,17 @@ export function MobileNav({ open, items, destinationsHref, regions, onClose }: P
         <nav
           id="mobile-nav"
           aria-label="Menu"
-          className="fade-in fixed inset-x-0 top-20 bottom-0 z-30 overflow-y-auto bg-paper text-ink lg:hidden"
+          className="on-dark fade-in fixed inset-x-0 top-16 bottom-0 z-30 overflow-y-auto bg-ink text-cream lg:hidden"
         >
           <div className="container-page py-10">
             <ul className="space-y-1">
               {items.map((item, i) => (
                 <li key={item.href} className="fade-up" style={{ animationDelay: `${0.05 * i}s` }}>
-                  <Link href={item.href} onClick={onClose} className="block py-2.5 font-display text-3xl text-ink hover:text-accent">
+                  <Link href={item.href} onClick={onClose} className="block py-2 font-display text-[2rem] leading-tight tracking-[0.04em] uppercase hover:opacity-70">
                     {item.label}
                   </Link>
                   {item.href === destinationsHref && (
-                    <div className="mt-2 mb-5 grid gap-6 border-s border-line-strong ps-5">
+                    <div className="mt-2 mb-5 grid gap-6 border-s border-cream/30 ps-5">
                       {regions.map((region) => (
                         <div key={region.id}>
                           <Link href={region.href} onClick={onClose} className="eyebrow">
@@ -44,7 +45,7 @@ export function MobileNav({ open, items, destinationsHref, regions, onClose }: P
                           <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
                             {region.countries.map((c) => (
                               <li key={c.href}>
-                                <Link href={c.href} onClick={onClose} className="block py-1 text-ink-2 hover:text-accent">
+                                <Link href={c.href} onClick={onClose} className="block py-1 text-cream/85 hover:text-cream">
                                   {c.name}
                                 </Link>
                               </li>
@@ -57,7 +58,18 @@ export function MobileNav({ open, items, destinationsHref, regions, onClose }: P
                 </li>
               ))}
             </ul>
-            <LatticeRule variant="strip" className="mt-12" />
+            <div className="mt-12 space-y-2 border-t border-cream/25 pt-8 text-sm">
+              <p>
+                <a href={whatsappLink()} rel="noopener" className="link-quiet">
+                  WhatsApp · {brand.contact.whatsappDisplay}
+                </a>
+              </p>
+              <p>
+                <a href={`mailto:${brand.contact.email}`} className="link-quiet">
+                  {brand.contact.emailDisplay}
+                </a>
+              </p>
+            </div>
           </div>
         </nav>
       )

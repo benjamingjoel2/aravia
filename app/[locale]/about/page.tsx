@@ -25,7 +25,7 @@ export default async function About({ params }: PageProps<"/[locale]/about">) {
       {/* The name, split around an image */}
       <section className="container-page pt-40 pb-24 sm:pt-48" aria-labelledby="about-title">
         <p className="eyebrow">About Aravia</p>
-        <h1 id="about-title" className="mt-10 font-display text-[clamp(3.25rem,1rem+9vw,10rem)] leading-[0.9] tracking-[0.02em]">
+        <h1 id="about-title" className="mt-10 font-display text-[clamp(1.875rem,0.2rem+7.4vw,9rem)] leading-[0.95] tracking-[0.02em]">
           <span className="block">The way</span>
           <span className="my-6 flex items-center gap-6 sm:my-8 sm:gap-10">
             <span aria-hidden className="relative block aspect-[3/2] w-[38%] max-w-md shrink-0 overflow-hidden sm:w-[30%]">
@@ -80,7 +80,7 @@ export default async function About({ params }: PageProps<"/[locale]/about">) {
           {concierges.map((c, i) => (
             <Reveal as="li" key={c.id} delay={(i % 2) * 0.1} className="lattice-host grid grid-cols-[5.5rem_1fr] gap-6 bg-paper p-8 sm:grid-cols-[7rem_1fr] sm:p-10">
               <LatticeHover />
-              <span aria-hidden className="flex aspect-[4/5] items-center justify-center rounded-lg bg-gradient-to-br from-sand-200 to-rose-200 font-display text-5xl text-accent">
+              <span aria-hidden className="flex aspect-[4/5] items-center justify-center bg-gradient-to-br from-sand-200 to-rose-200 font-display text-5xl text-accent">
                 {c.name.charAt(0)}
               </span>
               <div>

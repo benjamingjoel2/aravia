@@ -41,7 +41,7 @@ export function AskDialog({ labels, closeLabel, locale }: { labels: AskLabels; c
       onClose={closeAsk}
       onClick={(e) => e.target === e.currentTarget && closeAsk()}
       aria-labelledby="ask-dialog-title"
-      className="m-auto max-h-[calc(100dvh-2rem)] w-[min(40rem,calc(100vw-2rem))] overflow-y-auto rounded-2xl bg-paper p-0 text-ink shadow-[0_40px_120px_-40px_rgb(27_29_34/0.5)] backdrop:bg-ink/45 backdrop:backdrop-blur-sm"
+      className="m-auto max-h-[calc(100dvh-2rem)] w-[min(40rem,calc(100vw-2rem))] overflow-y-auto bg-paper p-0 text-ink shadow-[0_40px_120px_-40px_rgb(36_68_64/0.5)] backdrop:bg-ink/45 backdrop:backdrop-blur-sm"
     >
       <div className="relative p-7 sm:p-12">
         <button

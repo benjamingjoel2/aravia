@@ -386,7 +386,7 @@ function ChannelOption(props: OptionProps) {
   const { title, body, icon, onClick } = props;
   const inner = (
     <>
-      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line-strong text-ink transition-colors duration-500 group-hover:border-ink">
+      <span className="flex h-11 w-11 shrink-0 items-center justify-center border border-line-strong text-ink transition-colors duration-500 group-hover:border-ink">
         {icon}
       </span>
       <span className="min-w-0">
@@ -399,7 +399,7 @@ function ChannelOption(props: OptionProps) {
     </>
   );
   const cls =
-    "group flex w-full items-center gap-5 rounded-xl border border-line bg-paper-2/60 p-4 text-start transition-colors duration-500 hover:border-ink hover:bg-paper-2 sm:p-5";
+    "group flex w-full items-center gap-5 border border-line bg-paper-2/60 p-4 text-start transition-colors duration-500 hover:border-ink hover:bg-paper-2 sm:p-5";
   if (props.as === "a") {
     return (
       <a href={props.href} target="_blank" rel="noopener noreferrer" onClick={onClick} className={cls}>
