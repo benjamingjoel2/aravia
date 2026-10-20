@@ -81,12 +81,6 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
             homeHref={localePath(locale, "/")}
             items={items}
             mobileItems={mobileItems}
-            secondaryItems={[
-              { href: localePath(locale, "/travelling-with-grace"), label: dict.nav.grace },
-              { href: localePath(locale, "/about"), label: dict.nav.about },
-              { href: localePath(locale, "/journal"), label: dict.nav.journal },
-              { href: localePath(locale, "/contact"), label: dict.nav.contact },
-            ]}
             destinationsHref={localePath(locale, "/destinations")}
             regions={regionNav(locale)}
             labels={{ ask: dict.ask.cta, menu: dict.nav.menu, close: dict.nav.close, home: dict.nav.home, allDestinations: dict.nav.allDestinations }}
