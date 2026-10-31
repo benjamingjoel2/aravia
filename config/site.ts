@@ -1,6 +1,6 @@
 export const site = {
-  /** Replace with the production domain once chosen. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://aravia.example",
+  /** Production domain ({brandname}.tourground.com); NEXT_PUBLIC_SITE_URL overrides it. */
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://aravia.tourground.com",
   /** Show "[to confirm]" markers next to claims that still need the owner's confirmation. */
   showPlaceholders: process.env.NEXT_PUBLIC_SHOW_PLACEHOLDERS !== "false",
   /** Privacy-friendly, cookieless analytics only. Leave null for none. */
@@ -49,5 +49,4 @@ export const legalNav = [
   { href: "/legal/terms", key: "terms" },
   { href: "/legal/privacy-policy", key: "privacyPolicy" },
   { href: "/legal/cookies", key: "cookies" },
-  { href: "/legal/credits", key: "credits" },
 ] as const;

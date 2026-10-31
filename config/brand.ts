@@ -1,5 +1,5 @@
 /**
- * Brand settings. Everything in [BRACKETS] is a placeholder to be supplied before launch.
+ * Brand settings. The site shows no phone numbers, messaging apps, licence numbers or social links.
  */
 export const brand = {
   name: "Aravia",
@@ -8,18 +8,22 @@ export const brand = {
   promise: "Ask, and consider it arranged.",
   description:
     "A private travel concierge for the Arab world, from the Gulf to the Levant and North Africa. One personal concierge designs your journey, then stays with you, day and night, for anything you need.",
-  legalName: "[COMPANY NAME]",
+  legalName: "Aravia",
   contact: {
-    /** International format, digits only, used for wa.me links. */
-    whatsapp: "971000000000",
-    whatsappDisplay: "[WHATSAPP NUMBER]",
-    email: "concierge@aravia.example",
-    emailDisplay: "[CONCIERGE EMAIL]",
+    /** One address per brand: {brandname}@tourground.com. */
+    email: "aravia@tourground.com",
+    emailDisplay: "aravia@tourground.com",
   },
-  licences: [
-    { country: "United Arab Emirates", label: "[DUBAI DET LICENCE]" },
-    { country: "Other countries of operation", label: "[OTHER LICENCES]" },
-  ],
+  /**
+   * Business address: The Executive Centre at One Central, Dubai World Trade Centre (the owner-approved
+   * coworking arrangement). Source: executivecentre.com, Dubai coworking locations.
+   */
+  address: {
+    lines: ["The Executive Centre, Level 3, The Offices 3, One Central", "Dubai World Trade Centre, Sheikh Zayed Road", "Dubai, United Arab Emirates"],
+    street: "The Executive Centre, Level 3, The Offices 3, One Central, Dubai World Trade Centre, Sheikh Zayed Road",
+    locality: "Dubai",
+    countryCode: "AE",
+  },
 } as const;
 
 export type Brand = typeof brand;

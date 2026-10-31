@@ -4,7 +4,6 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useEffect, useId, useRef, useState, type FormEvent, type ReactNode } from "react";
 import type { Dictionary } from "@/dictionaries/en";
 import type { Channel } from "@/lib/request-schema";
-import { whatsappLink } from "@/lib/whatsapp";
 import { requestExamples } from "@/data/request-examples";
 import { CyclingPlaceholder } from "./CyclingPlaceholder";
 import type { AskSource } from "./AskContext";
@@ -84,14 +83,6 @@ export function AskFlow({ labels, locale, initialMessage = "", startAt = "compos
     }
     setErrors({});
     setStep("channel");
-  }
-
-  function chooseWhatsApp() {
-    // The link itself opens WhatsApp; this records the request without delaying it.
-    setChannel("whatsapp");
-    void sendRequest({ ...base, channel: "whatsapp" }, true);
-    setStep("sent");
-    onSent?.();
   }
 
   async function submitDetails(e: FormEvent) {
@@ -206,16 +197,6 @@ export function AskFlow({ labels, locale, initialMessage = "", startAt = "compos
             </h2>
             <p className="mt-3 text-ink-2">{labels.chooseIntro}</p>
             <ul className="mt-8 grid gap-3">
-              <li>
-                <ChannelOption
-                  as="a"
-                  href={whatsappLink(message)}
-                  onClick={chooseWhatsApp}
-                  title={labels.whatsapp.title}
-                  body={labels.whatsapp.body}
-                  icon={<WhatsAppGlyph />}
-                />
-              </li>
               <li>
                 <ChannelOption
                   onClick={() => {
@@ -335,11 +316,6 @@ export function AskFlow({ labels, locale, initialMessage = "", startAt = "compos
             </h2>
             <p className="mt-4 max-w-md text-ink-2">{labels.sent[channel]}</p>
             <div className="mt-10 flex flex-wrap items-center gap-8">
-              {channel === "whatsapp" && (
-                <a href={whatsappLink(message)} target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                  {labels.whatsappAgain}
-                </a>
-              )}
               <button type="button" onClick={reset} className="link-quiet text-xs tracking-[0.16em] font-medium uppercase">
                 {labels.another}
               </button>
@@ -416,14 +392,6 @@ function ChannelOption(props: OptionProps) {
 
 const glyph = { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1, className: "h-5 w-5", "aria-hidden": true } as const;
 
-function WhatsAppGlyph() {
-  return (
-    <svg {...glyph}>
-      <path d="M4 20l1.2-4A8 8 0 1 1 8.4 19z" />
-      <path d="M9 9.5c.3 2 1.8 3.8 4 4.5l1.2-1.1 1.8.9-.5 1.6c-3.5 0-6.5-3-6.5-6.5l1.6-.5.9 1.8z" />
-    </svg>
-  );
-}
 function PhoneGlyph() {
   return (
     <svg {...glyph}>

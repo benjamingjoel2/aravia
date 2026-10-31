@@ -22,7 +22,7 @@ const faqs: { q: string; a: string }[] = [
   { q: "Do you sell packages or tours?", a: "No. Every journey is designed for you by your concierge, and nothing is booked until you have agreed to it." },
   { q: "Why are there no prices on the site?", a: "Because every journey is different. Your concierge will share costs with each proposal, before anything is confirmed." },
   { q: "Which countries do you cover?", a: "Eleven across the Arab world: Saudi Arabia, the United Arab Emirates, Qatar, Kuwait, Bahrain and Oman in the Gulf; Jordan in the Levant; Egypt, Morocco, Tunisia and Algeria in North Africa." },
-  { q: "How do I reach my concierge while travelling?", a: "However you prefer: WhatsApp, a call or email. Your concierge is one message away, at any hour." },
+  { q: "How do I reach my concierge while travelling?", a: "However you prefer: a call or email. Your concierge is one message away, at any hour." },
   { q: "Can you guarantee access to events or private visits?", a: "We request access on your behalf and confirm only what has been confirmed to us. If something cannot be arranged, we will say so, and suggest what can." },
   { q: "Will you ever share who I am?", a: "Never. We do not name our clients or publish their photographs, and we sign non-disclosure agreements on request." },
 ];
@@ -33,7 +33,7 @@ const chapters: { n: string; title: string; lede: string; points: (string | { te
     lede: "Your first message reaches a person, who will stay with you for the whole journey and every one after it.",
     points: [
       "One concierge, who speaks your language and comes to know how you like to travel.",
-      "A first conversation, on WhatsApp, by phone or by email, at whatever pace suits you.",
+      "A first conversation, by phone or by email, at whatever pace suits you.",
       "No forms, no packages, no obligation.",
     ],
   },

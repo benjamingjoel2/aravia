@@ -9,14 +9,11 @@ import { localePath } from "@/lib/paths";
 import { regionNav } from "@/lib/nav";
 import { countriesInRegion, regions } from "@/data/countries";
 import { places } from "@/data/composer";
-import { concierges } from "@/data/concierges";
 import { coveredPaths, mapSize, neighbourPaths } from "@/data/map";
-import { whatsappLink } from "@/lib/whatsapp";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { Photo } from "@/components/ui/Photo";
 import { GiantWordmark } from "@/components/home/GiantWordmark";
 import { HorizontalScroller } from "@/components/home/HorizontalScroller";
-import { ToConfirm } from "@/components/ui/ToConfirm";
 
 export const metadata: Metadata = { alternates: alternates("/") };
 
@@ -53,6 +50,12 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           description: brand.description,
           url: `${site.url}/${locale}`,
           email: brand.contact.email,
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: brand.address.street,
+            addressLocality: brand.address.locality,
+            addressCountry: brand.address.countryCode,
+          },
           areaServed: regions.flatMap((r) => countriesInRegion(r.id).map((c) => ({ "@type": "Country", name: c.name }))),
         }}
       />
@@ -202,25 +205,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                   {brand.contact.emailDisplay}
                 </a>
               </p>
-              <p className="mt-1 text-[0.9375rem]">
-                <a href={whatsappLink()} rel="noopener" className="link-quiet">
-                  WhatsApp · {brand.contact.whatsappDisplay}
-                </a>
-              </p>
-
-              <ul className="mt-6 grid grid-cols-2 gap-x-6 gap-y-3 text-[0.9375rem]">
-                {concierges.map((c) => (
-                  <li key={c.id}>
-                    {c.name}
-                    <span className="block text-ink-3">
-                      {c.based} · {c.languages.slice(0, 2).join(", ")}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-2 text-xs">
-                <ToConfirm />
-              </p>
+              <p className="mt-1 text-[0.9375rem] text-ink-3">{brand.address.lines.join(", ")}</p>
 
               <h3 className="mt-10 text-[1.25rem] tracking-[0.12em] uppercase">
                 Always on call <span className="font-sans text-[0.875rem] tracking-normal normal-case">(day and night)</span>

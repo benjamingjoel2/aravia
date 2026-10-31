@@ -3,8 +3,6 @@ import { alternates } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/config/i18n";
 import { legalBySlug, legalDocs } from "@/lib/legal";
-import { photos } from "@/data/photos";
-import { ToConfirm } from "@/components/ui/ToConfirm";
 
 export const dynamicParams = false;
 
@@ -15,7 +13,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/[locale]/legal/[doc]">): Promise<Metadata> {
   const { doc } = await params;
   const d = legalBySlug[doc];
-  return d ? { title: d.title, robots: { index: d.slug !== "credits" }, alternates: alternates(`/legal/${d.slug}`) } : {};
+  return d ? { title: d.title, alternates: alternates(`/legal/${d.slug}`) } : {};
 }
 
 export default async function LegalPage({ params }: PageProps<"/[locale]/legal/[doc]">) {
@@ -30,12 +28,6 @@ export default async function LegalPage({ params }: PageProps<"/[locale]/legal/[
         <h1 className="mt-6 text-display-lg">{d.title}</h1>
         <p className="mt-6 text-sm text-ink-3">
           Last updated {d.updated}.
-          {d.slug !== "credits" && (
-            <>
-              {" "}Draft, to be reviewed by a lawyer for each country of operation.
-              <ToConfirm />
-            </>
-          )}
         </p>
       </header>
       <div className="prose-aravia mt-16">
@@ -47,18 +39,6 @@ export default async function LegalPage({ params }: PageProps<"/[locale]/legal/[
             ))}
           </section>
         ))}
-        {d.slug === "credits" && (
-          <ul className="mt-10 space-y-3 text-sm">
-            {Object.entries(photos).map(([key, p]) => (
-              <li key={key}>
-                <span className="text-ink">{p.alt}.</span>{" "}
-                <a href={p.credit} rel="noopener noreferrer">
-                  View on Unsplash
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
       </div>
     </article>
   );
