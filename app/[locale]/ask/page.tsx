@@ -4,19 +4,18 @@ import { notFound } from "next/navigation";
 import { isLocale } from "@/config/i18n";
 import { brand } from "@/config/brand";
 import { getDictionary } from "@/lib/i18n";
-import { whatsappLink } from "@/lib/whatsapp";
 import { AskFlow } from "@/components/ask/AskFlow";
 import { LatticeRule, StarMark } from "@/components/motif";
 
 export const metadata: Metadata = {
   alternates: alternates("/ask"),
   title: "Ask Aravia",
-  description: "Tell your concierge what you would like arranged, anywhere in the Arab world. Continue by WhatsApp, a call back or email.",
+  description: "Tell your concierge what you would like arranged, anywhere in the Arab world. Continue by a call back or email.",
 };
 
 const errors: Record<string, string> = {
   invalid: "Please check your request and the contact details, then try again.",
-  busy: "We have received several requests from you in a short time. Please write to us on WhatsApp or by email.",
+  busy: "We have received several requests from you in a short time. Please write to us by email.",
 };
 
 export default async function AskPage({ params, searchParams }: PageProps<"/[locale]/ask">) {
@@ -33,16 +32,12 @@ export default async function AskPage({ params, searchParams }: PageProps<"/[loc
         <p className="eyebrow">Ask Aravia</p>
         <h1 className="mt-6 text-display-lg">{brand.promise}</h1>
         <p className="mt-8 max-w-md text-ink-2">
-          Tell us what you have in mind, in as many or as few words as you like. Your concierge will take it from there, by WhatsApp, a
+          Tell us what you have in mind, in as many or as few words as you like. Your concierge will take it from there, by a
           call back or email.
         </p>
         <LatticeRule className="mt-12 max-w-xs" />
         <p className="mt-10 text-sm text-ink-2">
           Or write directly:{" "}
-          <a href={whatsappLink()} className="link-quiet text-accent">
-            WhatsApp
-          </a>{" "}
-          ·{" "}
           <a href={`mailto:${brand.contact.email}`} className="link-quiet text-accent">
             {brand.contact.emailDisplay}
           </a>

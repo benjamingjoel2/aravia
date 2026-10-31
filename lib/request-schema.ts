@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const channels = ["whatsapp", "callback", "email"] as const;
+export const channels = ["callback", "email"] as const;
 export type Channel = (typeof channels)[number];
 
 export const sources = ["hero", "header", "season", "composer", "destination", "service", "contact", "page"] as const;

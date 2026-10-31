@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { brand } from "@/config/brand";
-import { whatsappLink } from "@/lib/whatsapp";
 import type { NavItem } from "./Header";
 import type { RegionNav } from "@/lib/nav";
 
@@ -59,11 +58,6 @@ export function MobileNav({ open, items, destinationsHref, regions, onClose }: P
               ))}
             </ul>
             <div className="mt-12 space-y-2 border-t border-cream/25 pt-8 text-sm">
-              <p>
-                <a href={whatsappLink()} rel="noopener" className="link-quiet">
-                  WhatsApp · {brand.contact.whatsappDisplay}
-                </a>
-              </p>
               <p>
                 <a href={`mailto:${brand.contact.email}`} className="link-quiet">
                   {brand.contact.emailDisplay}
