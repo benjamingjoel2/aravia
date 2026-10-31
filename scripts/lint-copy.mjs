@@ -12,9 +12,13 @@ const rules = [
   { name: "banned phrase", re: new RegExp(`\\b(?:${banned.join("|")})\\b`, "gi") },
 ];
 
+// Generated translations (app/fr, app/de, app/es) are checked through their English source.
+const generated = new Set(["app/fr", "app/de", "app/es"].map((d) => join(d)));
+
 function* files(dir) {
   for (const name of readdirSync(dir)) {
     const p = join(dir, name);
+    if (generated.has(p)) continue;
     if (statSync(p).isDirectory()) yield* files(p);
     else if (exts.has(extname(p))) yield p;
   }

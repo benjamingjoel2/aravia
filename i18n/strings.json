@@ -1,0 +1,3624 @@
+{
+  "About": [
+    "app/en/about/page.tsx:12",
+    "app/en/page.tsx:93",
+    "dictionaries/en.ts:15"
+  ],
+  "Aravia, from “Arabia” and “via”: the way through Arabia. A private travel concierge for the Arab world.": [
+    "app/en/about/page.tsx:13"
+  ],
+  "About Aravia": [
+    "app/en/about/page.tsx:22"
+  ],
+  "The way": [
+    "app/en/about/page.tsx:24"
+  ],
+  "Arabia.": [
+    "app/en/about/page.tsx:31"
+  ],
+  "Aravia began with a simple observation: the Arab world is one of the most rewarding regions on earth to travel, and one of the hardest to travel well without someone who knows it.": [
+    "app/en/about/page.tsx:41"
+  ],
+  "Its hospitality is generous, its distances short by air, its customs quietly particular from one country to the next. The right introduction opens doors; the wrong hour closes them. We set out to be the introduction.": [
+    "app/en/about/page.tsx:45"
+  ],
+  "We are not a tour operator. We do not sell packages, and we never name our clients. Each guest has one concierge, who designs the journey and then stays with it, day and night. Our promise is the one on every page:": [
+    "app/en/about/page.tsx:49"
+  ],
+  "The founding story above is a placeholder to be confirmed.": [
+    "app/en/about/page.tsx:54"
+  ],
+  "One concierge, one message away.": [
+    "app/en/about/page.tsx:67"
+  ],
+  "Ask Aravia": [
+    "app/en/about/page.tsx:69",
+    "app/en/ask/page.tsx:29",
+    "app/en/ask/page.tsx:11",
+    "app/en/destinations/[country]/[slug]/page.tsx:111",
+    "app/en/destinations/[country]/page.tsx:134",
+    "app/en/destinations/page.tsx:88",
+    "app/en/how-it-works/page.tsx:129",
+    "app/en/journal/[slug]/page.tsx:71",
+    "app/en/services/[slug]/page.tsx:81",
+    "app/en/services/page.tsx:45",
+    "app/en/travelling-with-grace/[country]/page.tsx:134",
+    "app/en/travelling-with-grace/ramadan/page.tsx:145",
+    "components/season/SeasonCalendar.tsx:129",
+    "dictionaries/en.ts:35"
+  ],
+  "Tell your concierge what you would like arranged, anywhere in the Arab world. Continue by a call back or email.": [
+    "app/en/ask/page.tsx:12"
+  ],
+  "Please check your request and the contact details, then try again.": [
+    "app/en/ask/page.tsx:16"
+  ],
+  "We have received several requests from you in a short time. Please write to us by email.": [
+    "app/en/ask/page.tsx:17"
+  ],
+  "Tell us what you have in mind, in as many or as few words as you like. Your concierge will take it from there, by a call back or email.": [
+    "app/en/ask/page.tsx:32"
+  ],
+  "Or write directly:": [
+    "app/en/ask/page.tsx:37"
+  ],
+  "Leave empty": [
+    "app/en/ask/page.tsx:61"
+  ],
+  "Received": [
+    "app/en/ask/received/page.tsx:8"
+  ],
+  "Reach your Aravia concierge by email or ask for a call back. At any hour.": [
+    "app/en/contact/page.tsx:12"
+  ],
+  "Contact": [
+    "app/en/contact/page.tsx:21",
+    "app/en/contact/page.tsx:11",
+    "app/en/page.tsx:212",
+    "dictionaries/en.ts:17"
+  ],
+  "At any hour.": [
+    "app/en/contact/page.tsx:23"
+  ],
+  "Your concierge is one message away.": [
+    "app/en/contact/page.tsx:23"
+  ],
+  "Email": [
+    "app/en/contact/page.tsx:28",
+    "components/layout/Footer.tsx:39",
+    "dictionaries/en.ts:44",
+    "dictionaries/en.ts:30"
+  ],
+  "Office": [
+    "app/en/contact/page.tsx:36"
+  ],
+  "Press and partnerships": [
+    "app/en/contact/page.tsx:48"
+  ],
+  "Write to": [
+    "app/en/contact/page.tsx:50"
+  ],
+  ". We do not discuss clients, ever.": [
+    "app/en/contact/page.tsx:54"
+  ],
+  "The Season in {0}": [
+    "app/en/destinations/[country]/[slug]/page.tsx:122"
+  ],
+  "In the Season": [
+    "app/en/destinations/[country]/[slug]/page.tsx:122"
+  ],
+  "· verify yearly": [
+    "app/en/destinations/[country]/[slug]/page.tsx:129",
+    "app/en/destinations/[country]/page.tsx:88"
+  ],
+  "Request access": [
+    "app/en/destinations/[country]/[slug]/page.tsx:132",
+    "app/en/destinations/[country]/page.tsx:91",
+    "components/season/SeasonCalendar.tsx:170"
+  ],
+  "Nothing is listed yet. Ask, and we will tell you what is on during your dates.": [
+    "app/en/destinations/[country]/[slug]/page.tsx:138",
+    "app/en/destinations/[country]/page.tsx:97"
+  ],
+  "As a guest": [
+    "app/en/destinations/[country]/[slug]/page.tsx:144"
+  ],
+  "The weekend: {0}": [
+    "app/en/destinations/[country]/[slug]/page.tsx:146"
+  ],
+  "Travelling with grace in": [
+    "app/en/destinations/[country]/[slug]/page.tsx:154",
+    "app/en/destinations/[country]/page.tsx:130"
+  ],
+  "Also in": [
+    "app/en/destinations/[country]/[slug]/page.tsx:163"
+  ],
+  "Breadcrumb": [
+    "app/en/destinations/[country]/[slug]/page.tsx:64",
+    "app/en/destinations/[country]/page.tsx:47",
+    "app/en/journal/[slug]/page.tsx:51",
+    "app/en/services/[slug]/page.tsx:37",
+    "app/en/travelling-with-grace/[country]/page.tsx:53",
+    "app/en/travelling-with-grace/ramadan/page.tsx:53"
+  ],
+  "Where we take you": [
+    "app/en/destinations/[country]/[slug]/page.tsx:66",
+    "app/en/destinations/[country]/[slug]/page.tsx:56",
+    "app/en/destinations/[country]/page.tsx:49",
+    "app/en/destinations/page.tsx:26",
+    "app/en/destinations/page.tsx:17",
+    "app/en/page.tsx:174",
+    "app/en/page.tsx:154",
+    "dictionaries/en.ts:8"
+  ],
+  "Best months": [
+    "app/en/destinations/[country]/[slug]/page.tsx:88"
+  ],
+  "What your concierge can arrange here": [
+    "app/en/destinations/[country]/[slug]/page.tsx:98"
+  ],
+  "The full Season →": [
+    "app/en/destinations/[country]/page.tsx:100"
+  ],
+  "Before you go": [
+    "app/en/destinations/[country]/page.tsx:106"
+  ],
+  "The weekend": [
+    "app/en/destinations/[country]/page.tsx:110",
+    "app/en/travelling-with-grace/[country]/page.tsx:44"
+  ],
+  "Dress": [
+    "app/en/destinations/[country]/page.tsx:116",
+    "app/en/travelling-with-grace/[country]/page.tsx:43"
+  ],
+  "Entry": [
+    "app/en/destinations/[country]/page.tsx:122",
+    "app/en/travelling-with-grace/[country]/page.tsx:106",
+    "app/en/travelling-with-grace/[country]/page.tsx:78",
+    "components/composer/JourneyComposer.tsx:199"
+  ],
+  "Guidance only, verify.": [
+    "app/en/destinations/[country]/page.tsx:124"
+  ],
+  "A journey to {0}": [
+    "app/en/destinations/[country]/page.tsx:133",
+    "app/en/travelling-with-grace/[country]/page.tsx:133"
+  ],
+  "{0} Journeys in {1} arranged by your Aravia concierge.": [
+    "app/en/destinations/[country]/page.tsx:29"
+  ],
+  "Where we take you in": [
+    "app/en/destinations/[country]/page.tsx:65",
+    "app/en/travelling-with-grace/[country]/page.tsx:120"
+  ],
+  "Best: {0}": [
+    "app/en/destinations/[country]/page.tsx:70",
+    "app/en/destinations/page.tsx:69"
+  ],
+  "The Season in": [
+    "app/en/destinations/[country]/page.tsx:81"
+  ],
+  "The Gulf, the Levant and North Africa: the countries and places across the Arab world where your Aravia concierge arranges journeys.": [
+    "app/en/destinations/page.tsx:18"
+  ],
+  "From the Gulf to the Atlantic.": [
+    "app/en/destinations/page.tsx:27"
+  ],
+  "Eleven countries across the Arab world, and the places within them we know best. Combine as many as you wish; your concierge will shape the journey around you.": [
+    "app/en/destinations/page.tsx:29"
+  ],
+  "Regions": [
+    "app/en/destinations/page.tsx:32"
+  ],
+  "Somewhere you have in mind, or somewhere not listed here.": [
+    "app/en/destinations/page.tsx:85"
+  ],
+  "I would like to travel to ": [
+    "app/en/destinations/page.tsx:87"
+  ],
+  "We never name our clients and never post their photographs. NDAs on request, enquiries seen only by your concierge, and a website without chat widgets or advertising cookies.": [
+    "app/en/discretion/page.tsx:15"
+  ],
+  "Not in conversation, not in marketing, not as a favour. The words on this site from guests carry no names, and never will.": [
+    "app/en/discretion/page.tsx:19"
+  ],
+  "We never name our clients": [
+    "app/en/discretion/page.tsx:19"
+  ],
+  "No social media, no case studies, no “as seen with”. If a photographer is with you, the pictures are yours alone.": [
+    "app/en/discretion/page.tsx:20"
+  ],
+  "We never post client photographs": [
+    "app/en/discretion/page.tsx:20"
+  ],
+  "For you, your family and your staff. Our own team and the partners who serve you can sign one before your journey begins.": [
+    "app/en/discretion/page.tsx:21"
+  ],
+  "Non-disclosure agreements, on request": [
+    "app/en/discretion/page.tsx:21"
+  ],
+  "Your requests are handled by your concierge and the few colleagues they need. Partners receive only what is necessary to arrange what you asked for.": [
+    "app/en/discretion/page.tsx:22"
+  ],
+  "One concierge, and only them": [
+    "app/en/discretion/page.tsx:22"
+  ],
+  "No third-party chat widgets. When you write to us, you reach a person.": [
+    "app/en/discretion/page.tsx:26"
+  ],
+  "No advertising or tracking cookies, and no cookie banner, because there is nothing to consent to.": [
+    "app/en/discretion/page.tsx:27"
+  ],
+  "Fonts and images are served from our own domain, so your visit is not announced to anyone else.": [
+    "app/en/discretion/page.tsx:28"
+  ],
+  "If we measure visits at all, it is with privacy-friendly analytics that use no cookies and store no personal data.": [
+    "app/en/discretion/page.tsx:29"
+  ],
+  "What you send through Ask Aravia is used only to reply to you and arrange your journey.": [
+    "app/en/discretion/page.tsx:30"
+  ],
+  "Discretion, by design": [
+    "app/en/discretion/page.tsx:38",
+    "app/en/discretion/page.tsx:13"
+  ],
+  "We never name our clients. They prefer it that way, and so do we.": [
+    "app/en/discretion/page.tsx:39",
+    "dictionaries/en.ts:32"
+  ],
+  "Privacy is not a feature we add for some guests. It is how the house is run, for everyone, from the first message.": [
+    "app/en/discretion/page.tsx:41"
+  ],
+  "On this website": [
+    "app/en/discretion/page.tsx:63"
+  ],
+  "The same discretion applies to the site you are reading.": [
+    "app/en/discretion/page.tsx:65"
+  ],
+  "How long we keep enquiries, and where they are stored, is set out in our": [
+    "app/en/discretion/page.tsx:75"
+  ],
+  "privacy policy": [
+    "app/en/discretion/page.tsx:77"
+  ],
+  "A question about privacy?": [
+    "app/en/discretion/page.tsx:87"
+  ],
+  "Write to us at": [
+    "app/en/discretion/page.tsx:89"
+  ],
+  ". It will be read by a person, and answered by one.": [
+    "app/en/discretion/page.tsx:93"
+  ],
+  "Questions": [
+    "app/en/how-it-works/page.tsx:103",
+    "lib/legal.ts:51"
+  ],
+  "ask first.": [
+    "app/en/how-it-works/page.tsx:105"
+  ],
+  "What guests": [
+    "app/en/how-it-works/page.tsx:105"
+  ],
+  "We will take it from there.": [
+    "app/en/how-it-works/page.tsx:126"
+  ],
+  "Begin with a single message.": [
+    "app/en/how-it-works/page.tsx:126"
+  ],
+  "How we keep your privacy": [
+    "app/en/how-it-works/page.tsx:131"
+  ],
+  "Meet your concierge, design your journey, and travel with someone always on call. How Aravia works, from the first message to the flight home.": [
+    "app/en/how-it-works/page.tsx:17"
+  ],
+  "No. Every journey is designed for you by your concierge, and nothing is booked until you have agreed to it.": [
+    "app/en/how-it-works/page.tsx:21"
+  ],
+  "Do you sell packages or tours?": [
+    "app/en/how-it-works/page.tsx:21"
+  ],
+  "Because every journey is different. Your concierge will share costs with each proposal, before anything is confirmed.": [
+    "app/en/how-it-works/page.tsx:22"
+  ],
+  "Why are there no prices on the site?": [
+    "app/en/how-it-works/page.tsx:22"
+  ],
+  "Eleven across the Arab world: Saudi Arabia, the United Arab Emirates, Qatar, Kuwait, Bahrain and Oman in the Gulf; Jordan in the Levant; Egypt, Morocco, Tunisia and Algeria in North Africa.": [
+    "app/en/how-it-works/page.tsx:23"
+  ],
+  "Which countries do you cover?": [
+    "app/en/how-it-works/page.tsx:23"
+  ],
+  "However you prefer: a call or email. Your concierge is one message away, at any hour.": [
+    "app/en/how-it-works/page.tsx:24"
+  ],
+  "How do I reach my concierge while travelling?": [
+    "app/en/how-it-works/page.tsx:24"
+  ],
+  "We request access on your behalf and confirm only what has been confirmed to us. If something cannot be arranged, we will say so, and suggest what can.": [
+    "app/en/how-it-works/page.tsx:25"
+  ],
+  "Can you guarantee access to events or private visits?": [
+    "app/en/how-it-works/page.tsx:25"
+  ],
+  "Never. We do not name our clients or publish their photographs, and we sign non-disclosure agreements on request.": [
+    "app/en/how-it-works/page.tsx:26"
+  ],
+  "Will you ever share who I am?": [
+    "app/en/how-it-works/page.tsx:26"
+  ],
+  "Meet your concierge": [
+    "app/en/how-it-works/page.tsx:31"
+  ],
+  "Your first message reaches a person, who will stay with you for the whole journey and every one after it.": [
+    "app/en/how-it-works/page.tsx:32"
+  ],
+  "One concierge, who speaks your language and comes to know how you like to travel.": [
+    "app/en/how-it-works/page.tsx:34"
+  ],
+  "A first conversation, by phone or by email, at whatever pace suits you.": [
+    "app/en/how-it-works/page.tsx:35"
+  ],
+  "No forms, no packages, no obligation.": [
+    "app/en/how-it-works/page.tsx:36"
+  ],
+  "Design your journey": [
+    "app/en/how-it-works/page.tsx:40"
+  ],
+  "Together you shape the journey: the places, the pace, the rooms, the tables, the quiet hours.": [
+    "app/en/how-it-works/page.tsx:41"
+  ],
+  "A proposal written for you, refined until it feels right.": [
+    "app/en/how-it-works/page.tsx:43"
+  ],
+  "Every booking made, checked and confirmed by your concierge.": [
+    "app/en/how-it-works/page.tsx:44"
+  ],
+  "Notes on custom and etiquette for each country, before you leave.": [
+    "app/en/how-it-works/page.tsx:45"
+  ],
+  "Travel with someone always on call": [
+    "app/en/how-it-works/page.tsx:49"
+  ],
+  "Once you arrive, your concierge is one message away. At any hour.": [
+    "app/en/how-it-works/page.tsx:50"
+  ],
+  "Changes made as you go: a new table, a later flight, a different villa.": [
+    "app/en/how-it-works/page.tsx:52"
+  ],
+  "A local team on the ground in every country we arrange.": [
+    "app/en/how-it-works/page.tsx:53"
+  ],
+  "Requests large and small, from a jet by morning to an extra pillow tonight.": [
+    "app/en/how-it-works/page.tsx:54"
+  ],
+  "How it works": [
+    "app/en/how-it-works/page.tsx:64",
+    "app/en/how-it-works/page.tsx:16",
+    "dictionaries/en.ts:6"
+  ],
+  "One person, from the first message to the flight home.": [
+    "app/en/how-it-works/page.tsx:65"
+  ],
+  "We are not a tour operator and we do not sell packages. You have a concierge, who designs the journey with you and then stays with it, day and night.": [
+    "app/en/how-it-works/page.tsx:67"
+  ],
+  "Aravia": [
+    "app/en/journal/[slug]/page.tsx:45",
+    "app/en/journal/[slug]/page.tsx:44",
+    "config/brand.ts:11",
+    "config/brand.ts:5"
+  ],
+  "Journal": [
+    "app/en/journal/[slug]/page.tsx:53",
+    "app/en/journal/page.tsx:23",
+    "app/en/journal/page.tsx:12",
+    "dictionaries/en.ts:16"
+  ],
+  "{0} · {1} · {2} min read": [
+    "app/en/journal/[slug]/page.tsx:57"
+  ],
+  "Would you like this arranged?": [
+    "app/en/journal/[slug]/page.tsx:69"
+  ],
+  "More from the Journal": [
+    "app/en/journal/[slug]/page.tsx:78"
+  ],
+  "Notes from our concierges on travelling the Arab world well: when to go, how to combine places, and how to be a good guest.": [
+    "app/en/journal/page.tsx:13"
+  ],
+  "the way through.": [
+    "app/en/journal/page.tsx:25"
+  ],
+  "Notes from": [
+    "app/en/journal/page.tsx:25"
+  ],
+  "Journey Composer": [
+    "app/en/journey-composer/page.tsx:16",
+    "app/en/journey-composer/page.tsx:7",
+    "dictionaries/en.ts:11"
+  ],
+  "Many journeys, one concierge.": [
+    "app/en/journey-composer/page.tsx:17"
+  ],
+  "Many of our guests combine countries: the Gulf with Petra, Cairo with Marrakech, AlUla with the Red Sea. Choose the places that call to you and we will suggest an order, the time between them, how long to stay and when to go. Your concierge then makes it yours.": [
+    "app/en/journey-composer/page.tsx:19"
+  ],
+  "Combine two to four places across the Gulf, the Levant and North Africa. See a suggested order, approximate travel times, how long to stay and when to go.": [
+    "app/en/journey-composer/page.tsx:9"
+  ],
+  "%s · {0}": [
+    "app/en/layout.tsx:36"
+  ],
+  "{0}: private travel concierge for the Arab world": [
+    "app/en/layout.tsx:36"
+  ],
+  ".reveal{opacity:1!important;transform:none!important}": [
+    "app/en/layout.tsx:60"
+  ],
+  "Legal": [
+    "app/en/legal/[doc]/page.tsx:26"
+  ],
+  "Last updated": [
+    "app/en/legal/[doc]/page.tsx:29"
+  ],
+  "PRIVATE TRAVEL CONCIERGE · THE ARAB WORLD": [
+    "app/en/opengraph-image.tsx:32"
+  ],
+  "Travel at this level is made of details. A jet that waits, a villa opened for you alone, a table on the dunes at the hour the light turns. Your concierge arranges each one, and the people behind it.": [
+    "app/en/page.tsx:119"
+  ],
+  "From the first flight to the last transfer, everything is designed around how you like to travel, refined until it feels right, and looked after while you are away.": [
+    "app/en/page.tsx:123"
+  ],
+  "What we arrange": [
+    "app/en/page.tsx:126",
+    "app/en/page.tsx:110",
+    "app/en/services/[slug]/page.tsx:39",
+    "app/en/services/page.tsx:25",
+    "app/en/services/page.tsx:15",
+    "dictionaries/en.ts:7"
+  ],
+  "Eleven countries, from the Gulf to the Atlantic. The valleys of AlUla and the fjords of Musandam, the rose-red city of Petra, the Nile, the medinas of Fez and Marrakech, and the edge of the Sahara.": [
+    "app/en/page.tsx:167"
+  ],
+  "Your concierge knows each of them first hand, and travels them often, so the journey follows the season, the light and the pace you prefer.": [
+    "app/en/page.tsx:171"
+  ],
+  "Guides and archaeologists": [
+    "app/en/page.tsx:19"
+  ],
+  "Events and private openings": [
+    "app/en/page.tsx:19",
+    "data/services.ts:119"
+  ],
+  "Desert camps and dinners": [
+    "app/en/page.tsx:19"
+  ],
+  "Yachts": [
+    "app/en/page.tsx:19",
+    "data/services.ts:72"
+  ],
+  "Villas, palaces and suites": [
+    "app/en/page.tsx:19",
+    "data/services.ts:56"
+  ],
+  "Private aviation": [
+    "app/en/page.tsx:19"
+  ],
+  "(day and night)": [
+    "app/en/page.tsx:208"
+  ],
+  "Always on call": [
+    "app/en/page.tsx:208"
+  ],
+  "From the first message to the flight home, one person, one message away.": [
+    "app/en/page.tsx:210"
+  ],
+  "Ask.": [
+    "app/en/page.tsx:81"
+  ],
+  "Consider it": [
+    "app/en/page.tsx:83"
+  ],
+  "Aravia is a private travel concierge for the Arab world. One personal concierge designs your journey across the Gulf, the Levant and North Africa, then stays with you, day and night, for anything you need.": [
+    "app/en/page.tsx:89"
+  ],
+  "The Arab world's season, from Formula 1 weekends to art fairs, music festivals and Saharan gatherings. Request access through your Aravia concierge.": [
+    "app/en/season/page.tsx:10"
+  ],
+  "The Season": [
+    "app/en/season/page.tsx:17",
+    "app/en/season/page.tsx:8",
+    "dictionaries/en.ts:10"
+  ],
+  "From the first cool evenings to the last warm ones.": [
+    "app/en/season/page.tsx:18"
+  ],
+  "The region’s season runs from autumn to spring, with summer festivals in the mountains and by the sea. Choose what interests you and ask us for access. We request it on your behalf; we never promise tickets.": [
+    "app/en/season/page.tsx:20"
+  ],
+  "Dates move every year, and some events are not held every year. Every listing is a guide only: verify yearly.": [
+    "app/en/season/page.tsx:24"
+  ],
+  "Where": [
+    "app/en/services/[slug]/page.tsx:61"
+  ],
+  "What your concierge can arrange": [
+    "app/en/services/[slug]/page.tsx:68"
+  ],
+  "← Everything we arrange": [
+    "app/en/services/[slug]/page.tsx:92"
+  ],
+  "Next": [
+    "app/en/services/[slug]/page.tsx:95"
+  ],
+  "Private aviation, villas, yachts, desert camps, restaurant reservations, access to events, guides and more, across the Arab world. Arranged by your personal concierge.": [
+    "app/en/services/page.tsx:17"
+  ],
+  "Whatever the journey asks for.": [
+    "app/en/services/page.tsx:26"
+  ],
+  "If it can be arranged, your concierge arranges it. If it cannot, we will say so, and suggest what can. These are the things we are asked for most.": [
+    "app/en/services/page.tsx:28"
+  ],
+  "Something not on this list?": [
+    "app/en/services/page.tsx:43"
+  ],
+  "Guidance only, verify. Rules depend on your passport.": [
+    "app/en/travelling-with-grace/[country]/page.tsx:110"
+  ],
+  "Customs and laws change. Everything on this page is a guide only: verify before you travel.": [
+    "app/en/travelling-with-grace/[country]/page.tsx:114"
+  ],
+  "? Your concierge will brief you before you go.": [
+    "app/en/travelling-with-grace/[country]/page.tsx:132"
+  ],
+  "Travelling to": [
+    "app/en/travelling-with-grace/[country]/page.tsx:132"
+  ],
+  "Travelling with grace in {0}": [
+    "app/en/travelling-with-grace/[country]/page.tsx:28"
+  ],
+  "Dress, the weekend, alcohol, photography, greetings and tipping in {0}: a calm, practical guide for guests.": [
+    "app/en/travelling-with-grace/[country]/page.tsx:29"
+  ],
+  "Alcohol": [
+    "app/en/travelling-with-grace/[country]/page.tsx:45"
+  ],
+  "Photography": [
+    "app/en/travelling-with-grace/[country]/page.tsx:46"
+  ],
+  "Greetings": [
+    "app/en/travelling-with-grace/[country]/page.tsx:47"
+  ],
+  "Tipping": [
+    "app/en/travelling-with-grace/[country]/page.tsx:48"
+  ],
+  "Travelling with grace": [
+    "app/en/travelling-with-grace/[country]/page.tsx:55",
+    "app/en/travelling-with-grace/page.tsx:26",
+    "app/en/travelling-with-grace/page.tsx:13",
+    "app/en/travelling-with-grace/ramadan/page.tsx:55",
+    "dictionaries/en.ts:12"
+  ],
+  "On this page": [
+    "app/en/travelling-with-grace/[country]/page.tsx:67"
+  ],
+  "A calm, practical guide to custom across the Arab world: dress at religious and heritage sites, the weekend, alcohol, photography, greetings and tipping, country by country.": [
+    "app/en/travelling-with-grace/page.tsx:15"
+  ],
+  "To be a guest is an art. Here is how it is practised.": [
+    "app/en/travelling-with-grace/page.tsx:27"
+  ],
+  "Hospitality runs deep across the Arab world, and it is returned in small courtesies: how we dress at a mosque, when we raise a camera, how we accept a cup of coffee. This is what our concierges share with every guest before they travel. Customs vary a great deal from one country to the next, and they change, so treat it as a companion rather than a rulebook.": [
+    "app/en/travelling-with-grace/page.tsx:29"
+  ],
+  "A month of its own": [
+    "app/en/travelling-with-grace/page.tsx:43"
+  ],
+  "Travelling during Ramadan": [
+    "app/en/travelling-with-grace/page.tsx:44",
+    "app/en/travelling-with-grace/ramadan/page.tsx:61",
+    "app/en/travelling-with-grace/ramadan/page.tsx:14",
+    "dictionaries/en.ts:13"
+  ],
+  "What changes, what is beautiful about it, and how we plan around it.": [
+    "app/en/travelling-with-grace/page.tsx:45"
+  ],
+  "Read more →": [
+    "app/en/travelling-with-grace/page.tsx:47"
+  ],
+  "Weekend:": [
+    "app/en/travelling-with-grace/page.tsx:65"
+  ],
+  "Laws and customs change, and alcohol rules in particular differ widely. Every note here is a guide only: verify before you travel. Your concierge will brief you on anything particular to your dates and plans.": [
+    "app/en/travelling-with-grace/page.tsx:76"
+  ],
+  "What is beautiful about it": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:110"
+  ],
+  "How we plan around it": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:124"
+  ],
+  "Thinking of travelling during Ramadan or Eid? Your concierge will shape the days around it.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:141"
+  ],
+  "A journey during Ramadan": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:144"
+  ],
+  "What changes during Ramadan across the Arab world, what is beautiful about it, from iftar to the quiet of the day, and how your Aravia concierge plans around it.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:16"
+  ],
+  "Most Muslims fast from dawn until sunset, without food, water or smoking. As a guest, avoid eating, drinking or smoking in public during the day; hotels and many restaurants serve guests discreetly, often behind screens.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:26"
+  ],
+  "Days are quieter and working hours shorter. Museums, sites and shops may open later or close earlier, and many come alive again after sunset.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:27"
+  ],
+  "Alcohol may be served later in the day, more discreetly, or not at all, depending on the country and the venue.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:28"
+  ],
+  "Dress a little more modestly than usual, and keep music and voices low in public during the day.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:29"
+  ],
+  "Evenings are lively and late. Traffic gathers just before sunset as everyone hurries home for iftar.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:30"
+  ],
+  "Eid al-Fitr, which marks the end of the month, is a public holiday of several days. Flights and hotels fill early.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:31"
+  ],
+  "The fast is broken at sunset, often with dates and water, then a meal shared with family and friends. Guests are welcomed at iftar tents and tables across the region.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:35"
+  ],
+  "Iftar": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:35"
+  ],
+  "The meal before dawn, late at night, when cities stay awake and cafés are full.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:36"
+  ],
+  "Suhoor": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:36"
+  ],
+  "Lanterns in the souqs, the call to prayer across a quiet city, a generosity you feel everywhere, and nights that seem to last.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:37"
+  ],
+  "The atmosphere": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:37"
+  ],
+  "We place sightseeing in the cooler, quieter mornings, and the evenings for iftar, the souqs and the city at its most alive.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:41"
+  ],
+  "We confirm opening hours for every site, restaurant and experience during the month, as they change.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:42"
+  ],
+  "We arrange iftar for you, whether in a hotel, a desert camp, or, where it is possible and welcome, with a local family.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:43"
+  ],
+  "We plan around Eid early, so flights, villas and tables are held before the holiday fills them.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:44"
+  ],
+  "Ramadan is the holiest month of the Islamic year, a time of fasting, reflection and generosity. For a guest it is not a time to avoid, but a rare chance to see the region at its most heartfelt. A little understanding is all it asks.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:63"
+  ],
+  "Expected dates": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:71"
+  ],
+  "Ramadan": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:76"
+  ],
+  "Eid al-Fitr from": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:80"
+  ],
+  "Expected, subject to the sighting of the moon, and may differ by a day between countries. Verify yearly.": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:85"
+  ],
+  "What changes": [
+    "app/en/travelling-with-grace/ramadan/page.tsx:96"
+  ],
+  "useAsk must be used inside <AskProvider>": [
+    "components/ask/AskContext.tsx:35"
+  ],
+  "Please tell us a little about what you would like arranged.": [
+    "components/ask/AskFlow.tsx:81",
+    "lib/request-schema.ts:19"
+  ],
+  "Please add a number we can call, with the country code.": [
+    "components/ask/AskFlow.tsx:93",
+    "lib/request-schema.ts:40"
+  ],
+  "Please check the email address.": [
+    "components/ask/AskFlow.tsx:97",
+    "lib/request-schema.ts:29"
+  ],
+  "Or begin with a journey we know well": [
+    "components/composer/JourneyComposer.tsx:104"
+  ],
+  "Your journey": [
+    "components/composer/JourneyComposer.tsx:138"
+  ],
+  "{0}, and where next?": [
+    "components/composer/JourneyComposer.tsx:142"
+  ],
+  "Choose at least two places to see a suggested order, the time between them and when to go.": [
+    "components/composer/JourneyComposer.tsx:143"
+  ],
+  "A suggested order": [
+    "components/composer/JourneyComposer.tsx:154"
+  ],
+  "· Best:": [
+    "components/composer/JourneyComposer.tsx:173"
+  ],
+  ", about": [
+    "components/composer/JourneyComposer.tsx:177"
+  ],
+  "(estimate)": [
+    "components/composer/JourneyComposer.tsx:178"
+  ],
+  "Best season": [
+    "components/composer/JourneyComposer.tsx:189"
+  ],
+  "These places are at their best in different months. Your concierge will find the balance.": [
+    "components/composer/JourneyComposer.tsx:195"
+  ],
+  "Guidance only, verify. Rules depend on your passport and change often.": [
+    "components/composer/JourneyComposer.tsx:208"
+  ],
+  "Times are approximate time in the air or on the road, not door to door. Verify.": [
+    "components/composer/JourneyComposer.tsx:214"
+  ],
+  "Have your concierge refine this": [
+    "components/composer/JourneyComposer.tsx:217"
+  ],
+  "{0} to {1} nights": [
+    "components/composer/JourneyComposer.tsx:41"
+  ],
+  "{0}, about {1}. ": [
+    "components/composer/JourneyComposer.tsx:42"
+  ],
+  "Choose two to four places": [
+    "components/composer/JourneyComposer.tsx:50"
+  ],
+  "Clear": [
+    "components/composer/JourneyComposer.tsx:57"
+  ],
+  "var(--font-tenor), Arial, sans-serif": [
+    "components/home/GiantWordmark.tsx:16"
+  ],
+  "translate3d({0}px,0,0)": [
+    "components/home/HorizontalScroller.tsx:28"
+  ],
+  "Escape": [
+    "components/layout/DestinationsMenu.tsx:23",
+    "components/layout/MobileNav.tsx:15"
+  ],
+  "Ask your concierge": [
+    "components/layout/Footer.tsx:18"
+  ],
+  "How should we reply?": [
+    "components/layout/Footer.tsx:38"
+  ],
+  "A call back": [
+    "components/layout/Footer.tsx:39",
+    "dictionaries/en.ts:43"
+  ],
+  "Send request": [
+    "components/layout/Footer.tsx:40"
+  ],
+  "Thank you. Your concierge has your request and will be in touch shortly.": [
+    "components/layout/Footer.tsx:41"
+  ],
+  "Footer": [
+    "components/layout/Footer.tsx:47"
+  ],
+  "Please try again, or write to us by email.": [
+    "components/layout/FooterForm.tsx:42",
+    "components/layout/FooterForm.tsx:40"
+  ],
+  "Website": [
+    "components/layout/FooterForm.tsx:75"
+  ],
+  "Aravia, {0}": [
+    "components/layout/Header.tsx:86"
+  ],
+  "Primary": [
+    "components/layout/Header.tsx:92"
+  ],
+  "Language": [
+    "components/layout/LanguageSelector.tsx:15"
+  ],
+  "Menu": [
+    "components/layout/MobileNav.tsx:28",
+    "dictionaries/en.ts:21"
+  ],
+  "translate3d(0, {0}px, 0) scale(1.08)": [
+    "components/motion/Parallax.tsx:24"
+  ],
+  "All": [
+    "components/season/SeasonCalendar.tsx:100",
+    "components/season/SeasonCalendar.tsx:89",
+    "components/season/SeasonCalendar.tsx:78"
+  ],
+  "Show everything": [
+    "components/season/SeasonCalendar.tsx:116"
+  ],
+  "Nothing listed for this selection.": [
+    "components/season/SeasonCalendar.tsx:126"
+  ],
+  "The season is wider than this page. Ask, and we will tell you what is on.": [
+    "components/season/SeasonCalendar.tsx:127"
+  ],
+  "Dates vary · verify yearly": [
+    "components/season/SeasonCalendar.tsx:161"
+  ],
+  "Region": [
+    "components/season/SeasonCalendar.tsx:76",
+    "components/season/SeasonCalendar.tsx:75"
+  ],
+  "Country": [
+    "components/season/SeasonCalendar.tsx:87",
+    "components/season/SeasonCalendar.tsx:86"
+  ],
+  "Type": [
+    "components/season/SeasonCalendar.tsx:98",
+    "components/season/SeasonCalendar.tsx:97"
+  ],
+  "The page you were looking for has moved or never existed.": [
+    "components/ui/NotFoundContent.tsx:10"
+  ],
+  "Return home": [
+    "components/ui/NotFoundContent.tsx:12"
+  ],
+  "Not found": [
+    "components/ui/NotFoundContent.tsx:8"
+  ],
+  "This door is closed. Others are open.": [
+    "components/ui/NotFoundContent.tsx:9"
+  ],
+  "Illustrative photograph": [
+    "components/ui/PageHero.tsx:61"
+  ],
+  "to confirm": [
+    "components/ui/ToConfirm.tsx:5",
+    "dictionaries/en.ts:38"
+  ],
+  "A private travel concierge for the Arab world, from the Gulf to the Levant and North Africa. One personal concierge designs your journey, then stays with you, day and night, for anything you need.": [
+    "config/brand.ts:10"
+  ],
+  "aravia@tourground.com": [
+    "config/brand.ts:15",
+    "config/brand.ts:14"
+  ],
+  "Dubai, United Arab Emirates": [
+    "config/brand.ts:22"
+  ],
+  "Dubai World Trade Centre, Sheikh Zayed Road": [
+    "config/brand.ts:22"
+  ],
+  "The Executive Centre, Level 3, The Offices 3, One Central": [
+    "config/brand.ts:22"
+  ],
+  "The Executive Centre, Level 3, The Offices 3, One Central, Dubai World Trade Centre, Sheikh Zayed Road": [
+    "config/brand.ts:23"
+  ],
+  "ARAVIA": [
+    "config/brand.ts:6"
+  ],
+  "From “Arabia” and “via”: the way through Arabia.": [
+    "config/brand.ts:7"
+  ],
+  "Ask, and consider it arranged.": [
+    "config/brand.ts:8"
+  ],
+  "Abu Dhabi": [
+    "data/composer.ts:10",
+    "data/destinations.ts:23"
+  ],
+  "To Hurghada": [
+    "data/composer.ts:104"
+  ],
+  "Or about six hours by road through the Middle Atlas": [
+    "data/composer.ts:107"
+  ],
+  "Private flight to Errachidia, then by road; about nine hours over the Atlas by car": [
+    "data/composer.ts:108"
+  ],
+  "Ras Al Khaimah’s desert": [
+    "data/composer.ts:11",
+    "data/destinations.ts:26"
+  ],
+  "Through Ifrane, the cedar forests and the Ziz valley": [
+    "data/composer.ts:110"
+  ],
+  "Usually via Casablanca": [
+    "data/composer.ts:112",
+    "data/composer.ts:99"
+  ],
+  "Across the Chott el Jerid salt flats": [
+    "data/composer.ts:116"
+  ],
+  "AlUla": [
+    "data/composer.ts:12"
+  ],
+  "Dubai, AlUla and Petra": [
+    "data/composer.ts:123"
+  ],
+  "Late October to April": [
+    "data/composer.ts:124"
+  ],
+  "A city, then two of the great Nabataean sites. Fly privately from AlUla to Aqaba to keep the journey short.": [
+    "data/composer.ts:125"
+  ],
+  "Saudi Arabia, end to end": [
+    "data/composer.ts:126"
+  ],
+  "The capital and Diriyah, the canyons of AlUla, then the islands of the Red Sea to finish.": [
+    "data/composer.ts:128"
+  ],
+  "Three Gulf capitals": [
+    "data/composer.ts:129"
+  ],
+  "The Red Sea islands": [
+    "data/composer.ts:13",
+    "data/destinations.ts:9"
+  ],
+  "Short hops down the Gulf coast, each city with its own museums, souqs and pearling history.": [
+    "data/composer.ts:131"
+  ],
+  "Dubai, Musandam and Muscat": [
+    "data/composer.ts:132"
+  ],
+  "From the city to the fjords by road or helicopter, then on to Muscat.": [
+    "data/composer.ts:134"
+  ],
+  "Oman, mountain and sand": [
+    "data/composer.ts:135"
+  ],
+  "Muscat, the terraces of the Green Mountain, and a private camp in the dunes.": [
+    "data/composer.ts:137"
+  ],
+  "Jordan, stone and sand": [
+    "data/composer.ts:138"
+  ],
+  "March to May, September to November": [
+    "data/composer.ts:139"
+  ],
+  "Riyadh and Diriyah": [
+    "data/composer.ts:14",
+    "data/destinations.ts:12"
+  ],
+  "Rest at the Dead Sea, Petra at first light, then a night in the desert.": [
+    "data/composer.ts:140"
+  ],
+  "Pharaohs and Nabataeans": [
+    "data/composer.ts:141"
+  ],
+  "Giza, the Nile at Luxor, and Petra. The flight to Jordan connects through Cairo.": [
+    "data/composer.ts:143"
+  ],
+  "The Gulf and the Nile": [
+    "data/composer.ts:144"
+  ],
+  "November to March": [
+    "data/composer.ts:145",
+    "data/composer.ts:130",
+    "data/composer.ts:127"
+  ],
+  "A few days in Dubai, then Egypt, ending with a private dahabiya from Luxor.": [
+    "data/composer.ts:146"
+  ],
+  "Morocco, cities and Sahara": [
+    "data/composer.ts:147"
+  ],
+  "October to April": [
+    "data/composer.ts:148",
+    "data/composer.ts:142",
+    "data/composer.ts:133"
+  ],
+  "Marrakech, the dunes of Erg Chebbi, then north through the Ziz valley to Fes.": [
+    "data/composer.ts:149"
+  ],
+  "Jeddah": [
+    "data/composer.ts:15"
+  ],
+  "Marrakech and the Atlantic": [
+    "data/composer.ts:150"
+  ],
+  "April to October": [
+    "data/composer.ts:151"
+  ],
+  "The medina and its gardens, then the sea air of Essaouira.": [
+    "data/composer.ts:152"
+  ],
+  "Tunisia, north to south": [
+    "data/composer.ts:153"
+  ],
+  "April to June, September to October": [
+    "data/composer.ts:154"
+  ],
+  "Carthage and Sidi Bou Said, the oases of the Jerid, and the calm of Djerba.": [
+    "data/composer.ts:155"
+  ],
+  "Algeria, Casbah and Tassili": [
+    "data/composer.ts:156"
+  ],
+  "October to March": [
+    "data/composer.ts:157",
+    "data/composer.ts:136"
+  ],
+  "Algiers, then deep into the Sahara for the rock art of the Tassili n’Ajjer. Desert travel is arranged with a licensed local agency.": [
+    "data/composer.ts:158"
+  ],
+  "The Gulf and Morocco": [
+    "data/composer.ts:159"
+  ],
+  "Doha": [
+    "data/composer.ts:16",
+    "data/destinations.ts:31"
+  ],
+  "November, March and April": [
+    "data/composer.ts:160"
+  ],
+  "Two very different sides of the Arab world. A private jet makes the long crossing simple.": [
+    "data/composer.ts:161"
+  ],
+  "Many nationalities can obtain a tourist eVisa online or a visa on arrival. Others apply in advance.": [
+    "data/composer.ts:166"
+  ],
+  "Many nationalities receive a visa on arrival or enter visa-free. Others need a visa arranged before travel.": [
+    "data/composer.ts:167"
+  ],
+  "Many nationalities enter visa-free for a short stay. Others apply in advance online.": [
+    "data/composer.ts:168"
+  ],
+  "Kuwait City": [
+    "data/composer.ts:17",
+    "data/destinations.ts:36"
+  ],
+  "Many nationalities enter visa-free for a short stay. Others apply for an eVisa.": [
+    "data/composer.ts:171"
+  ],
+  "Many nationalities can obtain a visa on arrival. The Jordan Pass may cover the visa fee and entry to Petra for qualifying stays.": [
+    "data/composer.ts:172"
+  ],
+  "Many nationalities can obtain an eVisa or a visa on arrival. Others apply in advance.": [
+    "data/composer.ts:173",
+    "data/composer.ts:170",
+    "data/composer.ts:169"
+  ],
+  "Many nationalities, including most European and North American passport holders, enter visa-free for a stay of up to ninety days. Others apply for an eVisa.": [
+    "data/composer.ts:174"
+  ],
+  "Many nationalities, including most European and North American passport holders, enter visa-free for a short stay. Others apply in advance.": [
+    "data/composer.ts:175"
+  ],
+  "Most nationalities need a visa arranged in advance through an Algerian consulate. A visa on arrival may be available for organised trips to the Saharan south, arranged through a licensed agency.": [
+    "data/composer.ts:177"
+  ],
+  "Travel in the far south is accompanied by licensed guides, and some governments advise against travel to border areas. Check your government’s current travel advice.": [
+    "data/composer.ts:178"
+  ],
+  "Manama": [
+    "data/composer.ts:18",
+    "data/destinations.ts:44"
+  ],
+  "Muscat": [
+    "data/composer.ts:19",
+    "data/destinations.ts:49"
+  ],
+  "Musandam": [
+    "data/composer.ts:20"
+  ],
+  "Wahiba Sands": [
+    "data/composer.ts:21",
+    "data/destinations.ts:55"
+  ],
+  "Jebel Akhdar": [
+    "data/composer.ts:22",
+    "data/destinations.ts:58"
+  ],
+  "Petra": [
+    "data/composer.ts:24",
+    "data/destinations.ts:63"
+  ],
+  "Wadi Rum": [
+    "data/composer.ts:25",
+    "data/destinations.ts:66"
+  ],
+  "The Dead Sea": [
+    "data/composer.ts:26",
+    "data/destinations.ts:69"
+  ],
+  "Cairo and the Pyramids": [
+    "data/composer.ts:28",
+    "data/destinations.ts:77"
+  ],
+  "Luxor and the Nile": [
+    "data/composer.ts:29",
+    "data/destinations.ts:80"
+  ],
+  "Egypt’s Red Sea": [
+    "data/composer.ts:30",
+    "data/destinations.ts:83"
+  ],
+  "Marrakech": [
+    "data/composer.ts:31",
+    "data/destinations.ts:88"
+  ],
+  "Fes": [
+    "data/composer.ts:32",
+    "data/destinations.ts:91"
+  ],
+  "The Sahara at Merzouga": [
+    "data/composer.ts:33",
+    "data/destinations.ts:97"
+  ],
+  "Essaouira": [
+    "data/composer.ts:34",
+    "data/destinations.ts:100"
+  ],
+  "Tunis, Carthage and Sidi Bou Said": [
+    "data/composer.ts:35"
+  ],
+  "Tozeur and the Sahara": [
+    "data/composer.ts:36",
+    "data/destinations.ts:120"
+  ],
+  "Djerba": [
+    "data/composer.ts:37",
+    "data/destinations.ts:117"
+  ],
+  "Algiers and the Casbah": [
+    "data/composer.ts:38",
+    "data/destinations.ts:125"
+  ],
+  "Djanet and the Tassili n’Ajjer": [
+    "data/composer.ts:39"
+  ],
+  "By road via Ras Al Khaimah and the border crossing; helicopter by arrangement": [
+    "data/composer.ts:51"
+  ],
+  "To Khasab": [
+    "data/composer.ts:53"
+  ],
+  "A four-wheel-drive vehicle is required on the mountain road": [
+    "data/composer.ts:55"
+  ],
+  "Scheduled flights are limited; a private jet is simplest": [
+    "data/composer.ts:64"
+  ],
+  "To Red Sea International, then by boat or seaplane to the islands": [
+    "data/composer.ts:80",
+    "data/composer.ts:78"
+  ],
+  "By helicopter or seaplane, by arrangement; about three hours by road": [
+    "data/composer.ts:81"
+  ],
+  "Private jet to Aqaba, then about two hours by road": [
+    "data/composer.ts:83"
+  ],
+  "About three and a half hours to Amman, then three hours by road; or fly to Aqaba": [
+    "data/composer.ts:84"
+  ],
+  "Fly to Amman, then about forty-five minutes by road": [
+    "data/composer.ts:85"
+  ],
+  "Fly to Amman, then about three hours by road": [
+    "data/composer.ts:87",
+    "data/composer.ts:86"
+  ],
+  "Dubai": [
+    "data/composer.ts:9",
+    "data/destinations.ts:20",
+    "config/brand.ts:24"
+  ],
+  "By road to Amman, then about eighty minutes to Cairo": [
+    "data/composer.ts:96",
+    "data/composer.ts:95"
+  ],
+  "flight+drive": [
+    "data/composer.ts:96",
+    "data/composer.ts:95",
+    "data/composer.ts:87",
+    "data/composer.ts:86",
+    "data/composer.ts:85",
+    "data/composer.ts:84",
+    "data/composer.ts:83"
+  ],
+  "Usually via Casablanca; direct by private jet": [
+    "data/composer.ts:98",
+    "data/composer.ts:97"
+  ],
+  "The Levant": [
+    "data/countries.ts:13"
+  ],
+  "Rose-red cities carved from stone, desert under a sky of stars, and the lowest shore on earth.": [
+    "data/countries.ts:14"
+  ],
+  "North Africa": [
+    "data/countries.ts:19"
+  ],
+  "From the Nile to the Atlantic: pharaohs and medinas, Roman stone, mountain villages and the deep Sahara.": [
+    "data/countries.ts:20"
+  ],
+  "Saudi Arabia": [
+    "data/countries.ts:26"
+  ],
+  "A kingdom opening to travellers after centuries kept for pilgrims and traders: Nabataean tombs, coral islands and the mud-brick capital of the first Saudi state.": [
+    "data/countries.ts:27"
+  ],
+  "United Arab Emirates": [
+    "data/countries.ts:28"
+  ],
+  "Skyline and dune within the same hour. Seven emirates, each with its own character.": [
+    "data/countries.ts:29"
+  ],
+  "Qatar": [
+    "data/countries.ts:30"
+  ],
+  "A small peninsula with a serious devotion to museums, architecture and the sea.": [
+    "data/countries.ts:31"
+  ],
+  "Kuwait": [
+    "data/countries.ts:32"
+  ],
+  "A trading city on a deep bay, with a pearl-diving past and an island that Alexander’s sailors once knew.": [
+    "data/countries.ts:33"
+  ],
+  "Bahrain": [
+    "data/countries.ts:34"
+  ],
+  "An island of old souqs, pearling houses and Dilmun burial mounds, close and unhurried.": [
+    "data/countries.ts:35"
+  ],
+  "Oman": [
+    "data/countries.ts:36"
+  ],
+  "Mountains, wadis, fjords and sand sea. The Gulf at its most quietly traditional.": [
+    "data/countries.ts:37"
+  ],
+  "Jordan": [
+    "data/countries.ts:38"
+  ],
+  "Petra, Wadi Rum and the Dead Sea, all within a few hours of one another.": [
+    "data/countries.ts:39"
+  ],
+  "Egypt": [
+    "data/countries.ts:40"
+  ],
+  "Five thousand years along one river, and a coral sea to the east.": [
+    "data/countries.ts:41"
+  ],
+  "Morocco": [
+    "data/countries.ts:42"
+  ],
+  "Imperial cities, Atlas villages, Saharan dunes and an Atlantic coast, in a single country.": [
+    "data/countries.ts:43"
+  ],
+  "Tunisia": [
+    "data/countries.ts:44"
+  ],
+  "Carthage and blue-and-white Sidi Bou Said, a Roman amphitheatre on the plain, and oases at the edge of the Sahara.": [
+    "data/countries.ts:45"
+  ],
+  "Algeria": [
+    "data/countries.ts:46"
+  ],
+  "Africa’s largest country, still rarely visited: a whitewashed Casbah, intact Roman cities, and the rock art of the Tassili.": [
+    "data/countries.ts:47"
+  ],
+  "The Gulf": [
+    "data/countries.ts:7"
+  ],
+  "Six nations along the Arabian Gulf and the Red Sea, from the ancient valleys of AlUla to the fjords of Musandam.": [
+    "data/countries.ts:8"
+  ],
+  "Aqaba is Jordan’s Red Sea, with coral gardens a few strokes from the shore and the mountains of Sinai across the gulf.": [
+    "data/destination-details.ts:101"
+  ],
+  "Transfers to Wadi Rum and Petra": [
+    "data/destination-details.ts:102"
+  ],
+  "Beach resort stays": [
+    "data/destination-details.ts:102"
+  ],
+  "Yacht days on the gulf": [
+    "data/destination-details.ts:102"
+  ],
+  "Diving and snorkelling guides": [
+    "data/destination-details.ts:102",
+    "data/services.ts:82"
+  ],
+  "Cairo is a city of a thousand minarets and five thousand years. See the Pyramids of Giza early in the morning, the treasures of the Grand Egyptian Museum with an Egyptologist, and the lanes of Islamic Cairo at dusk.": [
+    "data/destination-details.ts:106"
+  ],
+  "Suites with views of the pyramids": [
+    "data/destination-details.ts:107"
+  ],
+  "Walks through Islamic Cairo": [
+    "data/destination-details.ts:107"
+  ],
+  "Private visits inside the pyramids, where permitted": [
+    "data/destination-details.ts:107"
+  ],
+  "Egyptologists for Giza and the Grand Egyptian Museum": [
+    "data/destination-details.ts:107"
+  ],
+  "Luxor is the greatest open-air museum on earth: the Valley of the Kings, Karnak and the Temple of Luxor. From here, a private dahabiya drifts south toward Aswan, stopping where you please.": [
+    "data/destination-details.ts:110"
+  ],
+  "Karnak at dusk": [
+    "data/destination-details.ts:111"
+  ],
+  "Hot-air balloon flights at dawn": [
+    "data/destination-details.ts:111"
+  ],
+  "Egyptologists for the Valley of the Kings": [
+    "data/destination-details.ts:111"
+  ],
+  "Private dahabiya cruises": [
+    "data/destination-details.ts:111"
+  ],
+  "Egypt’s Red Sea coast offers some of the clearest water and finest reefs in the world, from quiet bays in the north to the deep walls of the south.": [
+    "data/destination-details.ts:114"
+  ],
+  "Desert excursions inland": [
+    "data/destination-details.ts:115"
+  ],
+  "Beach resort villas": [
+    "data/destination-details.ts:115"
+  ],
+  "Yacht charters": [
+    "data/destination-details.ts:115"
+  ],
+  "Diving and snorkelling with private guides": [
+    "data/destination-details.ts:115"
+  ],
+  "Behind a plain door in the medina, a riad opens onto a courtyard of orange trees and quiet. Beyond the walls are gardens, palm groves and the Atlas on the horizon.": [
+    "data/destination-details.ts:119"
+  ],
+  "Days in the Agafay desert and the Atlas": [
+    "data/destination-details.ts:120"
+  ],
+  "Hammams and spa days": [
+    "data/destination-details.ts:120"
+  ],
+  "Guides to the medina and the souqs": [
+    "data/destination-details.ts:120"
+  ],
+  "Riads and palaces for private hire": [
+    "data/destination-details.ts:120"
+  ],
+  "Fes el-Bali is one of the largest car-free urban areas in the world, a medina of tanneries, madrasas and craftsmen that has changed little in centuries. It asks for a guide, and repays one.": [
+    "data/destination-details.ts:123"
+  ],
+  "Day trips to Volubilis and Meknes": [
+    "data/destination-details.ts:124"
+  ],
+  "Riad stays": [
+    "data/destination-details.ts:124"
+  ],
+  "Visits to artisans’ workshops": [
+    "data/destination-details.ts:124"
+  ],
+  "Private guides to the medina": [
+    "data/destination-details.ts:124"
+  ],
+  "An hour from Marrakech, the High Atlas rises to snow-capped peaks. Berber villages, walnut valleys and mountain lodges offer quiet walking and cool nights.": [
+    "data/destination-details.ts:127"
+  ],
+  "Helicopter transfers": [
+    "data/destination-details.ts:128"
+  ],
+  "Lunch with a village family, where welcome": [
+    "data/destination-details.ts:128"
+  ],
+  "Walks with mountain guides": [
+    "data/destination-details.ts:128"
+  ],
+  "Mountain lodge stays": [
+    "data/destination-details.ts:128"
+  ],
+  "At Merzouga, the dunes of Erg Chebbi rise up to 150 metres from the stony desert. A private camp, the light turning gold, and the drums of the Gnaoua at night.": [
+    "data/destination-details.ts:131"
+  ],
+  "Private flights to Errachidia": [
+    "data/destination-details.ts:133"
+  ],
+  "Gnaoua music in Khamlia": [
+    "data/destination-details.ts:133"
+  ],
+  "Dune walks at sunrise and sunset": [
+    "data/destination-details.ts:133"
+  ],
+  "Private luxury camps": [
+    "data/destination-details.ts:133"
+  ],
+  "Essaouira is an Atlantic port of ramparts, gulls and blue fishing boats, where the trade winds keep the summer gentle and the pace slow.": [
+    "data/destination-details.ts:136"
+  ],
+  "Horse riding on the beach": [
+    "data/destination-details.ts:137"
+  ],
+  "Argan cooperatives and workshops": [
+    "data/destination-details.ts:137"
+  ],
+  "Fish lunches in the port": [
+    "data/destination-details.ts:137"
+  ],
+  "Riad and villa stays": [
+    "data/destination-details.ts:137"
+  ],
+  "In the Rif mountains, Chefchaouen is washed in every shade of blue. Arrive early, when the lanes are empty and the town still belongs to its people.": [
+    "data/destination-details.ts:140"
+  ],
+  "Day trips to the Akchour waterfalls": [
+    "data/destination-details.ts:141"
+  ],
+  "Hikes to the Spanish Mosque": [
+    "data/destination-details.ts:141"
+  ],
+  "Early walks with a local guide": [
+    "data/destination-details.ts:141"
+  ],
+  "The medina of Tunis, the mosaics of the Bardo, and on the hill above the bay, the white walls and blue doors of Sidi Bou Said.": [
+    "data/destination-details.ts:145"
+  ],
+  "Lunch overlooking the bay": [
+    "data/destination-details.ts:146"
+  ],
+  "Stays in Sidi Bou Said": [
+    "data/destination-details.ts:146"
+  ],
+  "Private guides to the medina and the Bardo": [
+    "data/destination-details.ts:146"
+  ],
+  "Little stands of Carthage, once Rome’s rival, but what remains is extraordinary: the Punic ports, the Antonine Baths by the sea, and the hilltop of Byrsa.": [
+    "data/destination-details.ts:149"
+  ],
+  "Evenings at the Carthage International Festival": [
+    "data/destination-details.ts:150"
+  ],
+  "The Antonine Baths and the Punic ports": [
+    "data/destination-details.ts:150"
+  ],
+  "At El Djem, a Roman amphitheatre for 35,000 spectators rises out of an ordinary market town. It is one of the best preserved anywhere, and often almost empty.": [
+    "data/destination-details.ts:153"
+  ],
+  "Combined days with Kairouan and Sousse": [
+    "data/destination-details.ts:154"
+  ],
+  "Private guided visits": [
+    "data/destination-details.ts:154"
+  ],
+  "Djerba is an island of whitewashed mosques, the ancient El Ghriba synagogue, olive groves and long, calm beaches on the Gulf of Gabès.": [
+    "data/destination-details.ts:157"
+  ],
+  "Boat days to the lagoons": [
+    "data/destination-details.ts:158"
+  ],
+  "Guided visits to Houmt Souk and El Ghriba": [
+    "data/destination-details.ts:158"
+  ],
+  "Beach resort and villa stays": [
+    "data/destination-details.ts:158"
+  ],
+  "Tozeur is an oasis of brick-patterned lanes and palm groves at the edge of the Sahara. Nearby, the salt flats of Chott el Jerid stretch to the horizon and mirages are common.": [
+    "data/destination-details.ts:161"
+  ],
+  "Desert camps beyond Douz": [
+    "data/destination-details.ts:163"
+  ],
+  "Four-wheel-drive journeys to Chebika and Tamerza": [
+    "data/destination-details.ts:163"
+  ],
+  "Oasis resort stays": [
+    "data/destination-details.ts:163"
+  ],
+  "Algiers steps down white to the bay. Above it, the Ottoman Casbah, a UNESCO World Heritage Site, is a maze of lanes, palaces and stairways best explored with someone who grew up there.": [
+    "data/destination-details.ts:167"
+  ],
+  "Day trips to Tipaza": [
+    "data/destination-details.ts:168"
+  ],
+  "Visits to the Bardo and Notre-Dame d’Afrique": [
+    "data/destination-details.ts:168"
+  ],
+  "Private guides to the Casbah": [
+    "data/destination-details.ts:168"
+  ],
+  "In the eastern highlands, Timgad and Djémila are two of the most complete Roman cities to survive, their streets, arches and forums laid out as they were.": [
+    "data/destination-details.ts:171"
+  ],
+  "Journeys from Constantine": [
+    "data/destination-details.ts:172"
+  ],
+  "Visits with a private archaeologist": [
+    "data/destination-details.ts:172",
+    "data/destination-details.ts:150"
+  ],
+  "The Tassili n’Ajjer is a plateau of sandstone forests and arches, with thousands of prehistoric paintings. From the oasis of Djanet, licensed Tuareg guides lead journeys into one of the most remote landscapes on earth.": [
+    "data/destination-details.ts:175"
+  ],
+  "Camps in the dunes of Tin Merzouga": [
+    "data/destination-details.ts:176"
+  ],
+  "Rock-art visits with specialists": [
+    "data/destination-details.ts:176"
+  ],
+  "Accompanied desert journeys with licensed guides": [
+    "data/destination-details.ts:176"
+  ],
+  "AlUla is a valley of sandstone outcrops, palm groves and silence. At Hegra, Saudi Arabia’s first UNESCO World Heritage Site, more than a hundred tombs were carved into the rock by the same Nabataeans who built Petra. Come early, and the light does the rest.": [
+    "data/destination-details.ts:19"
+  ],
+  "Dinners under the stars": [
+    "data/destination-details.ts:20"
+  ],
+  "Villas and desert resorts in the canyons": [
+    "data/destination-details.ts:20"
+  ],
+  "Helicopter flights over the valley": [
+    "data/destination-details.ts:20"
+  ],
+  "Private guided visits to Hegra and the old town": [
+    "data/destination-details.ts:20"
+  ],
+  "Off Saudi Arabia’s western coast, an archipelago of low coral islands, lagoons and reefs is opening to a small number of guests. The water is clear, the islands are quiet, and most of the coast is still untouched.": [
+    "data/destination-details.ts:23"
+  ],
+  "Yacht days among the islands": [
+    "data/destination-details.ts:24"
+  ],
+  "Private diving and snorkelling guides": [
+    "data/destination-details.ts:24"
+  ],
+  "Seaplane and boat transfers": [
+    "data/destination-details.ts:24"
+  ],
+  "Island resort villas": [
+    "data/destination-details.ts:24"
+  ],
+  "Riyadh moves fast: new museums, restaurants and a season of events. A short drive away, the mud-brick lanes of At-Turaif in Diriyah recall where the first Saudi state began, and its terraces fill in the evening.": [
+    "data/destination-details.ts:27"
+  ],
+  "Day trips to the Edge of the World escarpment": [
+    "data/destination-details.ts:28"
+  ],
+  "Access requests for Riyadh Season events": [
+    "data/destination-details.ts:28"
+  ],
+  "Tables at Bujairi Terrace and beyond": [
+    "data/destination-details.ts:28"
+  ],
+  "Private guides to At-Turaif and the National Museum": [
+    "data/destination-details.ts:28"
+  ],
+  "Al-Balad is Jeddah’s historic heart: coral-stone houses with carved wooden rawasheen, narrow lanes and old souqs. Walk it at dusk, when the heat lifts and the coffee houses open.": [
+    "data/destination-details.ts:31"
+  ],
+  "Onward travel to the Red Sea or AlUla": [
+    "data/destination-details.ts:32"
+  ],
+  "Seafood dinners on the Corniche": [
+    "data/destination-details.ts:32"
+  ],
+  "Visits to restored merchant houses": [
+    "data/destination-details.ts:32"
+  ],
+  "Evening walks with a historian": [
+    "data/destination-details.ts:32"
+  ],
+  "Dubai can be whatever you need it to be: a city of tables hard to book and views hard to forget, a creek still worked by wooden dhows, and a desert half an hour away. Your concierge knows which Dubai you came for.": [
+    "data/destination-details.ts:36"
+  ],
+  "Private desert dinners and camps": [
+    "data/destination-details.ts:38"
+  ],
+  "Yacht charters along the coast": [
+    "data/destination-details.ts:38"
+  ],
+  "Restaurant reservations at the city’s most sought-after tables": [
+    "data/destination-details.ts:38"
+  ],
+  "Suites and private villas": [
+    "data/destination-details.ts:38"
+  ],
+  "Abu Dhabi is quieter than its neighbour and rich in culture: the Louvre and the other museums of Saadiyat, the Sheikh Zayed Grand Mosque in the evening light, and to the south the great dunes of Liwa.": [
+    "data/destination-details.ts:41"
+  ],
+  "Mangrove kayaking at dawn": [
+    "data/destination-details.ts:42"
+  ],
+  "Desert stays in Liwa": [
+    "data/destination-details.ts:42"
+  ],
+  "Access requests for the Abu Dhabi Grand Prix": [
+    "data/destination-details.ts:42"
+  ],
+  "Private visits to Saadiyat’s museums": [
+    "data/destination-details.ts:42"
+  ],
+  "North of Dubai, Ras Al Khaimah’s red dunes meet the Hajar mountains. It is close enough for an evening, and quiet enough to feel very far away.": [
+    "data/destination-details.ts:45"
+  ],
+  "Transfers from Dubai": [
+    "data/destination-details.ts:47"
+  ],
+  "Mountain drives on Jebel Jais": [
+    "data/destination-details.ts:47"
+  ],
+  "Falconry with local experts": [
+    "data/destination-details.ts:47"
+  ],
+  "Desert retreats and private camps": [
+    "data/destination-details.ts:47"
+  ],
+  "Doha has gathered some of the finest museums in the region along its corniche. Spend the day with I. M. Pei’s Museum of Islamic Art and the desert-rose National Museum, the evening in Souq Waqif, and a night at the inland sea where the dunes meet the water.": [
+    "data/destination-details.ts:51"
+  ],
+  "Dhow evenings on the bay": [
+    "data/destination-details.ts:52"
+  ],
+  "Desert drives to Khor Al Adaid": [
+    "data/destination-details.ts:52"
+  ],
+  "Access requests for the Qatar Grand Prix": [
+    "data/destination-details.ts:52"
+  ],
+  "Private museum visits with a curator": [
+    "data/destination-details.ts:52"
+  ],
+  "Kuwait City wraps around a deep bay, with a skyline above and a trading city’s soul below. The Grand Mosque, the Kuwait Towers and Souq Al-Mubarakiya are best seen slowly, with someone who knows the stories.": [
+    "data/destination-details.ts:56"
+  ],
+  "Crossings to Failaka Island": [
+    "data/destination-details.ts:57"
+  ],
+  "Diwaniya evenings, where welcome": [
+    "data/destination-details.ts:57"
+  ],
+  "Visits to the Grand Mosque": [
+    "data/destination-details.ts:57"
+  ],
+  "Private city guides": [
+    "data/destination-details.ts:57"
+  ],
+  "Failaka lies a short crossing from the capital. Bronze Age Dilmun settlements and a Hellenistic temple from the time of Alexander’s successors sit quietly on an island most visitors never reach.": [
+    "data/destination-details.ts:60"
+  ],
+  "Picnics by the shore": [
+    "data/destination-details.ts:61"
+  ],
+  "Guided visits to the archaeological sites": [
+    "data/destination-details.ts:61"
+  ],
+  "Private boat crossings": [
+    "data/destination-details.ts:61"
+  ],
+  "Bahrain was Dilmun, a trading crossroads for four thousand years. Walk the Pearling Path in Muharraq, see the burial mounds of A’ali, and watch the sun set over Qal’at al-Bahrain.": [
+    "data/destination-details.ts:65"
+  ],
+  "Island hotels and villas": [
+    "data/destination-details.ts:66"
+  ],
+  "Pearl diving with local divers": [
+    "data/destination-details.ts:66"
+  ],
+  "Access requests for the Bahrain Grand Prix": [
+    "data/destination-details.ts:66"
+  ],
+  "Guided walks on the Pearling Path": [
+    "data/destination-details.ts:66"
+  ],
+  "Muscat is low, white and calm, between the Hajar mountains and the sea. The Sultan Qaboos Grand Mosque in the morning, the Royal Opera House at night, and the Mutrah souq in between.": [
+    "data/destination-details.ts:70"
+  ],
+  "Onward journeys to the mountains and the sands": [
+    "data/destination-details.ts:71"
+  ],
+  "Boat trips along the coast": [
+    "data/destination-details.ts:71"
+  ],
+  "Performances at the Royal Opera House": [
+    "data/destination-details.ts:71"
+  ],
+  "Private city and mosque visits": [
+    "data/destination-details.ts:71"
+  ],
+  "At the tip of the Arabian Peninsula, the Musandam fjords drop straight from bare mountains into clear water. Spend days at anchor in quiet inlets, with dolphins for company.": [
+    "data/destination-details.ts:74"
+  ],
+  "Transfers from Dubai by road or helicopter": [
+    "data/destination-details.ts:75"
+  ],
+  "Snorkelling and diving": [
+    "data/destination-details.ts:75"
+  ],
+  "Mountain drives to Jebel Harim": [
+    "data/destination-details.ts:75"
+  ],
+  "Yacht and dhow charters": [
+    "data/destination-details.ts:75"
+  ],
+  "The Sharqiya Sands, once called Wahiba, roll for miles in shades of copper and amber. Here a private camp can be the only light you see.": [
+    "data/destination-details.ts:78"
+  ],
+  "Swims in Wadi Bani Khalid on the way": [
+    "data/destination-details.ts:80"
+  ],
+  "Visits to Bedouin families, where welcome": [
+    "data/destination-details.ts:80"
+  ],
+  "Dune drives at sunset": [
+    "data/destination-details.ts:80"
+  ],
+  "The Green Mountain rises two thousand metres above the plain. Terraced villages, pomegranates and roses cling to the canyon edges, and the air stays cool when the coast is hot.": [
+    "data/destination-details.ts:83"
+  ],
+  "Canyon-edge dinners": [
+    "data/destination-details.ts:84"
+  ],
+  "Rose-water distilleries in spring": [
+    "data/destination-details.ts:84"
+  ],
+  "Village walks with a local guide": [
+    "data/destination-details.ts:84"
+  ],
+  "Mountain resort stays": [
+    "data/destination-details.ts:84"
+  ],
+  "Walk the Siq in the first light, before the day begins, and watch the Treasury emerge from the rock. Petra rewards those who stay: the Monastery in the afternoon, and the city by candlelight at night.": [
+    "data/destination-details.ts:88"
+  ],
+  "Stays a few minutes from the gate": [
+    "data/destination-details.ts:90"
+  ],
+  "Hikes to the Monastery and the High Place": [
+    "data/destination-details.ts:90"
+  ],
+  "Petra by Night": [
+    "data/destination-details.ts:90"
+  ],
+  "Early entry with a private guide": [
+    "data/destination-details.ts:90"
+  ],
+  "The Valley of the Moon: red sand, granite mountains and Bedouin hospitality. By night the sky here is among the darkest you will ever see.": [
+    "data/destination-details.ts:93"
+  ],
+  "Stargazing with a guide": [
+    "data/destination-details.ts:94",
+    "data/services.ts:97"
+  ],
+  "Hot-air balloon flights": [
+    "data/destination-details.ts:94"
+  ],
+  "Four-wheel-drive journeys through the canyons": [
+    "data/destination-details.ts:94"
+  ],
+  "Private desert camps": [
+    "data/destination-details.ts:94",
+    "data/destination-details.ts:80"
+  ],
+  "At the lowest point on earth, the water holds you up and the air is soft. The Dead Sea is a place to do very little, and to watch the hills across the water turn rose at sunset.": [
+    "data/destination-details.ts:97"
+  ],
+  "Hikes in Wadi Mujib": [
+    "data/destination-details.ts:98"
+  ],
+  "Visits to the baptism site and Mount Nebo": [
+    "data/destination-details.ts:98"
+  ],
+  "Private spa treatments": [
+    "data/destination-details.ts:98"
+  ],
+  "Resort and spa stays": [
+    "data/destination-details.ts:98"
+  ],
+  "An archipelago of coral islands and lagoons on Saudi Arabia’s western coast, newly opened to a small number of guests.": [
+    "data/destinations.ts:10"
+  ],
+  "An Atlantic port of ramparts, gulls and blue fishing boats, where the wind keeps the summer gentle.": [
+    "data/destinations.ts:101"
+  ],
+  "A few days in Essaouira": [
+    "data/destinations.ts:102"
+  ],
+  "Chefchaouen": [
+    "data/destinations.ts:103"
+  ],
+  "A mountain town washed in blue, quiet in the early morning before the day arrives.": [
+    "data/destinations.ts:104"
+  ],
+  "Chefchaouen, early in the morning": [
+    "data/destinations.ts:105"
+  ],
+  "The medina of Tunis and the Bardo’s mosaics, then white walls and blue doors above the bay.": [
+    "data/destinations.ts:109"
+  ],
+  "A stay on the Red Sea islands": [
+    "data/destinations.ts:11"
+  ],
+  "Tunis and Sidi Bou Said": [
+    "data/destinations.ts:110",
+    "data/destinations.ts:108"
+  ],
+  "Carthage": [
+    "data/destinations.ts:111"
+  ],
+  "The Punic ports and Roman baths of a city that once rivalled Rome, walked with an archaeologist.": [
+    "data/destinations.ts:112"
+  ],
+  "Carthage with a private archaeologist": [
+    "data/destinations.ts:113"
+  ],
+  "El Djem": [
+    "data/destinations.ts:114"
+  ],
+  "A Roman amphitheatre rising out of an ordinary town, among the best preserved anywhere.": [
+    "data/destinations.ts:115"
+  ],
+  "A private visit to El Djem": [
+    "data/destinations.ts:116"
+  ],
+  "An island of whitewashed mosques, old synagogues, olive groves and long, calm beaches.": [
+    "data/destinations.ts:118"
+  ],
+  "A few days on Djerba": [
+    "data/destinations.ts:119"
+  ],
+  "Palm oases, brick-patterned lanes and the salt flats of Chott el Jerid, at the edge of the dunes.": [
+    "data/destinations.ts:121"
+  ],
+  "Tozeur and a night in the Tunisian Sahara": [
+    "data/destinations.ts:122"
+  ],
+  "A white city stepping down to the bay, and the Ottoman lanes of the Casbah above it.": [
+    "data/destinations.ts:126"
+  ],
+  "Algiers and the Casbah, with a private guide": [
+    "data/destinations.ts:127"
+  ],
+  "Timgad and Djémila": [
+    "data/destinations.ts:128"
+  ],
+  "Two Roman cities in the highlands, their streets, arches and forums still laid out as they were.": [
+    "data/destinations.ts:129"
+  ],
+  "The capital at full pace, and beside it the restored mud-brick lanes of At-Turaif, birthplace of the Saudi state.": [
+    "data/destinations.ts:13"
+  ],
+  "Timgad and Djémila with an archaeologist": [
+    "data/destinations.ts:130"
+  ],
+  "Tassili n’Ajjer and Djanet": [
+    "data/destinations.ts:131"
+  ],
+  "A plateau of sandstone forests and thousands of prehistoric rock paintings, reached from the oasis of Djanet.": [
+    "data/destinations.ts:132"
+  ],
+  "Tassili n’Ajjer and the Sahara at Djanet": [
+    "data/destinations.ts:133"
+  ],
+  "Riyadh and Diriyah, with a private guide": [
+    "data/destinations.ts:14"
+  ],
+  "Jeddah’s Al-Balad": [
+    "data/destinations.ts:15"
+  ],
+  "Coral-stone merchant houses with carved wooden balconies, in the old heart of the Red Sea’s great port.": [
+    "data/destinations.ts:16"
+  ],
+  "An evening walk through Al-Balad in Jeddah": [
+    "data/destinations.ts:17"
+  ],
+  "Tables that are hard to book, a creek still worked by wooden dhows, and the desert half an hour away.": [
+    "data/destinations.ts:21"
+  ],
+  "A few days in Dubai": [
+    "data/destinations.ts:22"
+  ],
+  "Museums on Saadiyat, the Sheikh Zayed Grand Mosque in the evening, and the Liwa sands to the south.": [
+    "data/destinations.ts:24"
+  ],
+  "Abu Dhabi, with time in the Liwa desert": [
+    "data/destinations.ts:25"
+  ],
+  "Red dunes at the foot of the Hajar mountains, an hour north of Dubai and a world quieter.": [
+    "data/destinations.ts:27"
+  ],
+  "A desert night in Ras Al Khaimah": [
+    "data/destinations.ts:28"
+  ],
+  "The Museum of Islamic Art across the water from the corniche, Souq Waqif after dark, and the inland sea at Khor Al Adaid.": [
+    "data/destinations.ts:32"
+  ],
+  "A few days in Doha": [
+    "data/destinations.ts:33"
+  ],
+  "Towers above a long bay, a grand mosque of quiet scale, and Souq Al-Mubarakiya, where the city still comes to shop and talk.": [
+    "data/destinations.ts:37"
+  ],
+  "A few days in Kuwait City": [
+    "data/destinations.ts:38"
+  ],
+  "Failaka Island": [
+    "data/destinations.ts:39"
+  ],
+  "A short crossing from the capital to an island of Bronze Age Dilmun and a Hellenistic temple, almost always empty.": [
+    "data/destinations.ts:40"
+  ],
+  "A private day on Failaka Island": [
+    "data/destinations.ts:41"
+  ],
+  "The Pearling Path in Muharraq, Bab Al Bahrain and its souq, and the ancient fort at Qal’at al-Bahrain at sunset.": [
+    "data/destinations.ts:45"
+  ],
+  "A few days in Manama": [
+    "data/destinations.ts:46"
+  ],
+  "A low white city between mountains and sea, with the Royal Opera House and the Mutrah souq.": [
+    "data/destinations.ts:50"
+  ],
+  "A few days in Muscat": [
+    "data/destinations.ts:51"
+  ],
+  "The Musandam fjords": [
+    "data/destinations.ts:52"
+  ],
+  "Mountains falling straight into the sea at the tip of Arabia, best seen from a dhow or a yacht at anchor.": [
+    "data/destinations.ts:53"
+  ],
+  "A yacht in Musandam": [
+    "data/destinations.ts:54"
+  ],
+  "A sea of copper dunes where a private camp can be the only light for miles.": [
+    "data/destinations.ts:56"
+  ],
+  "A private camp in Wahiba Sands": [
+    "data/destinations.ts:57"
+  ],
+  "The Green Mountain: terraced villages, pomegranates and roses at two thousand metres, cool when the coast is not.": [
+    "data/destinations.ts:59"
+  ],
+  "AlUla and Hegra": [
+    "data/destinations.ts:6"
+  ],
+  "A few days on Jebel Akhdar": [
+    "data/destinations.ts:60"
+  ],
+  "The Siq at first light, before the day begins, and the Treasury as the sun reaches it.": [
+    "data/destinations.ts:64"
+  ],
+  "Petra at first light": [
+    "data/destinations.ts:65",
+    "data/request-examples.ts:4"
+  ],
+  "Red sand and granite, Bedouin hospitality, and a night sky with nothing in the way.": [
+    "data/destinations.ts:67"
+  ],
+  "A night under the stars in Wadi Rum": [
+    "data/destinations.ts:68"
+  ],
+  "Sandstone valleys and the tombs of Hegra, carved by the Nabataeans two thousand years ago. At first light the canyon belongs to almost no one.": [
+    "data/destinations.ts:7"
+  ],
+  "The lowest shore on earth, with warm mineral water and a slow sunset over the hills opposite.": [
+    "data/destinations.ts:70"
+  ],
+  "A quiet stay on the Dead Sea": [
+    "data/destinations.ts:71"
+  ],
+  "Aqaba": [
+    "data/destinations.ts:72"
+  ],
+  "Jordan’s window on the Red Sea, with reefs a few strokes from the shore.": [
+    "data/destinations.ts:73"
+  ],
+  "Time on the water in Aqaba": [
+    "data/destinations.ts:74"
+  ],
+  "Giza early in the morning, the Grand Egyptian Museum, and the lanes of Islamic Cairo.": [
+    "data/destinations.ts:78"
+  ],
+  "Cairo and the Pyramids, with an Egyptologist": [
+    "data/destinations.ts:79"
+  ],
+  "A few days in AlUla and Hegra": [
+    "data/destinations.ts:8"
+  ],
+  "The Valley of the Kings, Karnak at dusk, and a private dahabiya drifting south toward Aswan.": [
+    "data/destinations.ts:81"
+  ],
+  "A private dahabiya on the Nile from Luxor": [
+    "data/destinations.ts:82"
+  ],
+  "Clear water and coral off the eastern coast, from quiet bays to the deep reefs of the south.": [
+    "data/destinations.ts:84"
+  ],
+  "Time on Egypt’s Red Sea coast": [
+    "data/destinations.ts:85"
+  ],
+  "A riad behind a plain door, the medina waking up, and the palm groves and gardens beyond the walls.": [
+    "data/destinations.ts:89"
+  ],
+  "A few days in Marrakech": [
+    "data/destinations.ts:90"
+  ],
+  "The oldest of the imperial cities, a medina of craftsmen and scholars that has changed little in centuries.": [
+    "data/destinations.ts:92"
+  ],
+  "Fes, with a private guide to the medina": [
+    "data/destinations.ts:93"
+  ],
+  "The Atlas Mountains": [
+    "data/destinations.ts:94"
+  ],
+  "Berber villages, walnut valleys and snow on the high peaks, an hour from Marrakech.": [
+    "data/destinations.ts:95"
+  ],
+  "A few days in the Atlas Mountains": [
+    "data/destinations.ts:96"
+  ],
+  "The great dunes of Erg Chebbi, and a camp set for you alone as the light turns gold.": [
+    "data/destinations.ts:98"
+  ],
+  "A private camp in the Sahara at Merzouga": [
+    "data/destinations.ts:99"
+  ],
+  "Saudi Arabia has opened to travellers quickly, and its hospitality is generous. A little care in dress and manner is noticed and appreciated.": [
+    "data/etiquette.ts:10"
+  ],
+  "“As-salamu alaykum” is a gracious opening. Kuwaitis often greet at length; there is no need to rush.": [
+    "data/etiquette.ts:102"
+  ],
+  "Wait for a woman to offer her hand.": [
+    "data/etiquette.ts:103"
+  ],
+  "Ten per cent in restaurants is appreciated. Small tips for drivers and porters are customary.": [
+    "data/etiquette.ts:106"
+  ],
+  "Bahrain has long been a crossroads of the Gulf, relaxed and welcoming, with deep roots in its pearling past.": [
+    "data/etiquette.ts:111"
+  ],
+  "Away from hotels and beaches, cover shoulders and knees.": [
+    "data/etiquette.ts:113"
+  ],
+  "At Al Fateh Grand Mosque, women cover their hair, arms and legs; robes are usually provided.": [
+    "data/etiquette.ts:114"
+  ],
+  "Available in licensed hotels, restaurants and bars. Drinking in public places is not permitted.": [
+    "data/etiquette.ts:118"
+  ],
+  "Modest, loose clothing covering shoulders and knees is appreciated for men and women in public places.": [
+    "data/etiquette.ts:12"
+  ],
+  "Ask before photographing people.": [
+    "data/etiquette.ts:121"
+  ],
+  "Avoid government and military sites.": [
+    "data/etiquette.ts:122"
+  ],
+  "A handshake is common between men; with women, follow her lead.": [
+    "data/etiquette.ts:125"
+  ],
+  "Service is often included. Otherwise, around ten per cent.": [
+    "data/etiquette.ts:128"
+  ],
+  "Visiting women are not required to wear an abaya or cover their hair, though many choose a light scarf at heritage and religious sites.": [
+    "data/etiquette.ts:13"
+  ],
+  "Oman is perhaps the most quietly traditional country in the Gulf. Courtesy and calm are the national manner, and guests are expected to share it.": [
+    "data/etiquette.ts:133"
+  ],
+  "Cover shoulders and knees in towns, villages and souqs. In mountain villages, more modest dress is kind.": [
+    "data/etiquette.ts:135"
+  ],
+  "At the Sultan Qaboos Grand Mosque, women cover their hair, arms and legs. Visiting hours are limited.": [
+    "data/etiquette.ts:136"
+  ],
+  "Mosques ask for covered arms and legs, and a headscarf for women. Shoes come off at the door.": [
+    "data/etiquette.ts:14"
+  ],
+  "Served in licensed hotels and some restaurants. Not sold in ordinary shops, and not for public places.": [
+    "data/etiquette.ts:140"
+  ],
+  "Ask before photographing people, especially in villages and the interior.": [
+    "data/etiquette.ts:143"
+  ],
+  "Avoid military and government sites.": [
+    "data/etiquette.ts:144"
+  ],
+  "Omanis greet unhurriedly. Take the time to ask after health and family.": [
+    "data/etiquette.ts:147"
+  ],
+  "Accept kahwa and dates when offered; it is the heart of Omani welcome.": [
+    "data/etiquette.ts:148"
+  ],
+  "Not expected, but appreciated. Around ten per cent in restaurants; something for guides and drivers.": [
+    "data/etiquette.ts:151"
+  ],
+  "Jordanians are famously hospitable. Accept the tea, take your time, and you will be treated as a friend.": [
+    "data/etiquette.ts:156"
+  ],
+  "Amman is relaxed; outside the city, and in villages, cover shoulders and knees.": [
+    "data/etiquette.ts:158"
+  ],
+  "At Petra and Wadi Rum, comfortable, modest clothing and good shoes. Mosques ask for covered arms, legs and hair for women.": [
+    "data/etiquette.ts:159"
+  ],
+  "Friday and Saturday. Many places open later on Friday, after midday prayers.": [
+    "data/etiquette.ts:16"
+  ],
+  "Available in hotels, many restaurants and licensed shops. Discretion is appreciated in conservative areas.": [
+    "data/etiquette.ts:163"
+  ],
+  "Ask before photographing people, including Bedouin families at Petra and in Wadi Rum.": [
+    "data/etiquette.ts:166"
+  ],
+  "“Ahlan wa sahlan”, welcome, you will hear often. A handshake is common; with women, follow her lead.": [
+    "data/etiquette.ts:169"
+  ],
+  "Refusing tea or coffee outright can seem cold. Accept at least one cup.": [
+    "data/etiquette.ts:170"
+  ],
+  "Ten per cent in restaurants is usual. Guides, drivers and camp hosts appreciate a tip at the end.": [
+    "data/etiquette.ts:173"
+  ],
+  "Egypt has welcomed travellers for millennia. A little patience and good humour are returned many times over.": [
+    "data/etiquette.ts:178"
+  ],
+  "Alcohol is not available to visitors and must not be brought into the country.": [
+    "data/etiquette.ts:18"
+  ],
+  "Cover shoulders and knees in cities and at temples. Beachwear is for the Red Sea resorts.": [
+    "data/etiquette.ts:180"
+  ],
+  "At mosques, women cover their hair, arms and legs; shoes come off at the door.": [
+    "data/etiquette.ts:181"
+  ],
+  "Friday and Saturday for offices; shops and sites are generally open.": [
+    "data/etiquette.ts:183"
+  ],
+  "Available in hotels, Nile boats and many restaurants. Discretion is appreciated outside tourist areas.": [
+    "data/etiquette.ts:185"
+  ],
+  "Some sites charge for, or restrict, photography inside tombs. Your guide will advise at each site.": [
+    "data/etiquette.ts:188"
+  ],
+  "Ask before photographing people, and avoid military and police installations.": [
+    "data/etiquette.ts:189"
+  ],
+  "Hotels and restaurants offer excellent alcohol-free drinks, and Saudi coffee with dates is the true welcome.": [
+    "data/etiquette.ts:19"
+  ],
+  "A warm handshake is common; with women, follow her lead.": [
+    "data/etiquette.ts:192"
+  ],
+  "Baksheesh, small tips for small services, is part of daily life. Your concierge will prepare you so you are never caught without.": [
+    "data/etiquette.ts:195"
+  ],
+  "Ten to fifteen per cent in restaurants; guides, drivers and boat crews at the end of their time with you.": [
+    "data/etiquette.ts:196"
+  ],
+  "Moroccan hospitality is unhurried and generous. Mint tea is a welcome, and saying yes to a glass is the start of a conversation.": [
+    "data/etiquette.ts:201"
+  ],
+  "Cover shoulders and knees in medinas and villages. Coastal towns and riads are more relaxed.": [
+    "data/etiquette.ts:203"
+  ],
+  "Most mosques in Morocco are open only to Muslims; the Hassan II Mosque in Casablanca welcomes visitors on guided tours.": [
+    "data/etiquette.ts:204"
+  ],
+  "Saturday and Sunday. Friday is the day for communal prayer and couscous at home.": [
+    "data/etiquette.ts:206"
+  ],
+  "Served in licensed hotels, riads, restaurants and bars, and sold in some supermarkets. Drinking in the street is not appropriate.": [
+    "data/etiquette.ts:208"
+  ],
+  "Always ask before photographing people, especially in the medinas and the mountains; some prefer not to be photographed.": [
+    "data/etiquette.ts:211"
+  ],
+  "Performers and storytellers in squares may ask for a small tip.": [
+    "data/etiquette.ts:212"
+  ],
+  "“Salam” or “As-salamu alaykum”, with a handshake and a hand to the heart. French is widely spoken.": [
+    "data/etiquette.ts:215"
+  ],
+  "Bread is treated with respect; it is never thrown away.": [
+    "data/etiquette.ts:216"
+  ],
+  "Around ten per cent in restaurants. Small tips for guides, drivers, riad staff and porters are customary.": [
+    "data/etiquette.ts:219"
+  ],
+  "Ask before photographing people, especially women and families.": [
+    "data/etiquette.ts:22"
+  ],
+  "Tunisia is open, Mediterranean and proud of its long history. Visitors are welcomed with ease.": [
+    "data/etiquette.ts:224"
+  ],
+  "Relaxed in Tunis and resorts; cover shoulders and knees in medinas, the south and at religious sites.": [
+    "data/etiquette.ts:226"
+  ],
+  "Many mosques are closed to non-Muslims, though some courtyards, such as Kairouan’s Great Mosque, can be visited.": [
+    "data/etiquette.ts:227"
+  ],
+  "Saturday and Sunday. Many offices close early on Friday.": [
+    "data/etiquette.ts:229"
+  ],
+  "Avoid photographing government buildings, military sites and airports.": [
+    "data/etiquette.ts:23"
+  ],
+  "Available in hotels, restaurants and bars, and Tunisia makes its own wines. Discretion is kind in conservative areas and the south.": [
+    "data/etiquette.ts:231"
+  ],
+  "Ask before photographing people. Avoid government buildings and security forces.": [
+    "data/etiquette.ts:234"
+  ],
+  "A handshake is common; French is widely spoken alongside Tunisian Arabic.": [
+    "data/etiquette.ts:237"
+  ],
+  "Around ten per cent in restaurants. Guides and drivers appreciate a tip.": [
+    "data/etiquette.ts:240"
+  ],
+  "Algeria receives few travellers, and those who come are often met with real curiosity and warmth. Patience and respect for local custom are essential.": [
+    "data/etiquette.ts:245"
+  ],
+  "Modest clothing covering shoulders and knees in all public places. In the south and in smaller towns, more conservative dress is kind.": [
+    "data/etiquette.ts:247"
+  ],
+  "In the Sahara, loose, light clothing and a scarf against sun and sand.": [
+    "data/etiquette.ts:248"
+  ],
+  "Friday and Saturday.": [
+    "data/etiquette.ts:250",
+    "data/etiquette.ts:161",
+    "data/etiquette.ts:138",
+    "data/etiquette.ts:116",
+    "data/etiquette.ts:93",
+    "data/etiquette.ts:68"
+  ],
+  "Available in some hotels and licensed restaurants in the cities; limited or unavailable elsewhere. Discretion is important.": [
+    "data/etiquette.ts:252"
+  ],
+  "Always ask before photographing people.": [
+    "data/etiquette.ts:255"
+  ],
+  "Avoid photographing police, military, government buildings and infrastructure; this is taken seriously.": [
+    "data/etiquette.ts:256"
+  ],
+  "A handshake is common, often followed by a hand to the heart. French and Arabic are widely spoken; Tamazight in the south and the mountains.": [
+    "data/etiquette.ts:259"
+  ],
+  "“As-salamu alaykum” is always welcome; the reply is “wa alaykum as-salam”.": [
+    "data/etiquette.ts:26"
+  ],
+  "Tuareg hosts in the Sahara will offer tea in three glasses. It is a ritual worth the time.": [
+    "data/etiquette.ts:260"
+  ],
+  "Not always expected, but appreciated. Guides, drivers and desert crews receive a tip at the end of the journey.": [
+    "data/etiquette.ts:263"
+  ],
+  "Wait for a woman to offer her hand before offering yours. A hand on the heart is a warm alternative.": [
+    "data/etiquette.ts:27"
+  ],
+  "Accept coffee or tea when offered; a gentle shake of the cup signals you have had enough.": [
+    "data/etiquette.ts:28"
+  ],
+  "Not expected, but appreciated. Around ten per cent in restaurants where service is not included.": [
+    "data/etiquette.ts:31"
+  ],
+  "A small amount for drivers, guides and hotel staff is a kind gesture.": [
+    "data/etiquette.ts:32"
+  ],
+  "The Emirates are cosmopolitan, but they remain a place of Emirati custom. A little modesty away from the beach goes a long way.": [
+    "data/etiquette.ts:37"
+  ],
+  "Beachwear belongs at the beach and the pool. Elsewhere, cover shoulders and knees, particularly in malls and older neighbourhoods.": [
+    "data/etiquette.ts:39"
+  ],
+  "At the Sheikh Zayed Grand Mosque, women cover their hair, arms and legs; men wear long trousers. Abayas can be provided.": [
+    "data/etiquette.ts:40"
+  ],
+  "Saturday and Sunday for most of the country, with a shorter working day on Friday. Sharjah differs.": [
+    "data/etiquette.ts:42"
+  ],
+  "Served in licensed hotels, restaurants and bars. Drinking in public places is not permitted.": [
+    "data/etiquette.ts:44"
+  ],
+  "Sharjah does not permit alcohol.": [
+    "data/etiquette.ts:45"
+  ],
+  "Rules for residents and visitors have changed in recent years; your concierge will advise.": [
+    "data/etiquette.ts:46"
+  ],
+  "Ask before photographing people, especially Emirati women and families.": [
+    "data/etiquette.ts:49"
+  ],
+  "Drones need permission and registration.": [
+    "data/etiquette.ts:50"
+  ],
+  "A handshake is common between men. With women, wait for a hand to be offered.": [
+    "data/etiquette.ts:53"
+  ],
+  "Public displays of affection are best kept discreet.": [
+    "data/etiquette.ts:54"
+  ],
+  "Service is sometimes included. Otherwise, ten to fifteen per cent in restaurants.": [
+    "data/etiquette.ts:57"
+  ],
+  "Small tips for drivers, valets and porters are customary.": [
+    "data/etiquette.ts:58"
+  ],
+  "Doha is open and international, with a traditional heart. Visitors are welcomed warmly and asked, gently, to dress with care.": [
+    "data/etiquette.ts:63"
+  ],
+  "Cover shoulders and knees in public places, including museums and souqs.": [
+    "data/etiquette.ts:65"
+  ],
+  "Mosques ask for covered arms and legs and a headscarf for women.": [
+    "data/etiquette.ts:66"
+  ],
+  "Served only in licensed hotel restaurants and bars. Drinking in public places is not permitted.": [
+    "data/etiquette.ts:70"
+  ],
+  "Alcohol cannot be brought into the country.": [
+    "data/etiquette.ts:71"
+  ],
+  "Ask before photographing people, especially women.": [
+    "data/etiquette.ts:74"
+  ],
+  "Avoid government and security buildings.": [
+    "data/etiquette.ts:75"
+  ],
+  "Handshakes are common between men; with women, follow her lead.": [
+    "data/etiquette.ts:78"
+  ],
+  "Using the right hand to give and receive is courteous.": [
+    "data/etiquette.ts:79"
+  ],
+  "Ten to fifteen per cent in restaurants where service is not included.": [
+    "data/etiquette.ts:82"
+  ],
+  "Small tips for drivers and porters are welcome.": [
+    "data/etiquette.ts:83"
+  ],
+  "Kuwait is a conservative, family-centred society with a long tradition of hospitality. Guests who dress and behave modestly are welcomed warmly.": [
+    "data/etiquette.ts:88"
+  ],
+  "Modest clothing covering shoulders and knees is expected in public places.": [
+    "data/etiquette.ts:90"
+  ],
+  "At the Grand Mosque, women cover their hair, arms and legs; abayas may be provided for guided visits.": [
+    "data/etiquette.ts:91"
+  ],
+  "Alcohol is prohibited in Kuwait, including in hotels, and must not be brought into the country.": [
+    "data/etiquette.ts:95"
+  ],
+  "Ask before photographing people, and never photograph women without permission.": [
+    "data/etiquette.ts:98"
+  ],
+  "Avoid photographing oil installations, government buildings and military sites.": [
+    "data/etiquette.ts:99"
+  ],
+  "Screenings and conversations, including open-air nights in the Jemaa el-Fna.": [
+    "data/events.ts:100"
+  ],
+  "The Marrakech International Film Festival": [
+    "data/events.ts:101"
+  ],
+  "1-54 Contemporary African Art Fair, Marrakech": [
+    "data/events.ts:102"
+  ],
+  "Usually in February": [
+    "data/events.ts:103"
+  ],
+  "Contemporary art from Africa and its diaspora, with a city-wide programme around it.": [
+    "data/events.ts:104"
+  ],
+  "The 1-54 art fair in Marrakech": [
+    "data/events.ts:105"
+  ],
+  "Fes Festival of World Sacred Music": [
+    "data/events.ts:106"
+  ],
+  "Usually late May or June": [
+    "data/events.ts:107"
+  ],
+  "Sufi, Andalusian and sacred music from many traditions, in the palaces and gardens of Fes.": [
+    "data/events.ts:108"
+  ],
+  "The Fes Festival of World Sacred Music": [
+    "data/events.ts:109"
+  ],
+  "Gnaoua World Music Festival": [
+    "data/events.ts:110"
+  ],
+  "Usually in June": [
+    "data/events.ts:111"
+  ],
+  "Gnaoua masters and visiting musicians playing late into the night on the Essaouira ramparts.": [
+    "data/events.ts:112"
+  ],
+  "Essaouira for the Gnaoua World Music Festival": [
+    "data/events.ts:113"
+  ],
+  "International Festival of the Sahara, Douz": [
+    "data/events.ts:114"
+  ],
+  "Usually in late December": [
+    "data/events.ts:115"
+  ],
+  "Saharan poetry, horsemanship and music at the edge of the Grand Erg Oriental.": [
+    "data/events.ts:116"
+  ],
+  "The Festival of the Sahara in Douz": [
+    "data/events.ts:117"
+  ],
+  "Carthage International Festival": [
+    "data/events.ts:118"
+  ],
+  "Usually in July and August": [
+    "data/events.ts:119"
+  ],
+  "Summer concerts in the Roman theatre of Carthage.": [
+    "data/events.ts:120"
+  ],
+  "An evening at the Carthage International Festival": [
+    "data/events.ts:121"
+  ],
+  "Sebeïba, Djanet": [
+    "data/events.ts:122"
+  ],
+  "Held at Ashura, so the date moves with the lunar calendar": [
+    "data/events.ts:123"
+  ],
+  "An ancient Tuareg ceremony of song and dance in the oasis of Djanet, recognised by UNESCO.": [
+    "data/events.ts:124"
+  ],
+  "Djanet during the Sebeïba": [
+    "data/events.ts:125"
+  ],
+  "Timgad International Festival": [
+    "data/events.ts:126"
+  ],
+  "Usually in summer, when held": [
+    "data/events.ts:127"
+  ],
+  "Music in the open air beside the Roman city of Timgad.": [
+    "data/events.ts:128"
+  ],
+  "The Timgad International Festival": [
+    "data/events.ts:129"
+  ],
+  "Formula 1 Abu Dhabi Grand Prix": [
+    "data/events.ts:18"
+  ],
+  "Usually late November or early December, at Yas Marina": [
+    "data/events.ts:19"
+  ],
+  "The season’s closing race, run from day into night beside the marina.": [
+    "data/events.ts:20"
+  ],
+  "Access to the Formula 1 Abu Dhabi Grand Prix": [
+    "data/events.ts:21"
+  ],
+  "Formula 1 Saudi Arabian Grand Prix": [
+    "data/events.ts:22"
+  ],
+  "Usually in spring, on the Jeddah Corniche circuit": [
+    "data/events.ts:23"
+  ],
+  "A fast night race along the Red Sea shore.": [
+    "data/events.ts:24"
+  ],
+  "Access to the Formula 1 Saudi Arabian Grand Prix in Jeddah": [
+    "data/events.ts:25"
+  ],
+  "Formula 1 Qatar Grand Prix": [
+    "data/events.ts:26"
+  ],
+  "Usually late November, at Lusail": [
+    "data/events.ts:27"
+  ],
+  "Floodlit racing in the desert north of Doha.": [
+    "data/events.ts:28"
+  ],
+  "Access to the Formula 1 Qatar Grand Prix": [
+    "data/events.ts:29"
+  ],
+  "Formula 1 Bahrain Grand Prix": [
+    "data/events.ts:30"
+  ],
+  "Usually in the early part of the season, at Sakhir": [
+    "data/events.ts:31"
+  ],
+  "One of the region’s longest-running races, under lights in the desert.": [
+    "data/events.ts:32"
+  ],
+  "Access to the Formula 1 Bahrain Grand Prix": [
+    "data/events.ts:33"
+  ],
+  "Riyadh Season": [
+    "data/events.ts:34"
+  ],
+  "Usually from October through the winter": [
+    "data/events.ts:35"
+  ],
+  "Months of concerts, fights, theatre and dining across the capital.": [
+    "data/events.ts:36"
+  ],
+  "Riyadh Season, with help choosing what to see": [
+    "data/events.ts:37"
+  ],
+  "AlUla’s winter festivals": [
+    "data/events.ts:38"
+  ],
+  "Through the winter months, programme announced each year": [
+    "data/events.ts:39"
+  ],
+  "Music, art and gatherings set among the canyons, with programmes that change each season.": [
+    "data/events.ts:40"
+  ],
+  "AlUla during the winter festivals": [
+    "data/events.ts:41"
+  ],
+  "Diriyah Contemporary Art Biennale": [
+    "data/events.ts:42"
+  ],
+  "Held in alternate years, usually opening in winter": [
+    "data/events.ts:43"
+  ],
+  "Contemporary art from the region and beyond, in the JAX district of Diriyah.": [
+    "data/events.ts:44"
+  ],
+  "A private visit to the Diriyah Contemporary Art Biennale": [
+    "data/events.ts:45"
+  ],
+  "MDLBEAST Soundstorm": [
+    "data/events.ts:46"
+  ],
+  "Usually in December, outside Riyadh": [
+    "data/events.ts:47"
+  ],
+  "The region’s largest music festival, over several nights.": [
+    "data/events.ts:48"
+  ],
+  "Access to MDLBEAST Soundstorm": [
+    "data/events.ts:49"
+  ],
+  "Motorsport": [
+    "data/events.ts:5",
+    "data/events.ts:5"
+  ],
+  "Art Dubai": [
+    "data/events.ts:50"
+  ],
+  "Usually in spring, at Madinat Jumeirah": [
+    "data/events.ts:51"
+  ],
+  "The region’s leading art fair, with galleries from across the Global South.": [
+    "data/events.ts:52"
+  ],
+  "Art Dubai, with a guide to the fair": [
+    "data/events.ts:53"
+  ],
+  "Dubai Shopping Festival": [
+    "data/events.ts:54"
+  ],
+  "Usually mid-December to late January": [
+    "data/events.ts:55"
+  ],
+  "A month of city-wide events, launches and fireworks over the creek.": [
+    "data/events.ts:56"
+  ],
+  "A personal stylist during the Dubai Shopping Festival": [
+    "data/events.ts:57"
+  ],
+  "Abu Dhabi Art": [
+    "data/events.ts:58"
+  ],
+  "Usually in November, on Saadiyat Island": [
+    "data/events.ts:59"
+  ],
+  "Art and culture": [
+    "data/events.ts:6",
+    "data/events.ts:6"
+  ],
+  "A fair and programme of exhibitions in the cultural district.": [
+    "data/events.ts:60"
+  ],
+  "Abu Dhabi Art, with a private walkthrough": [
+    "data/events.ts:61"
+  ],
+  "Dubai World Cup": [
+    "data/events.ts:62"
+  ],
+  "Usually late March or early April, at Meydan": [
+    "data/events.ts:63"
+  ],
+  "One of the richest evenings in horse racing.": [
+    "data/events.ts:64"
+  ],
+  "Access to the Dubai World Cup at Meydan": [
+    "data/events.ts:65"
+  ],
+  "Muscat Nights": [
+    "data/events.ts:66"
+  ],
+  "Usually in January and February": [
+    "data/events.ts:67"
+  ],
+  "Omani food, crafts and performance in parks across the capital.": [
+    "data/events.ts:68"
+  ],
+  "Muscat during Muscat Nights": [
+    "data/events.ts:69"
+  ],
+  "Music": [
+    "data/events.ts:7",
+    "data/events.ts:7"
+  ],
+  "Qatar Museums winter season": [
+    "data/events.ts:70"
+  ],
+  "Exhibitions open through the winter, programme announced each year": [
+    "data/events.ts:71"
+  ],
+  "Major exhibitions across Doha’s museums, from the Museum of Islamic Art to the National Museum.": [
+    "data/events.ts:72"
+  ],
+  "Doha’s winter exhibitions, with a curator if possible": [
+    "data/events.ts:73"
+  ],
+  "Hala February": [
+    "data/events.ts:74"
+  ],
+  "Through February, around Kuwait’s national days": [
+    "data/events.ts:75"
+  ],
+  "A month of concerts and celebration leading into Kuwait’s National and Liberation Days.": [
+    "data/events.ts:76"
+  ],
+  "Kuwait City during Hala February": [
+    "data/events.ts:77"
+  ],
+  "Sport": [
+    "data/events.ts:8",
+    "data/events.ts:8"
+  ],
+  "Jerash Festival of Culture and Arts": [
+    "data/events.ts:80"
+  ],
+  "Usually in summer, in the Roman city of Jerash": [
+    "data/events.ts:81"
+  ],
+  "Music and poetry performed among Roman colonnades north of Amman.": [
+    "data/events.ts:82"
+  ],
+  "An evening at the Jerash Festival": [
+    "data/events.ts:83"
+  ],
+  "Abu Simbel Sun Festival (February)": [
+    "data/events.ts:86"
+  ],
+  "Around 22 February": [
+    "data/events.ts:87"
+  ],
+  "Twice a year the rising sun reaches the inner sanctuary of Ramesses II’s temple. This is the first.": [
+    "data/events.ts:88"
+  ],
+  "Abu Simbel for the Sun Festival in February": [
+    "data/events.ts:89"
+  ],
+  "Festival": [
+    "data/events.ts:9"
+  ],
+  "Festivals": [
+    "data/events.ts:9"
+  ],
+  "Abu Simbel Sun Festival (October)": [
+    "data/events.ts:90"
+  ],
+  "Around 22 October": [
+    "data/events.ts:91"
+  ],
+  "The second of the year’s two sunrises into the sanctuary at Abu Simbel.": [
+    "data/events.ts:92"
+  ],
+  "Abu Simbel for the Sun Festival in October": [
+    "data/events.ts:93"
+  ],
+  "El Gouna Film Festival": [
+    "data/events.ts:94"
+  ],
+  "Usually in autumn, on the Red Sea coast": [
+    "data/events.ts:95"
+  ],
+  "Arab and international cinema in a lagoon town on the Red Sea.": [
+    "data/events.ts:96"
+  ],
+  "The El Gouna Film Festival": [
+    "data/events.ts:97"
+  ],
+  "Marrakech International Film Festival": [
+    "data/events.ts:98"
+  ],
+  "Usually late November or early December": [
+    "data/events.ts:99"
+  ],
+  "The sun setting low over a sea of dunes, the sand already in shadow": [
+    "data/photos.ts:20"
+  ],
+  "A pale beach and a still sea under a night sky full of stars": [
+    "data/photos.ts:21"
+  ],
+  "A flat desert at dusk, distant hills on a thin band of orange light": [
+    "data/photos.ts:22"
+  ],
+  "The Treasury at Petra seen through the narrow walls of the Siq": [
+    "data/photos.ts:23"
+  ],
+  "The carved facade of the Treasury at Petra, rose-red in the light": [
+    "data/photos.ts:24"
+  ],
+  "Burj Al Arab rising from the sea off Dubai, the Palm beyond": [
+    "data/photos.ts:25"
+  ],
+  "Burj Khalifa lit against the night sky in Dubai": [
+    "data/photos.ts:26"
+  ],
+  "Two slender minarets and a dome in silhouette at sunset": [
+    "data/photos.ts:27"
+  ],
+  "Wide dunes under a bright sky, mountains on the horizon": [
+    "data/photos.ts:28"
+  ],
+  "A long curve of dune falling into evening shadow below a rocky ridge": [
+    "data/photos.ts:29"
+  ],
+  "Light catching the sharp crest of a dune": [
+    "data/photos.ts:30"
+  ],
+  "Soft, pale dunes under a clear sky": [
+    "data/photos.ts:31"
+  ],
+  "A dune rippled by wind, glowing gold in low sun": [
+    "data/photos.ts:32"
+  ],
+  "A single orange dune against a clear blue sky": [
+    "data/photos.ts:33"
+  ],
+  "An open desert plain under clouds at dusk": [
+    "data/photos.ts:34"
+  ],
+  "Wind ripples in sand, in black and white": [
+    "data/photos.ts:35"
+  ],
+  "Close detail of wind-shaped ripples in sand": [
+    "data/photos.ts:36"
+  ],
+  "Ripples of sand catching the last light": [
+    "data/photos.ts:37"
+  ],
+  "Golden sand patterned by the wind": [
+    "data/photos.ts:38"
+  ],
+  "A yacht crossing turquoise water, seen from above": [
+    "data/photos.ts:39"
+  ],
+  "Waves breaking on a dark shore, seen from above": [
+    "data/photos.ts:40"
+  ],
+  "The rock art of the Tassili, from Djanet": [
+    "data/request-examples.ts:10"
+  ],
+  "A table in Doha tonight, somewhere the city goes": [
+    "data/request-examples.ts:11"
+  ],
+  "A dahabiya on the Nile for five nights": [
+    "data/request-examples.ts:12"
+  ],
+  "A private dinner in the dunes for our anniversary": [
+    "data/request-examples.ts:3"
+  ],
+  "Three days in AlUla, with a helicopter": [
+    "data/request-examples.ts:5"
+  ],
+  "Paddock access in Abu Dhabi": [
+    "data/request-examples.ts:6"
+  ],
+  "A yacht in Musandam this weekend": [
+    "data/request-examples.ts:7"
+  ],
+  "A riad for the family in Marrakech, with a cook": [
+    "data/request-examples.ts:8"
+  ],
+  "Carthage with an archaeologist, then a few quiet days on Djerba": [
+    "data/request-examples.ts:9"
+  ],
+  "The UAE, Oman, Saudi Arabia, Jordan, Egypt, Morocco, Tunisia and Algeria.": [
+    "data/services.ts:100"
+  ],
+  "A private dinner in the dunes": [
+    "data/services.ts:101"
+  ],
+  "Restaurant reservations": [
+    "data/services.ts:104"
+  ],
+  "The table you wanted, on the night you wanted it, whenever it can be had.": [
+    "data/services.ts:105"
+  ],
+  "The region’s best tables fill quickly, and some of the best are not listed anywhere at all.": [
+    "data/services.ts:107"
+  ],
+  "Tell us what you feel like and when. We will suggest a few places, book the one you choose and let them know who is coming.": [
+    "data/services.ts:108"
+  ],
+  "Reservations at the region’s most sought-after restaurants": [
+    "data/services.ts:111"
+  ],
+  "Chef’s tables and private rooms": [
+    "data/services.ts:112"
+  ],
+  "Home dining with a local family, where welcome": [
+    "data/services.ts:113"
+  ],
+  "Every city we cover.": [
+    "data/services.ts:115"
+  ],
+  "A table tonight": [
+    "data/services.ts:116"
+  ],
+  "Grand Prix weekends, art fairs and openings, with access requested on your behalf.": [
+    "data/services.ts:120"
+  ],
+  "The season brings Formula 1, art fairs, festivals and first nights. We request access for you, from hospitality at the circuit to the preview before the doors open.": [
+    "data/services.ts:122"
+  ],
+  "We never promise what we cannot confirm. If something cannot be arranged, we will say so, and suggest what can.": [
+    "data/services.ts:123"
+  ],
+  "Formula 1 hospitality and paddock requests": [
+    "data/services.ts:126"
+  ],
+  "Art fair previews and gallery visits": [
+    "data/services.ts:127"
+  ],
+  "Concert and festival access": [
+    "data/services.ts:128"
+  ],
+  "Private openings of museums and sites": [
+    "data/services.ts:129"
+  ],
+  "See The Season for what is on.": [
+    "data/services.ts:131"
+  ],
+  "Access to an event": [
+    "data/services.ts:132"
+  ],
+  "Shopping and personal stylists": [
+    "data/services.ts:135"
+  ],
+  "Private appointments, personal shoppers and the ateliers worth knowing.": [
+    "data/services.ts:136"
+  ],
+  "From the boutiques of Dubai and Doha to the craftsmen of the Fes medina, the region is a remarkable place to shop, if you know where to look.": [
+    "data/services.ts:138"
+  ],
+  "A personal stylist or shopper can accompany you, or have a selection waiting in your suite.": [
+    "data/services.ts:139"
+  ],
+  "Personal shoppers and stylists": [
+    "data/services.ts:142"
+  ],
+  "Private appointments after hours": [
+    "data/services.ts:143"
+  ],
+  "Ateliers, jewellers and perfumers": [
+    "data/services.ts:144"
+  ],
+  "Souq and medina visits with a guide": [
+    "data/services.ts:145"
+  ],
+  "Dubai, Abu Dhabi, Doha, Riyadh, Marrakech, Fes and Cairo.": [
+    "data/services.ts:147"
+  ],
+  "A personal stylist during our stay": [
+    "data/services.ts:148"
+  ],
+  "Wellness and spa retreats": [
+    "data/services.ts:151"
+  ],
+  "Hammams, mountain retreats and the Dead Sea, arranged around rest.": [
+    "data/services.ts:152"
+  ],
+  "Rest is a reason to travel. The region offers hammams centuries old, cool mountain retreats and the mineral waters of the Dead Sea.": [
+    "data/services.ts:154"
+  ],
+  "We plan days around treatments, practitioners and quiet, and leave space for nothing at all.": [
+    "data/services.ts:155"
+  ],
+  "Spa and hammam bookings": [
+    "data/services.ts:158"
+  ],
+  "Wellness retreats in the mountains and the desert": [
+    "data/services.ts:159"
+  ],
+  "Private practitioners in your villa or suite": [
+    "data/services.ts:160"
+  ],
+  "The Dead Sea, Jebel Akhdar, the Atlas, the Red Sea and every major city.": [
+    "data/services.ts:162"
+  ],
+  "A few days of rest": [
+    "data/services.ts:163"
+  ],
+  "Families": [
+    "data/services.ts:166"
+  ],
+  "Vetted nannies, kids’ clubs, family villas and days planned around the youngest guest.": [
+    "data/services.ts:167"
+  ],
+  "Travelling with children asks for a different kind of planning: shorter days, longer lunches, a pool, and someone who knows which sites will hold a seven-year-old’s attention.": [
+    "data/services.ts:169"
+  ],
+  "We arrange family villas, vetted childcare and guides who are good with children, so the journey works for everyone.": [
+    "data/services.ts:170"
+  ],
+  "Family villas and connecting suites": [
+    "data/services.ts:173"
+  ],
+  "Vetted nannies and childcare": [
+    "data/services.ts:174"
+  ],
+  "Kids’ clubs and activities": [
+    "data/services.ts:175"
+  ],
+  "Guides who are good with children": [
+    "data/services.ts:176"
+  ],
+  "A family journey": [
+    "data/services.ts:179"
+  ],
+  "Celebrations": [
+    "data/services.ts:182"
+  ],
+  "Proposals, birthdays and anniversaries, planned quietly and down to the last candle.": [
+    "data/services.ts:183"
+  ],
+  "A proposal at first light in the desert, a birthday dinner in a palace courtyard, an anniversary on a yacht at sunset.": [
+    "data/services.ts:185"
+  ],
+  "We plan the setting, the music, the flowers and the photographer, and keep everything secret until the moment arrives.": [
+    "data/services.ts:186"
+  ],
+  "Proposals": [
+    "data/services.ts:189"
+  ],
+  "Birthdays and anniversaries": [
+    "data/services.ts:190"
+  ],
+  "Private celebrations in unusual places": [
+    "data/services.ts:191"
+  ],
+  "Musicians, florists and photographers": [
+    "data/services.ts:192"
+  ],
+  "A celebration": [
+    "data/services.ts:195"
+  ],
+  "Heritage, guides and archaeologists": [
+    "data/services.ts:198"
+  ],
+  "Private guides, Egyptologists and archaeologists who make the stones speak.": [
+    "data/services.ts:199"
+  ],
+  "The region holds some of the oldest and most extraordinary places on earth. The right guide changes them from a sight into a story.": [
+    "data/services.ts:201"
+  ],
+  "We work with licensed guides, Egyptologists and archaeologists, and plan visits for the quiet hours whenever we can.": [
+    "data/services.ts:202"
+  ],
+  "Licensed private guides": [
+    "data/services.ts:205"
+  ],
+  "Egyptologists and archaeologists": [
+    "data/services.ts:206"
+  ],
+  "Early and late visits, where permitted": [
+    "data/services.ts:207"
+  ],
+  "Heritage stays and specialist routes": [
+    "data/services.ts:208"
+  ],
+  "Petra, AlUla, Egypt, Carthage, the Roman cities of Tunisia and Algeria, and more.": [
+    "data/services.ts:210"
+  ],
+  "A private guide": [
+    "data/services.ts:211"
+  ],
+  "Photographers": [
+    "data/services.ts:214"
+  ],
+  "A discreet photographer for a moment you want to keep, and only for you.": [
+    "data/services.ts:215"
+  ],
+  "Some moments deserve better than a phone. A discreet photographer can join you for an hour, an evening or a day.": [
+    "data/services.ts:217"
+  ],
+  "The pictures are yours alone. We never use them, share them or post them.": [
+    "data/services.ts:218"
+  ],
+  "Photographers for an hour, an evening or a journey": [
+    "data/services.ts:221"
+  ],
+  "Portraits, celebrations and proposals": [
+    "data/services.ts:222"
+  ],
+  "Strict privacy: the images are yours alone": [
+    "data/services.ts:223"
+  ],
+  "Every country we cover.": [
+    "data/services.ts:225",
+    "data/services.ts:194",
+    "data/services.ts:178",
+    "data/services.ts:68"
+  ],
+  "A photographer for an evening": [
+    "data/services.ts:226"
+  ],
+  "Private aviation and helicopters": [
+    "data/services.ts:24"
+  ],
+  "Jets between countries, helicopters between valleys, and the paperwork handled before you ask.": [
+    "data/services.ts:25"
+  ],
+  "Distances in the Arab world are short by air and long by road. A private jet turns Dubai, AlUla and Petra into a single, unhurried week; a helicopter turns a three-hour drive into twenty minutes over the dunes.": [
+    "data/services.ts:27"
+  ],
+  "Your concierge sources the aircraft, the crew and the permits, times each flight around your days, and has a car waiting at every door.": [
+    "data/services.ts:28"
+  ],
+  "Charter jets for one leg or the whole journey": [
+    "data/services.ts:31"
+  ],
+  "Helicopter transfers and scenic flights, where permitted": [
+    "data/services.ts:32"
+  ],
+  "Seaplane connections to island resorts, where available": [
+    "data/services.ts:33"
+  ],
+  "Private terminal and fast-track arrival": [
+    "data/services.ts:34"
+  ],
+  "Throughout the region, subject to local permits.": [
+    "data/services.ts:36"
+  ],
+  "A private jet for our journey": [
+    "data/services.ts:37"
+  ],
+  "Chauffeurs and discreet security": [
+    "data/services.ts:40"
+  ],
+  "Drivers who know the city, and close protection that stays out of the photograph.": [
+    "data/services.ts:41"
+  ],
+  "A good driver is a guide who never speaks unless asked. Ours know the back roads, the hotel entrances and the hours when a city is quiet.": [
+    "data/services.ts:43"
+  ],
+  "For guests who need it, licensed close protection travels with you, planned with the same care as everything else and kept as unobtrusive as you wish.": [
+    "data/services.ts:44"
+  ],
+  "Chauffeurs by the day or the journey": [
+    "data/services.ts:47"
+  ],
+  "Luxury and four-wheel-drive vehicles": [
+    "data/services.ts:48"
+  ],
+  "Licensed close protection officers": [
+    "data/services.ts:49"
+  ],
+  "Advance planning of routes and venues": [
+    "data/services.ts:50"
+  ],
+  "Major cities and every destination we arrange.": [
+    "data/services.ts:52"
+  ],
+  "A chauffeur for our stay": [
+    "data/services.ts:53"
+  ],
+  "The right room in the right house, from a riad in the medina to a private island villa.": [
+    "data/services.ts:57"
+  ],
+  "The best room is rarely the most expensive one. It is the one with the right light, the right quiet and the right distance from everything you came to see.": [
+    "data/services.ts:59"
+  ],
+  "We know the suites worth asking for, the private villas that are rarely listed, and the riads behind plain doors. Your concierge books, briefs the house and checks every detail before you arrive.": [
+    "data/services.ts:60"
+  ],
+  "Hotel suites, with preferences sent ahead": [
+    "data/services.ts:63"
+  ],
+  "Private villas with staff": [
+    "data/services.ts:64"
+  ],
+  "Riads and heritage houses": [
+    "data/services.ts:65"
+  ],
+  "Palaces and residences available for private hire": [
+    "data/services.ts:66"
+  ],
+  "A villa for our family": [
+    "data/services.ts:69"
+  ],
+  "Dubai’s coast, the fjords of Musandam and the reefs of the Red Sea, by day or for a week.": [
+    "data/services.ts:73"
+  ],
+  "From a sunset hour off Dubai Marina to a week among the Red Sea islands, the water changes how a journey feels.": [
+    "data/services.ts:75"
+  ],
+  "We charter the boat and the crew, plan the anchorages and the meals, and arrange permits for the waters that need them.": [
+    "data/services.ts:76"
+  ],
+  "Day and sunset charters": [
+    "data/services.ts:79"
+  ],
+  "Week-long crewed charters": [
+    "data/services.ts:80"
+  ],
+  "Traditional dhows in Musandam and the Gulf": [
+    "data/services.ts:81"
+  ],
+  "Dubai and Abu Dhabi, Musandam, the Saudi and Egyptian Red Sea, Aqaba.": [
+    "data/services.ts:84"
+  ],
+  "A yacht for a few days": [
+    "data/services.ts:85"
+  ],
+  "Private desert camps and dinners": [
+    "data/services.ts:88"
+  ],
+  "A camp set for you alone, from Wahiba to Wadi Rum to the dunes of Merzouga.": [
+    "data/services.ts:89"
+  ],
+  "Some of the region’s most remarkable evenings happen far from any building: a table set on a dune, lanterns, a fire, and a sky with nothing in the way.": [
+    "data/services.ts:91"
+  ],
+  "We choose the place, the crew and the cook, and arrange everything so it is there when you arrive and gone the next morning.": [
+    "data/services.ts:92"
+  ],
+  "Private camps for a night or several": [
+    "data/services.ts:95"
+  ],
+  "Dinners in the desert for two or for many": [
+    "data/services.ts:96"
+  ],
+  "Transfers by four-wheel drive or helicopter": [
+    "data/services.ts:98"
+  ],
+  "Discretion": [
+    "dictionaries/en.ts:14"
+  ],
+  "Close": [
+    "dictionaries/en.ts:22"
+  ],
+  "Arrange": [
+    "dictionaries/en.ts:25"
+  ],
+  "Destinations": [
+    "dictionaries/en.ts:26"
+  ],
+  "Guidance": [
+    "dictionaries/en.ts:27"
+  ],
+  "The house": [
+    "dictionaries/en.ts:28"
+  ],
+  "Your concierge": [
+    "dictionaries/en.ts:29"
+  ],
+  "Skip to content": [
+    "dictionaries/en.ts:3"
+  ],
+  "All rights reserved.": [
+    "dictionaries/en.ts:31"
+  ],
+  "What would you like arranged?": [
+    "dictionaries/en.ts:36"
+  ],
+  "Continue": [
+    "dictionaries/en.ts:37"
+  ],
+  "Your request": [
+    "dictionaries/en.ts:39"
+  ],
+  "Edit": [
+    "dictionaries/en.ts:40"
+  ],
+  "How would you like to continue?": [
+    "dictionaries/en.ts:41"
+  ],
+  "Your concierge will take it from here.": [
+    "dictionaries/en.ts:42"
+  ],
+  "Your concierge calls you, at a time that suits you.": [
+    "dictionaries/en.ts:43"
+  ],
+  "Your concierge replies in writing.": [
+    "dictionaries/en.ts:44"
+  ],
+  "Your name": [
+    "dictionaries/en.ts:45"
+  ],
+  "Optional. A first name is enough.": [
+    "dictionaries/en.ts:46"
+  ],
+  "Number, with country code": [
+    "dictionaries/en.ts:47"
+  ],
+  "When should we call?": [
+    "dictionaries/en.ts:48"
+  ],
+  "Evening": [
+    "dictionaries/en.ts:49"
+  ],
+  "Afternoon": [
+    "dictionaries/en.ts:49"
+  ],
+  "Morning": [
+    "dictionaries/en.ts:49"
+  ],
+  "As soon as possible": [
+    "dictionaries/en.ts:49"
+  ],
+  "Home": [
+    "dictionaries/en.ts:5"
+  ],
+  "In your time zone": [
+    "dictionaries/en.ts:50"
+  ],
+  "Email address": [
+    "dictionaries/en.ts:51"
+  ],
+  "Send to your concierge": [
+    "dictionaries/en.ts:52"
+  ],
+  "Sending": [
+    "dictionaries/en.ts:53"
+  ],
+  "Back": [
+    "dictionaries/en.ts:54"
+  ],
+  "Received.": [
+    "dictionaries/en.ts:55"
+  ],
+  "Your concierge will call you at the time you chose.": [
+    "dictionaries/en.ts:57"
+  ],
+  "Your concierge will write to you shortly.": [
+    "dictionaries/en.ts:58"
+  ],
+  "Ask for something else": [
+    "dictionaries/en.ts:60"
+  ],
+  "Seen only by your concierge. Never shared.": [
+    "dictionaries/en.ts:61"
+  ],
+  "Something went wrong. Please try again, or write to us by email.": [
+    "dictionaries/en.ts:62"
+  ],
+  "All destinations": [
+    "dictionaries/en.ts:9"
+  ],
+  "By air": [
+    "lib/composer.ts:103"
+  ],
+  "Private flight": [
+    "lib/composer.ts:104"
+  ],
+  "By road": [
+    "lib/composer.ts:105"
+  ],
+  "By air and road": [
+    "lib/composer.ts:106"
+  ],
+  "By sea": [
+    "lib/composer.ts:107"
+  ],
+  "{0} h {1} min": [
+    "lib/composer.ts:116"
+  ],
+  "{0}–{1} nights": [
+    "lib/composer.ts:119"
+  ],
+  "Estimated from distance; connections vary": [
+    "lib/composer.ts:33"
+  ],
+  "Booking terms": [
+    "lib/legal.ts:12",
+    "dictionaries/en.ts:18"
+  ],
+  "{0} is a private travel concierge for the Arab world, based at {1}. You can reach us at {2}. These terms apply to every journey and service we arrange for you. By confirming a booking you accept them on behalf of everyone travelling with you.": [
+    "lib/legal.ts:14"
+  ],
+  "Who we are": [
+    "lib/legal.ts:14"
+  ],
+  "Requests for access to events, sites or venues are requests, not guarantees. We confirm only what a provider has confirmed to us.": [
+    "lib/legal.ts:15"
+  ],
+  "{0} arranges services on your behalf with independent providers such as hotels, airlines, aircraft operators, yacht owners, drivers and guides. Each provider’s own terms also apply to the service it provides, and we share them with you before you confirm.": [
+    "lib/legal.ts:15"
+  ],
+  "Our role": [
+    "lib/legal.ts:15"
+  ],
+  "Travel times, seasons, etiquette notes and entry information on this website are guidance, not guarantees.": [
+    "lib/legal.ts:16"
+  ],
+  "Every journey is made to measure. When you ask us for something, we reply with advice and, if you wish, a written proposal with an itinerary and a quote. Proposals and quotes are free and do not commit you to anything.": [
+    "lib/legal.ts:16"
+  ],
+  "Enquiries and proposals": [
+    "lib/legal.ts:16"
+  ],
+  "A quote is valid for the period stated on it. Prices depend on availability at the time of booking, and we confirm the final price in writing before you pay anything. The quote lists what is included and what is not; international flights, visas, insurance, gratuities and personal expenses are not included unless the quote says so.": [
+    "lib/legal.ts:17"
+  ],
+  "Quotes": [
+    "lib/legal.ts:17"
+  ],
+  "A proposal is not a booking. A service is booked when you have paid the deposit set out in your quote and we have confirmed the booking to you in writing. The person making the booking must be at least 18 years old and is responsible for passing these terms and all travel information to everyone in the party.": [
+    "lib/legal.ts:18"
+  ],
+  "Confirming a booking": [
+    "lib/legal.ts:18"
+  ],
+  "The balance is due by the date shown on your confirmation. If it is not paid on time, we may treat the booking as cancelled by you, and the cancellation terms below apply.": [
+    "lib/legal.ts:19"
+  ],
+  "Paying the balance": [
+    "lib/legal.ts:19"
+  ],
+  "If you would like to change a confirmed booking, tell us as soon as possible. We will do our best to help, but changes depend on availability and may cost more. Any charges made by providers, and any difference in price, are passed on to you.": [
+    "lib/legal.ts:20"
+  ],
+  "Changes by you": [
+    "lib/legal.ts:20"
+  ],
+  "You can cancel at any time by writing to us. Cancellation charges depend on how close to the date you cancel and on the conditions of the providers we have booked for you. The charges that apply are set out in your quote and confirmation before you pay. We recommend travel insurance that covers cancellation from the day you book.": [
+    "lib/legal.ts:21"
+  ],
+  "Cancellation by you": [
+    "lib/legal.ts:21"
+  ],
+  "We will not cancel a confirmed booking unless we have to, for example because of unavoidable and extraordinary circumstances such as severe weather, civil unrest or official travel advice. If we cancel, we will offer you an alternative or a full refund of the money you have paid us.": [
+    "lib/legal.ts:22"
+  ],
+  "Weather, schedules and local circumstances sometimes require us to adjust an arrangement, for example a route, a hotel or a flight. If a change is significant, we will tell you as soon as possible and offer a comparable alternative or, where the change is major, a refund of the affected part of the booking.": [
+    "lib/legal.ts:22"
+  ],
+  "Changes and cancellation by us": [
+    "lib/legal.ts:22"
+  ],
+  "Comprehensive travel insurance is a condition of booking. It must cover medical treatment, emergency evacuation and repatriation, and should cover cancellation and curtailment.": [
+    "lib/legal.ts:23"
+  ],
+  "Travel insurance": [
+    "lib/legal.ts:23"
+  ],
+  "You are responsible for having a valid passport, any visa you need and any vaccinations or health documents required for each country you visit or pass through. Entry rules change, so check the current requirements for your nationality with official sources and take medical advice before you travel. We can point you to the right sources, but we cannot accept liability if you are refused boarding or entry.": [
+    "lib/legal.ts:24"
+  ],
+  "Passports, visas and health": [
+    "lib/legal.ts:24"
+  ],
+  "We are not responsible for loss, damage, delay or injury caused by you or anyone in your party, by a third party unconnected with the services we arranged, or by unavoidable and extraordinary circumstances beyond our control. Where international conventions limit the compensation payable by airlines, operators or hotels, our liability is limited in the same way. Nothing in these terms limits liability that cannot be limited by law.": [
+    "lib/legal.ts:25"
+  ],
+  "We take care in choosing the providers we work with, and we are responsible for arranging your journey as confirmed.": [
+    "lib/legal.ts:25"
+  ],
+  "Our responsibility": [
+    "lib/legal.ts:25"
+  ],
+  "Please respect local laws and customs, follow the instructions of guides, drivers and crews, and dress and behave as each place expects. We may end the arrangements of anyone whose behaviour puts others at risk.": [
+    "lib/legal.ts:26"
+  ],
+  "Your responsibilities": [
+    "lib/legal.ts:26"
+  ],
+  "If something is not right during your journey, tell your concierge straight away so we can put it right on the spot. If you are still not satisfied, write to {0} within 28 days of your return and we will reply in writing.": [
+    "lib/legal.ts:27"
+  ],
+  "Complaints": [
+    "lib/legal.ts:27"
+  ],
+  "These terms are governed by the law that applies to the contract between you and {0}. Any dispute will be handled by the courts that have jurisdiction under that law. If you are a consumer, you keep the protection given to you by the law of the country where you live.": [
+    "lib/legal.ts:28"
+  ],
+  "Law": [
+    "lib/legal.ts:28"
+  ],
+  "Privacy policy": [
+    "lib/legal.ts:32",
+    "dictionaries/en.ts:19"
+  ],
+  "We never name our clients, never publish their photographs, and never sell or share personal details for marketing. Non-disclosure agreements are available on request.": [
+    "lib/legal.ts:34"
+  ],
+  "Our promise": [
+    "lib/legal.ts:34"
+  ],
+  "{0}, {1}, is responsible for the personal information described here. Contact: {2}.": [
+    "lib/legal.ts:35"
+  ],
+  "Who is responsible": [
+    "lib/legal.ts:35"
+  ],
+  "When you browse this website, our hosting provider keeps standard server logs (IP address, browser, page and time) for security and to keep the site running. We do not use advertising, tracking or analytics cookies.": [
+    "lib/legal.ts:36"
+  ],
+  "When you travel with us, we receive the details needed to arrange your journey, such as names as shown on passports, passport details where a provider requires them, flight times, and any dietary, health or mobility information you choose to share.": [
+    "lib/legal.ts:36"
+  ],
+  "When you use Ask Aravia or the request form, we receive your request and the contact details you choose to give: a name, a phone number for a call back or an email address, a preferred time to call, and your time zone.": [
+    "lib/legal.ts:36"
+  ],
+  "What we collect": [
+    "lib/legal.ts:36"
+  ],
+  "To meet legal, accounting and tax obligations, and to keep this website secure (our legitimate interest).": [
+    "lib/legal.ts:37"
+  ],
+  "To arrange and deliver what you confirm, with the providers involved (performance of our contract with you).": [
+    "lib/legal.ts:37"
+  ],
+  "To reply to your request and prepare a proposal (steps you have asked us to take before a contract).": [
+    "lib/legal.ts:37"
+  ],
+  "How we use it": [
+    "lib/legal.ts:37"
+  ],
+  "Our hosting and email providers process data on our instructions only. We disclose information where the law requires it.": [
+    "lib/legal.ts:38"
+  ],
+  "Providers receive only what they need to deliver a service you have confirmed, such as hotels, airlines, drivers and guides. Some are in other countries, which may not offer the same level of data protection as your own; we share only the minimum needed.": [
+    "lib/legal.ts:38"
+  ],
+  "Who we share it with": [
+    "lib/legal.ts:38"
+  ],
+  "Requests that do not lead to a booking are deleted within two years of our last contact. Booking records are kept for as long as accounting and tax law requires, then deleted. Server logs are kept for a short period only.": [
+    "lib/legal.ts:39"
+  ],
+  "How long we keep it": [
+    "lib/legal.ts:39"
+  ],
+  "Depending on where you live, you may have the right to see the information we hold about you, to correct it, to have it deleted, to restrict or object to how we use it, and to receive a copy. Where we rely on your consent, you can withdraw it at any time. Write to {0}; we reply within one month. You may also complain to the data protection authority in your country.": [
+    "lib/legal.ts:40"
+  ],
+  "Your rights": [
+    "lib/legal.ts:40"
+  ],
+  "We may update this policy from time to time. The date at the top shows when it last changed.": [
+    "lib/legal.ts:41"
+  ],
+  "Changes": [
+    "lib/legal.ts:41"
+  ],
+  "30 October 2026": [
+    "lib/legal.ts:45",
+    "lib/legal.ts:32",
+    "lib/legal.ts:12"
+  ],
+  "Cookie policy": [
+    "lib/legal.ts:45",
+    "dictionaries/en.ts:20"
+  ],
+  "This website sets no cookies: no advertising, tracking or analytics cookies, which is why there is no cookie banner. It also stores nothing in your browser’s local or session storage.": [
+    "lib/legal.ts:47"
+  ],
+  "In short": [
+    "lib/legal.ts:47"
+  ],
+  "Your browser may keep the website’s own files, such as styles, scripts and images, in its cache so pages load faster. Nothing is stored that identifies you.": [
+    "lib/legal.ts:48"
+  ],
+  "What your browser keeps": [
+    "lib/legal.ts:48"
+  ],
+  "Fonts are served from our own domain. Photographs come from our image delivery provider and are delivered through our own domain after being optimised by our hosting provider, so your browser does not contact a third-party image service. There are no chat widgets or social media embeds.": [
+    "lib/legal.ts:49"
+  ],
+  "Third parties": [
+    "lib/legal.ts:49"
+  ],
+  "Because we set no cookies that need consent, we do not ask for it. If we ever add cookies that do, such as analytics, we will ask first, update this page and give you a way to withdraw consent at any time. You can also block or delete cookies in your browser settings at any time without affecting how this website works.": [
+    "lib/legal.ts:50"
+  ],
+  "Consent and how to withdraw it": [
+    "lib/legal.ts:50"
+  ],
+  "Write to {0}.": [
+    "lib/legal.ts:51"
+  ],
+  "All year": [
+    "lib/months.ts:14"
+  ],
+  "Dec": [
+    "lib/months.ts:3"
+  ],
+  "Nov": [
+    "lib/months.ts:3"
+  ],
+  "Oct": [
+    "lib/months.ts:3"
+  ],
+  "Sep": [
+    "lib/months.ts:3"
+  ],
+  "Aug": [
+    "lib/months.ts:3"
+  ],
+  "Jul": [
+    "lib/months.ts:3"
+  ],
+  "Jun": [
+    "lib/months.ts:3"
+  ],
+  "Apr": [
+    "lib/months.ts:3"
+  ],
+  "Mar": [
+    "lib/months.ts:3"
+  ],
+  "Feb": [
+    "lib/months.ts:3"
+  ],
+  "Jan": [
+    "lib/months.ts:3"
+  ],
+  "December": [
+    "lib/months.ts:4"
+  ],
+  "November": [
+    "lib/months.ts:4"
+  ],
+  "October": [
+    "lib/months.ts:4"
+  ],
+  "September": [
+    "lib/months.ts:4"
+  ],
+  "August": [
+    "lib/months.ts:4"
+  ],
+  "July": [
+    "lib/months.ts:4"
+  ],
+  "June": [
+    "lib/months.ts:4"
+  ],
+  "May": [
+    "lib/months.ts:4",
+    "lib/months.ts:3"
+  ],
+  "April": [
+    "lib/months.ts:4"
+  ],
+  "March": [
+    "lib/months.ts:4"
+  ],
+  "February": [
+    "lib/months.ts:4"
+  ],
+  "January": [
+    "lib/months.ts:4"
+  ],
+  "Please add an email address.": [
+    "lib/request-schema.ts:43"
+  ]
+}

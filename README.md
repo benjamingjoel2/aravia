@@ -8,10 +8,12 @@ Site URL: https://aravia.tourground.com (set `NEXT_PUBLIC_SITE_URL` in Vercel).
 
 ```bash
 npm install
-npm run dev          # http://localhost:3000 → redirects to /en
+npm run dev          # http://localhost:3000 → redirects to /en (generates the FR/DE/ES copies first)
 npm run build        # runs the copy check first, then a production build
 npm run lint:copy    # tone-of-voice check on its own
 npm run typecheck
+npm run i18n:missing # strings with no translation, per language (add --list to print them)
+npm run i18n:extract # write i18n/strings.json, every translatable string and where it is used
 ```
 
 Next.js 16 (App Router), TypeScript, Tailwind CSS v4, Framer Motion, MDX. Deployed on Vercel.
@@ -22,7 +24,7 @@ Next.js 16 (App Router), TypeScript, Tailwind CSS v4, Framer Motion, MDX. Deploy
 |---|---|
 | Brand name, promise, email, business address | `config/brand.ts` |
 | Navigation, site URL, placeholder markers on/off | `config/site.ts` |
-| Languages (English live; Arabic RTL, French, German prepared) | `config/i18n.ts`, `dictionaries/` |
+| Languages: English (source), French, German, Spanish; Arabic RTL prepared | `config/i18n.ts`, `i18n/{fr,de,es}.json`, `i18n/content/`, `scripts/i18n-build.mjs` |
 | Ramadan and Eid dates | `config/ramadan.ts` |
 | Countries and regions (The Gulf, The Levant, North Africa) | `data/countries.ts` |
 | Destinations, and their page content | `data/destinations.ts`, `data/destination-details.ts` |
@@ -37,12 +39,23 @@ Next.js 16 (App Router), TypeScript, Tailwind CSS v4, Framer Motion, MDX. Deploy
 | Design tokens and motif | `app/globals.css`, `components/motif/` |
 | Design reference notes | `docs/design-references.md` |
 
+## Languages
+
+The site is in English, French, German and Spanish: `/en/...` (English, the source and `x-default`), `/fr/...`, `/de/...`, `/es/...`. Every page exists in all four and is pre-rendered; no translation code ships to the browser.
+
+- English pages live in `app/en/`. Code reads the current language from `config/locale.ts` (`locale`), so links built with `localePath(locale, …)`, `<html lang>`, the canonical and hreflang tags follow automatically.
+- `scripts/i18n-build.mjs` runs before `dev` and `build`. For each language it writes a translated copy of `app/en/` to `app/<locale>/` and of `components`, `lib`, `data`, `config`, `dictionaries` and `content` to `.i18n/<locale>/`, replacing English strings from `i18n/<locale>.json` (English text → translation; a `path::text` key overrides one file only). Journal posts come from `i18n/content/<locale>/journal/`. The generated folders are git-ignored; never edit them.
+- When you change or add English copy, add the same key to `i18n/fr.json`, `i18n/de.json` and `i18n/es.json` (`npm run i18n:missing -- --list` shows what is missing; untranslated strings fall back to English). A file containing `i18n-skip-strings` is copied without translation (`config/i18n.ts`, `data/map.ts`).
+- The language selector (EN · FR · DE · ES) is `components/layout/LanguageSelector.tsx`: in the header and the mobile menu, it links to the same page in the other language. There is no redirect by browser language.
+- Parsing uses TypeScript 5 (dev dependency `typescript-parser`), because TypeScript 7 has no JavaScript compiler API.
+
 ## Before launch
 
 **Details to confirm**
 - [ ] Email is `aravia@tourground.com`; business address is The Executive Centre, One Central, Dubai World Trade Centre (owner-approved coworking arrangement). Confirm the exact level/suite with the centre.
 - [ ] The site deliberately shows no phone numbers, WhatsApp, licence numbers, social links, team profiles or testimonials.
-- [ ] Legal pages (`lib/legal.ts`) reviewed by a lawyer.
+- [ ] Legal pages (`lib/legal.ts`, and their translations in `i18n/{fr,de,es}.json`) reviewed by a lawyer.
+- [ ] French, German and Spanish copy read by a native speaker before launch (`i18n/*.json`, `i18n/content/`).
 
 **Claims to confirm.** 42 specific claims (private openings, early entry, close protection, NDAs and similar) carry `confirm: true` and show a small "to confirm" marker. Confirm or remove each one. Once all are settled, set `NEXT_PUBLIC_SHOW_PLACEHOLDERS=false` to hide the markers.
 
