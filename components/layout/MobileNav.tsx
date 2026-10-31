@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { brand } from "@/config/brand";
-import { whatsappLink } from "@/lib/whatsapp";
 import type { NavItem } from "./Header";
 import type { RegionNav } from "@/lib/nav";
+import { LanguageSelector } from "./LanguageSelector";
 
 type Props = { open: boolean; items: NavItem[]; destinationsHref: string; regions: RegionNav[]; onClose: () => void };
 
@@ -58,12 +58,8 @@ export function MobileNav({ open, items, destinationsHref, regions, onClose }: P
                 </li>
               ))}
             </ul>
-            <div className="mt-12 space-y-2 border-t border-cream/25 pt-8 text-sm">
-              <p>
-                <a href={whatsappLink()} rel="noopener" className="link-quiet">
-                  WhatsApp · {brand.contact.whatsappDisplay}
-                </a>
-              </p>
+            <LanguageSelector className="mt-12 border-t border-cream/25 pt-8" />
+            <div className="mt-8 space-y-2 text-sm">
               <p>
                 <a href={`mailto:${brand.contact.email}`} className="link-quiet">
                   {brand.contact.emailDisplay}

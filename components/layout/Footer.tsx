@@ -5,7 +5,6 @@ import type { Locale } from "@/config/i18n";
 import type { Dictionary } from "@/dictionaries/en";
 import { localePath } from "@/lib/paths";
 import { GiantWordmark } from "@/components/home/GiantWordmark";
-import { whatsappLink } from "@/lib/whatsapp";
 import { regionNav } from "@/lib/nav";
 import { FooterForm } from "./FooterForm";
 
@@ -20,15 +19,11 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <p className="mt-6 max-w-sm">{dict.footer.discretionLine}</p>
           <ul className="mt-10 space-y-3 text-[0.9375rem]">
             <li>
-              <a href={whatsappLink()} className="link-quiet" rel="noopener">
-                {dict.footer.whatsapp} · {brand.contact.whatsappDisplay}
-              </a>
-            </li>
-            <li>
               <a href={`mailto:${brand.contact.email}`} className="link-quiet">
                 {dict.footer.email} · {brand.contact.emailDisplay}
               </a>
             </li>
+            <li className="text-cream/85">{brand.address.lines.join(", ")}</li>
           </ul>
         </div>
         <div className="lg:col-span-7">
@@ -41,7 +36,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               request: dict.ask.yourRequest,
               privacy: dict.ask.privacy,
               replyBy: "How should we reply?",
-              channels: { callback: "A call or a WhatsApp message", email: "Email" },
+              channels: { callback: "A call back", email: "Email" },
               submit: "Send request",
               sent: "Thank you. Your concierge has your request and will be in touch shortly.",
             }}
@@ -78,16 +73,6 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         ))}
       </nav>
 
-      <div className="container-page text-sm">
-        <ul className="flex flex-wrap gap-x-8 gap-y-2 text-cream/85">
-          {brand.licences.map((l) => (
-            <li key={l.label}>
-              {l.country}: {l.label}
-            </li>
-          ))}
-        </ul>
-      </div>
-
       {/* The name, set across the width and cut by the foot of the page */}
       <div aria-hidden className="container-page -mb-[4%] pt-10 text-cream/20">
         <GiantWordmark />
@@ -95,7 +80,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
       <div className="relative bg-ink">
         <div className="container-page flex flex-col gap-4 border-t border-cream/25 py-6 text-xs sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {brand.legalName}. {dict.footer.rights}
+            © {year} {brand.name}. {dict.footer.rights}
           </p>
           <ul className="flex flex-wrap gap-6">
             {legalNav.map((l) => (

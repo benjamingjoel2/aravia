@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { locales } from "@/config/i18n";
+import { allLocales, defaultLocale, locales } from "@/config/i18n";
 import { site } from "@/config/site";
 import { countries, countryByCode } from "@/data/countries";
 import { destinations } from "@/data/destinations";
@@ -22,11 +22,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...posts.map((p) => `/journal/${p.slug}`),
     ...legalDocs.map((d) => `/legal/${d.slug}`),
   ];
+  // Every page in every language, each entry listing its alternates (hreflang, x-default English).
   return locales.flatMap((l) =>
     paths.map((p) => ({
       url: `${site.url}/${l}${p}`,
       changeFrequency: p === "/season" || p === "" ? "weekly" : "monthly",
       priority: p === "" ? 1 : p.split("/").length > 3 ? 0.6 : 0.8,
+      alternates: {
+        languages: {
+          ...Object.fromEntries(locales.map((o) => [allLocales[o].hreflang, `${site.url}/${o}${p}`])),
+          "x-default": `${site.url}/${defaultLocale}${p}`,
+        },
+      },
     })),
   );
 }

@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 import { defaultLocale, locales, allLocales } from "@/config/i18n";
+import { locale as currentLocale } from "@/config/locale";
 import { site } from "@/config/site";
 
-/**
- * Canonical and hreflang links for a locale-relative path.
- * While English is the only enabled locale the canonical is the English URL; once more locales are enabled,
- * pass the page's own locale.
- */
-export function alternates(path: string, locale: string = defaultLocale): Metadata["alternates"] {
+/** Canonical (this page in this language) and hreflang links (every language, x-default English) for a locale-relative path. */
+export function alternates(path: string, locale: string = currentLocale): Metadata["alternates"] {
   const p = path === "/" ? "" : path;
   return {
     canonical: `/${locale}${p}`,

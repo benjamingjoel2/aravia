@@ -1,13 +1,16 @@
+// i18n-skip-strings (language names are shown in their own language)
 /**
- * Locales. Only English is enabled. Arabic (right-to-left), French and German are prepared:
- * add a dictionary in /dictionaries, enable the locale here, and the routes, <html dir> and
- * hreflang tags follow automatically.
+ * Locales. English is the source and lives at /en; French, German and Spanish are generated from it by
+ * scripts/i18n-build.mjs (translations in i18n/<locale>.json and i18n/content/<locale>/). Arabic (right to
+ * left) is prepared: add it to the build script and translations, enable it here, and the routes, <html dir>
+ * and hreflang tags follow.
  */
 export const allLocales = {
-  en: { label: "English", dir: "ltr", enabled: true, hreflang: "en" },
-  ar: { label: "العربية", dir: "rtl", enabled: false, hreflang: "ar" },
-  fr: { label: "Français", dir: "ltr", enabled: false, hreflang: "fr" },
-  de: { label: "Deutsch", dir: "ltr", enabled: false, hreflang: "de" },
+  en: { label: "English", short: "EN", dir: "ltr", enabled: true, hreflang: "en", og: "en_GB" },
+  fr: { label: "Français", short: "FR", dir: "ltr", enabled: true, hreflang: "fr", og: "fr_FR" },
+  de: { label: "Deutsch", short: "DE", dir: "ltr", enabled: true, hreflang: "de", og: "de_DE" },
+  es: { label: "Español", short: "ES", dir: "ltr", enabled: true, hreflang: "es", og: "es_ES" },
+  ar: { label: "العربية", short: "AR", dir: "rtl", enabled: false, hreflang: "ar", og: "ar_AE" },
 } as const;
 
 export type Locale = keyof typeof allLocales;

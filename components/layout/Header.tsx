@@ -7,6 +7,7 @@ import { Logo } from "@/components/motif";
 import { AskButton } from "@/components/ask/AskButton";
 import { MobileNav } from "./MobileNav";
 import { DestinationsMenu } from "./DestinationsMenu";
+import { LanguageSelector } from "./LanguageSelector";
 import type { RegionNav } from "@/lib/nav";
 
 export type NavItem = { href: string; label: string };
@@ -118,6 +119,9 @@ export function Header({ homeHref, items, mobileItems, secondaryItems, destinati
                 solid ? "pointer-events-none invisible h-0 opacity-0" : "opacity-100"
               }`}
             >
+              <li className="pb-1">
+                <LanguageSelector className="flex justify-end" />
+              </li>
               {secondaryItems.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} aria-current={pathname === item.href ? "page" : undefined} className="link-quiet">
