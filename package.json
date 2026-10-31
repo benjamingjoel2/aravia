@@ -11,7 +11,9 @@
     "prebuild": "node scripts/lint-copy.mjs",
     "i18n": "node scripts/i18n-build.mjs",
     "i18n:extract": "node scripts/i18n-build.mjs extract",
-    "i18n:missing": "node scripts/i18n-build.mjs missing"
+    "i18n:missing": "node scripts/i18n-build.mjs missing",
+    "cf-build": "opennextjs-cloudflare build",
+    "cf-pages": "node scripts/cf-pages.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
@@ -26,12 +28,14 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.20.15",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2",
-    "typescript-parser": "npm:typescript@^5.9.3"
+    "typescript-parser": "npm:typescript@^5.9.3",
+    "wrangler": "^4.156.0"
   }
 }
