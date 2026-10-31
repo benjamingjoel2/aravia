@@ -9,7 +9,7 @@ type Labels = {
   email: string;
   request: string;
   privacy: string;
-  /** The footer offers the two channels that need contact details; WhatsApp chats start from the Ask dialog. */
+  /** The footer offers both channels: a call back or email. */
   channels: Partial<Record<Channel, string>>;
   replyBy: string;
   submit: string;
@@ -37,9 +37,9 @@ export function FooterForm({ labels, locale }: { labels: Labels; locale: string 
       const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string; fieldErrors?: Record<string, string> };
       if (res.ok && data.ok) return setState("sent");
       setErrors(data.fieldErrors ?? {});
-      setError(data.error ?? "Please try again, or write to us on WhatsApp.");
+      setError(data.error ?? "Please try again, or write to us by email.");
     } catch {
-      setError("Please try again, or write to us on WhatsApp.");
+      setError("Please try again, or write to us by email.");
     }
     setState("idle");
   }

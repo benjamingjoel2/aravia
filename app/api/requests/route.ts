@@ -37,7 +37,7 @@ export async function POST(request: Request) {
   if (rateLimited(ip)) {
     return isForm
       ? NextResponse.redirect(new URL(`/${locale}/ask?error=busy`, request.url), 303)
-      : NextResponse.json({ ok: false, error: "Too many requests. Please write to us on WhatsApp or by email." }, { status: 429 });
+      : NextResponse.json({ ok: false, error: "Too many requests. Please write to us by email." }, { status: 429 });
   }
 
   const parsed = conciergeRequestSchema.safeParse(raw);
@@ -61,7 +61,6 @@ export async function POST(request: Request) {
   console.info("[aravia:request]", JSON.stringify(record));
 
   // TODO(CRM): forward `record` to the CRM, assigning it to the client's concierge.
-  // TODO(WhatsApp): notify the concierge team via the WhatsApp Business API when channel is "whatsapp" or "callback".
   // TODO(Email): send an acknowledgement when channel is "email", from the concierge's own address.
 
   return isForm

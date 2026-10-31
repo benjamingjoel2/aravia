@@ -8,9 +8,13 @@ const nextConfig: NextConfig = {
   experimental: { globalNotFound: true },
   images: {
     formats: ["image/avif", "image/webp"],
-    qualities: [75],
+    qualities: [70],
     // Unsplash photos only; see data/photos.ts.
     remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com", pathname: "/photo-**" }],
+  },
+  async redirects() {
+    // The Unsplash-only credits page was removed (Unsplash needs no attribution).
+    return [{ source: "/:locale/legal/credits", destination: "/:locale/legal/terms", permanent: true }];
   },
   async headers() {
     return [

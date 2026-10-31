@@ -3,17 +3,16 @@ import { alternates } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/config/i18n";
 import { brand } from "@/config/brand";
-import { concierges } from "@/data/concierges";
 import { Photo } from "@/components/ui/Photo";
 import { ToConfirm } from "@/components/ui/ToConfirm";
 import { Reveal } from "@/components/motion/Reveal";
 import { AskButton } from "@/components/ask/AskButton";
-import { LatticeHover, LatticeRule, StarMark } from "@/components/motif";
+import { LatticeRule } from "@/components/motif";
 
 export const metadata: Metadata = {
   alternates: alternates("/about"),
   title: "About",
-  description: "Aravia, from “Arabia” and “via”: the way through Arabia. A private travel concierge for the Arab world, and the concierges who make it work.",
+  description: "Aravia, from “Arabia” and “via”: the way through Arabia. A private travel concierge for the Arab world.",
 };
 
 export default async function About({ params }: PageProps<"/[locale]/about">) {
@@ -56,7 +55,7 @@ export default async function About({ params }: PageProps<"/[locale]/about">) {
             <span className="text-ink">{brand.promise}</span>
           </p>
           <p className="text-sm text-ink-3">
-            Founding story and team details are placeholders to be confirmed.
+            The founding story above is a placeholder to be confirmed.
             <ToConfirm />
           </p>
         </Reveal>
@@ -66,43 +65,10 @@ export default async function About({ params }: PageProps<"/[locale]/about">) {
         <Photo name="dunesWideSun" sizes="100vw" alt="" />
       </section>
 
-      <section className="container-page py-28" aria-labelledby="team-title">
-        <div className="max-w-2xl">
-          <p className="eyebrow">Our concierges</p>
-          <h2 id="team-title" className="mt-6 text-display-md">
-            The people you will speak to.
-          </h2>
-          <p className="mt-6 text-ink-2">
-            First names only. Our concierges are as discreet about themselves as they are about you.
-          </p>
-        </div>
-        <ul className="mt-16 grid gap-px bg-line sm:grid-cols-2">
-          {concierges.map((c, i) => (
-            <Reveal as="li" key={c.id} delay={(i % 2) * 0.1} className="lattice-host grid grid-cols-[5.5rem_1fr] gap-6 bg-paper p-8 sm:grid-cols-[7rem_1fr] sm:p-10">
-              <LatticeHover />
-              <span aria-hidden className="flex aspect-[4/5] items-center justify-center bg-gradient-to-br from-sand-200 to-rose-200 font-display text-5xl text-accent">
-                {c.name.charAt(0)}
-              </span>
-              <div>
-                <h3 className="font-display text-display-sm">
-                  {c.name}
-                  {c.placeholder && <ToConfirm label="placeholder" />}
-                </h3>
-                <p className="mt-1 text-xs tracking-[0.16em] font-medium text-accent uppercase">
-                  {c.based} · {c.regions}
-                </p>
-                <p className="mt-5 font-display text-xl leading-snug text-ink italic">“{c.line}”</p>
-                <p className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-2">
-                  <StarMark className="h-3 w-3 text-accent" />
-                  {c.languages.join(" · ")}
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </ul>
+      <section className="container-page py-28">
         <LatticeRule className="my-24" />
         <div className="text-center">
-          <p className="mx-auto max-w-xl font-display text-display-sm">One of them will be yours.</p>
+          <p className="mx-auto max-w-xl font-display text-display-sm">One concierge, one message away.</p>
           <AskButton source="page" className="btn-primary mt-10">
             Ask Aravia
           </AskButton>

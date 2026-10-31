@@ -4,15 +4,13 @@ import { notFound } from "next/navigation";
 import { isLocale } from "@/config/i18n";
 import { brand } from "@/config/brand";
 import { getDictionary } from "@/lib/i18n";
-import { whatsappLink } from "@/lib/whatsapp";
 import { AskFlow } from "@/components/ask/AskFlow";
 import { LatticeRule, StarMark } from "@/components/motif";
-import { ToConfirm } from "@/components/ui/ToConfirm";
 
 export const metadata: Metadata = {
   alternates: alternates("/contact"),
   title: "Contact",
-  description: "Reach your Aravia concierge by WhatsApp, a call back or email. At any hour.",
+  description: "Reach your Aravia concierge by email or ask for a call back. At any hour.",
 };
 
 export default async function Contact({ params }: PageProps<"/[locale]/contact">) {
@@ -30,14 +28,6 @@ export default async function Contact({ params }: PageProps<"/[locale]/contact">
         <LatticeRule className="my-12 max-w-xs" />
         <dl className="space-y-8">
           <div>
-            <dt className="field-label">WhatsApp</dt>
-            <dd className="mt-2">
-              <a href={whatsappLink()} className="link-quiet font-display text-2xl" rel="noopener">
-                {brand.contact.whatsappDisplay}
-              </a>
-            </dd>
-          </div>
-          <div>
             <dt className="field-label">Email</dt>
             <dd className="mt-2">
               <a href={`mailto:${brand.contact.email}`} className="link-quiet font-display text-2xl">
@@ -46,10 +36,15 @@ export default async function Contact({ params }: PageProps<"/[locale]/contact">
             </dd>
           </div>
           <div>
-            <dt className="field-label">Offices</dt>
+            <dt className="field-label">Office</dt>
             <dd className="mt-2 text-ink-2">
-              [OFFICE ADDRESSES]
-              <ToConfirm />
+              <address className="not-italic">
+                {brand.address.lines.map((l) => (
+                  <span key={l} className="block">
+                    {l}
+                  </span>
+                ))}
+              </address>
             </dd>
           </div>
           <div>
