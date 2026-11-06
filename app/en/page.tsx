@@ -7,7 +7,6 @@ import { localePath } from "@/lib/paths";
 import { regionNav } from "@/lib/nav";
 import { countriesInRegion, regions } from "@/data/countries";
 import { places } from "@/data/composer";
-import { coveredPaths, mapSize, neighbourPaths } from "@/data/map";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { Photo } from "@/components/ui/Photo";
 import { GiantWordmark } from "@/components/home/GiantWordmark";
@@ -176,23 +175,16 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* 5. A narrow photograph, then the house: contacts, the map and the places strip */}
+        {/* 5. A narrow photograph, then the house: contacts and the places strip */}
         <div aria-hidden className="relative hidden shrink-0 lg:block lg:h-full lg:w-[22vw]">
           <Photo name="duneEveningShadow" sizes="22vw" alt="" />
         </div>
 
         <section aria-labelledby="house-title" className="relative flex shrink-0 flex-col bg-paper lg:h-full lg:w-[78vw]">
           <div className="relative flex-1">
-            <svg
-              aria-hidden
-              viewBox={`0 0 ${mapSize.width} ${mapSize.height}`}
-              className="pointer-events-none mx-auto mt-6 block w-full max-w-xl px-[var(--gutter)] lg:absolute lg:inset-y-0 lg:end-0 lg:mt-0 lg:h-full lg:w-[62%] lg:max-w-none lg:px-0"
-              preserveAspectRatio="xMidYMid meet"
-            >
-              <path d={neighbourPaths} fill="none" stroke="var(--color-line)" strokeWidth="1" />
-              <path d={Object.values(coveredPaths).join("")} fill="var(--color-ink)" stroke="var(--color-paper)" strokeWidth="1.25" />
-            </svg>
-
+            <div aria-hidden className="pointer-events-none relative mx-auto mt-6 block aspect-[4/3] w-full max-w-xl overflow-hidden px-[var(--gutter)] lg:absolute lg:inset-y-0 lg:end-0 lg:mt-0 lg:aspect-auto lg:h-full lg:w-[62%] lg:max-w-none lg:px-0">
+              <Photo name="minaretsSunset" sizes="(min-width: 1024px) 48vw, 100vw" alt="" />
+            </div>
             <div className="relative px-[var(--gutter)] pt-10 pb-14 lg:absolute lg:top-[14%] lg:start-[5vw] lg:w-[30vw] lg:p-0">
               <h2 id="house-title" className="text-[1.75rem] tracking-[0.12em]">
                 {brand.name}
@@ -214,8 +206,8 @@ export default async function Home() {
             </div>
           </div>
 
-          {/* The places strip, with the name set large and cut by the foot of the page */}
-          <div aria-hidden className="on-dark relative h-44 shrink-0 overflow-hidden bg-ink text-cream lg:h-[26svh]">
+          {/* The places strip */}
+          <div aria-hidden className="on-dark relative h-24 shrink-0 overflow-hidden bg-ink text-cream lg:h-[12svh]">
             <div className="marquee flex w-max gap-14 pt-8 font-display text-[1.375rem] tracking-[0.12em] whitespace-nowrap uppercase opacity-90">
               {[0, 1].map((copy) => (
                 <div key={copy} className="flex gap-14">
@@ -224,9 +216,6 @@ export default async function Home() {
                   ))}
                 </div>
               ))}
-            </div>
-            <div className="absolute inset-x-[var(--gutter)] -bottom-[4%] text-cream/20 lg:-bottom-[18%]">
-              <GiantWordmark />
             </div>
           </div>
         </section>

@@ -47,7 +47,7 @@ The whole Sylver page was reviewed this time, by serving its scroll library (GSA
 | Horizontal scroll on desktop: vertical scrolling moves full-height panels sideways; stacked on mobile | `HorizontalScroller` on the homepage, from 64rem up; keyboard focus scrolls an off-screen panel into view |
 | Split hero: photo melting into taupe `#B7A283`, giant spaced wordmark top-left, intro and "About →" on the right, the uppercase promise at the foot running into the next panel | Same composition. Taupe deepened to `#866F50` so white text passes 4.5:1 |
 | Hôtellerie and Ristorazione panels: huge uppercase heading, a short list, two paragraphs, a link with a faint wordmark behind it, a two-photo collage | What we arrange; Where we take you |
-| Contact panel with a map of Tuscany and Umbria filled in green over faint outlines | Contacts and concierges beside a map of the eleven countries (`data/map.ts`, Natural Earth) |
+| Contact panel with a map of Tuscany and Umbria filled in green over faint outlines | Contacts and concierges beside a photograph (map removed by owner rule: no map illustrations) |
 | Green band with a strip of partner logos and the name set huge, cut by the edge | The same band with a strip of places |
 | Green footer with "Contatta il commerciale" form | "Ask your concierge" form on every page, posting to `/api/requests` |
 | Header: spaced wordmark, links with a short rule under the first letters, a second row stacked beneath; green bar on mobile | The same; Ask Aravia is a link in the row |

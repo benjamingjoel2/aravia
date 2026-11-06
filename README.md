@@ -45,7 +45,7 @@ The site is in English, French, German and Spanish: `/en/...` (English, the sour
 
 - English pages live in `app/en/`. Code reads the current language from `config/locale.ts` (`locale`), so links built with `localePath(locale, …)`, `<html lang>`, the canonical and hreflang tags follow automatically.
 - `scripts/i18n-build.mjs` runs before `dev` and `build`. For each language it writes a translated copy of `app/en/` to `app/<locale>/` and of `components`, `lib`, `data`, `config`, `dictionaries` and `content` to `.i18n/<locale>/`, replacing English strings from `i18n/<locale>.json` (English text → translation; a `path::text` key overrides one file only). Journal posts come from `i18n/content/<locale>/journal/`. The generated folders are git-ignored; never edit them.
-- When you change or add English copy, add the same key to `i18n/fr.json`, `i18n/de.json` and `i18n/es.json` (`npm run i18n:missing -- --list` shows what is missing; untranslated strings fall back to English). A file containing `i18n-skip-strings` is copied without translation (`config/i18n.ts`, `data/map.ts`).
+- When you change or add English copy, add the same key to `i18n/fr.json`, `i18n/de.json` and `i18n/es.json` (`npm run i18n:missing -- --list` shows what is missing; untranslated strings fall back to English). A file containing `i18n-skip-strings` is copied without translation (`config/i18n.ts`).
 - The language selector (EN · FR · DE · ES) is `components/layout/LanguageSelector.tsx`: in the header and the mobile menu, it links to the same page in the other language. There is no redirect by browser language.
 - Parsing uses TypeScript 5 (dev dependency `typescript-parser`), because TypeScript 7 has no JavaScript compiler API.
 
